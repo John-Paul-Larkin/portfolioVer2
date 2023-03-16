@@ -1,0 +1,162 @@
+.contact {
+  width: 100vw;
+  background-color: var(--clr-two);
+  padding: 50px 0;
+}
+
+.contact .container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--clr-three);
+  color: white;
+  border-radius: 20px;
+}
+
+.contact .form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  gap: 1rem;
+  /* width: 100%; */
+  padding: 3rem 0;
+}
+
+.contact .inputs {
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.label-wrapper {
+  width:90%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact .name,
+.email,
+.message {
+  width: 90%;
+  max-width: 900px;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--clr-four);
+}
+
+
+.contact .message {
+  height: 7rem;
+}
+
+.contact .send {
+  width: 50%;
+  height: 3rem;
+  max-width: 350px;
+}
+
+input,
+textarea {
+  color: white;
+}
+
+textarea {
+  resize: none;
+}
+
+/* 
+.container {
+    width: 50vw;
+    margin: 50px auto;
+    background-color: #ffd6ba;
+    -webkit-box-shadow: -5px 5px 0px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: -5px 5px 0px 3px rgba(0, 0, 0, 0.25);
+  }
+  
+  .container h3 {
+    font-size: 3em;
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .name {
+    margin: 25px auto;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 90%;
+    height: 40px;
+  }
+   
+  input[type="text"] {
+    width: 40%;
+    margin: 0 20px 0 0;
+    padding: 15px;
+    font-style: italic;
+    border: 2px solid #434753;
+    background: transparent;
+    color: #434753;
+    outline-color: #ffd6ba;
+  }
+  
+  label[for="firstName"] {
+    position: absolute;
+    top: -30px;
+    left: 0;
+  }
+  
+  label[for="lastName"] {
+    position: absolute;
+    top: -30px;
+    right: 190px;
+  }
+  
+  .email {
+    width: 50%;
+    margin: 0 0 20px 35px;
+    height: 40px;
+    padding: 15px;
+    font-style: italic;
+    border: 2px solid #434753;
+    background: transparent;
+    color: #434753;
+    outline-color: #ffd6ba;
+  }
+  
+  
+  label:not(#nameLabel) {
+    margin-left: 35px;
+    margin-bottom: 10px;
+  }
+  
+  .message {
+    width: 80%;
+    margin: 0 35px;
+    height: 100px;
+    padding: 15px;
+    font-style: italic;
+    border: 2px solid #434753;
+    background: transparent;
+    color: #434753;
+    outline-color: #ffd6ba;
+  }
+  
+  .send {
+    width: 100px;
+    margin: 30px 35px;
+    height: 40px;
+    border: none;
+    background: #434753;
+    color: #ffd6ba;
+    cursor: pointer;
+  }
+   */

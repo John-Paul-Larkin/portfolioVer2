@@ -4,7 +4,13 @@
 }
 
 :root {
-    --clr-font: #004E98;
+  --clr-one: #0c1821;
+  --clr-two: #1b2a41;
+  --clr-three: #324a5f;
+  --clr-four: #6874e8;
+  --clr-five: #ee589e;
+  --clr-six: #7a5c61;
+  --clr-seven: #e8f0ff;
 }
 /*------------------------------------------------- CSS resets */
 
@@ -47,11 +53,11 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img,
-picture, svg {
+picture,
+svg {
   max-width: 100%;
   display: block;
 }
-
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
