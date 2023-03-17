@@ -9,8 +9,8 @@ import "./Projects.css";
 export default function Projects() {
   return (
     <section className="projects">
-      <SectionHeading heading='Projects'/>
       <div className="container">
+      <SectionHeading heading="Projects" />
         <div className="project1">
           <div className="project1-description">
             <h3>Kitchen management</h3>
@@ -23,21 +23,17 @@ export default function Projects() {
               to the ingredients and the remaining time before the order should be sent.
             </p>
           </div>
-          <img className="pos-move" src={posMove} alt="" />
+          <img className="pos-move" src={posMove} alt="animated image of the point of sale app in action" />
         </div>
-          <YouTube
-            videoId="j1p1O0-Bl50"
-            opts={{
-              width: "800",
-              playerVars: { autoplay: 1, controls: 1, cc_load_policy: 1, cc_lang_pref: "en", modestbranding: 1, rel: 0 },
-            }}
-            className="youtube"
-          />
+        <YouTube
+          videoId="j1p1O0-Bl50"
+          opts={{
+            width: "800",
+            playerVars: { autoplay: 1, controls: 1, cc_load_policy: 1, cc_lang_pref: "en", modestbranding: 1, rel: 0 },
+          }}
+          className="youtube"
+        />
       </div>
-
-
-
-
     </section>
   );
 }

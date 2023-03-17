@@ -1,5 +1,6 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import SectionHeading from "../SectionHeading/SectionHeading";
 import "./ContactForm.css";
 
 export default function ContactForm() {
@@ -40,13 +41,14 @@ export default function ContactForm() {
       controls.start(animation.initial);
       controlsBorder.start(animationBorder.initial);
     }
-  }, [controls, isInView]);
+  }, [controls, isInView, animation.animate, animation.initial, animationBorder.animate, animationBorder.initial, controlsBorder]);
 
   return (
     <section className="contact">
+      {/* <SectionHeading heading="Get in touch!" /> */}
       <div className="container">
         <div className="heading">
-          <h2>Get in touch!</h2>
+          <h3>Get in touch!</h3>
           <motion.p animate={controls} initial={animation.initial}>
             Comments, suggestions, or just want to say hello?
           </motion.p>

@@ -1,4 +1,4 @@
-import { easeIn, easeOut, motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import "./SectionHeading.css";
 
@@ -9,7 +9,7 @@ export default function SectionHeading({ heading }: { heading: string }) {
 
   const animation = {
     initial: { opacity: 0, y: 10 },
-    animate: { opacity: 1, y: 0, transition: { delay: 0.4, duration: 0.25, ease: "easeOut" } },
+    animate: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.25, ease: "easeOut" } },
   };
 
   useEffect(() => {
@@ -18,13 +18,15 @@ export default function SectionHeading({ heading }: { heading: string }) {
     } else {
       controls.start(animation.initial);
     }
-  }, );
+  }, [controls, isInView, animation.animate, animation.initial]);
 
-//   [controls,isInView]
   return (
     <div className="section-heading">
       <h2>
-        <motion.span ref={animateRef}>{heading}</motion.span>
+        <motion.span ref={animateRef} animate={controls} initial={animation.initial}>
+          {heading}
+        </motion.span>
+        
       </h2>
     </div>
   );
