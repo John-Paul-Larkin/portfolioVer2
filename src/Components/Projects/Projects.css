@@ -1,0 +1,55 @@
+
+.projects {
+  background-color: var(--clr-one);
+  padding: 4rem 0;
+}
+
+.projects .container {
+  max-width: var(--max-width);
+  width: 90%;
+  margin: 0 auto;
+  color: var(--clr-seven);
+  background-color: var(--clr-three);
+  border-radius: 20px;
+}
+
+.projects h2 {
+  font-size: 3.5rem;    
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 1rem 0;
+}
+
+.project1 {
+    display: flex;
+}
+
+.project1 p {
+  display: inline-block;
+  width: 300px;
+  padding: 1rem;
+}
+
+.pos-move {
+  padding: 1rem;
+}
+
+.youtube {
+    /* border: 10px solid blue; */
+    background-color: blue;
+    width:850px;
+
+
+}
+
+@media (max-width: 375px) {
+  .projects h2 {
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+  .pos-move {
+    padding: 1rem;
+    width:100%
+  }
+}

@@ -5,9 +5,13 @@ import styles from "./Hero.module.css";
 export default function HeroScreen() {
   return (
     <section className={styles["hero-wrapper"]}>
-      <div className={styles["hero-image-br"]}>
+      <span
+        className={styles["hero-image-br"]}
+        role="img"
+        aria-label="John Paul Larkin, sitting on a bench, on a hillside in County Kerry, overlooking the ocean."
+      >
         <FullName />
-      </div>
+      </span>
       <motion.div
         className={styles["black-screen"]}
         initial={{ opacity: 1, top: 0 }}

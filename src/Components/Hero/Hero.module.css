@@ -63,7 +63,7 @@
 
 .web-design-wrapper {
   height: 40px;
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: center;
 }
@@ -75,11 +75,12 @@
   font-weight: 400;
   color: white;
   text-shadow: none;
-  top: -100px;
+  top: 8em;
 }
 
 .hero-image-br {
   /* scroll-snap-align: start; */
+  display: block;
   height: 100vh;
   width: 100vw;
   /* background-image: url("../../Assets/Images/BenchKerryCompressed.webp"); */

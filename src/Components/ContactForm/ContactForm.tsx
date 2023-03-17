@@ -24,12 +24,12 @@ export default function ContactForm() {
 
   const animation = {
     initial: { opacity: 0, y: 10 },
-    animate: { opacity: 1, y: 0, transition: { delay: 0.1, duration: 0.75, ease: "easeInOut" } },
+    animate: { opacity: 1, y: 0, transition: { delay: 0.4, duration: 0.25, ease: "easeOut" } },
   };
 
   const animationBorder = {
-    initial: { opacity: 0, width: 0 },
-    animate: { opacity: 1, width: "90%", transition: { delay: 0.3, duration: .9, ease: "easeInOut" } },
+    initial: { opacity: 0, width: "50%" },
+    animate: { opacity: 1, width: "90%", transition: { delay: 0.1, duration: 0.25, ease: "easeIn" } },
   };
 
   useEffect(() => {
@@ -42,29 +42,20 @@ export default function ContactForm() {
     }
   }, [controls, isInView]);
 
-
   return (
     <section className="contact">
       <div className="container">
+        <div className="heading">
+          <h2>Get in touch!</h2>
+          <motion.p animate={controls} initial={animation.initial}>
+            Comments, suggestions, or just want to say hello?
+          </motion.p>
+          <motion.p animate={controls} initial={animation.initial}>
+            I'd love to hear from you.
+          </motion.p>
+        </div>
         <form onSubmit={handleSubmit} className="form">
-          <motion.div className="inputs" ref={animateRef} animate={controls} initial={animation.initial}>
-            <div className="label-wrapper">
-              <label htmlFor="name">Your Name</label>
-            </div>
-            <motion.input
-              type="text"
-              name="name"
-              id="name"
-              className="name"
-              placeholder="name"
-              ref={nameRef}
-              tabIndex={1}
-              animate={controlsBorder}
-              initial={animationBorder.initial}
-            />
-          </motion.div>
-
-          <motion.div className="inputs" ref={animateRef} animate={controls} initial={animation.initial}>
+          <motion.div className="inputs" animate={controls} initial={animation.initial} ref={animateRef}>
             <div className="label-wrapper">
               <label htmlFor="email">Email Address</label>
             </div>
@@ -75,13 +66,30 @@ export default function ContactForm() {
               className="email"
               placeholder="youremail@corp.com"
               ref={emailRef}
-              tabIndex={2}
+              tabIndex={1}
               animate={controlsBorder}
               initial={animationBorder.initial}
             />
           </motion.div>
 
-          <motion.div className="inputs" ref={animateRef} animate={controls} initial={animation.initial}>
+          <motion.div className="inputs" animate={controls} initial={animation.initial}>
+            <div className="label-wrapper">
+              <label htmlFor="name">Name</label>
+            </div>
+            <motion.input
+              type="text"
+              name="name"
+              id="name"
+              className="name"
+              placeholder="Optional"
+              ref={nameRef}
+              tabIndex={2}
+              animate={controlsBorder}
+              initial={animation.initial}
+            />
+          </motion.div>
+
+          <motion.div className="inputs" animate={controls} initial={animation.initial}>
             <div className="label-wrapper">
               <label htmlFor="message">Message</label>
             </div>
@@ -97,7 +105,7 @@ export default function ContactForm() {
           </motion.div>
 
           <div className="inputs">
-            <button type="submit" className="send" tabIndex={4}>
+            <button type="submit" className="btn-send" tabIndex={4}>
               Send
             </button>
           </div>

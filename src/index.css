@@ -11,6 +11,11 @@
   --clr-five: #ee589e;
   --clr-six: #7a5c61;
   --clr-seven: #e8f0ff;
+
+  --max-width: 1200px;
+
+  /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  font-family: "Roboto", sans-serif;
 }
 /*------------------------------------------------- CSS resets */
 
