@@ -1,38 +1,68 @@
+import { motion } from "framer-motion";
 import YouTube from "react-youtube";
 // import floorPlan from "../../Assets/Images/FloorPlan.jpg";
 // import kitchenDisplay from "../../Assets/Images/KitchenDisplay.jpg";
 // import posImage from "../../Assets/Images/KitchenPOS.jpg";
 import posMove from "../../Assets/Images/PosMove.webp";
-import SectionHeading from "../SectionHeading/SectionHeading";
 import "./Projects.css";
 
 export default function Projects() {
+  const initial = {
+    opacity: 0,
+    y: 30,
+  };
+
+  const initialLeft = {
+    opacity: 0,
+    x: 30,
+  };
+
+  const animate = {
+    opacity: 1,
+    y: 0,
+    x: 0,
+    transition: {
+      ease: "easeOut",
+      duration: 0.5,
+      delay: 0.3,
+    },
+  };
+
   return (
     <section className="projects">
       <div className="container">
-        <SectionHeading heading="Projects" />
         <div className="project1">
           <div className="project1-description">
-            <h3>Kitchen management</h3>
-            <p>
+            <motion.h3 initial={initial} whileInView={animate}>
+              Kitchen management
+            </motion.h3>
+            <motion.p initial={initialLeft} whileInView={animate}>
               "Kitchen POS" is a point of sale application for restaurants, designed to simplify the process of order taking, while streamlining
               communication between the server in the front of house, and the chefs in the kitchen. I built this app to work in conjunction with a
               kitchen display application, which is an app for orchestrating the various sections of a commercial kitchen, such that orders are
               displayed, timed and prepared in a logical, sequential manner. The app provides a timeline, which arranges the orders depending on the
               station(grill, fry), so that each chef can, at a glance, determine which item they should be preparing, if there are any modifications
               to the ingredients and the remaining time before the order should be sent.
-            </p>
+            </motion.p>
           </div>
-          <img className="pos-move" src={posMove} alt="animated image of the point of sale app in action" />
+          <motion.img
+            initial={initialLeft}
+            whileInView={animate}
+            className="pos-move"
+            src={posMove}
+            alt="animated image of the point of sale app in action"
+          />
         </div>
-        <YouTube
-          videoId="j1p1O0-Bl50"
-          opts={{
-            width: "800",
-            playerVars: { autoplay: 0, controls: 1, cc_load_policy: 1, cc_lang_pref: "en", modestbranding: 1, rel: 0 },
-          }}
-          className="youtube"
-        />
+        <motion.div className="youtube-container" initial={initialLeft} whileInView={animate}>
+          <YouTube
+            className="youtube"
+            videoId="j1p1O0-Bl50"
+            opts={{
+              width: "800",
+              playerVars: { autoplay: 0, controls: 1, cc_load_policy: 1, cc_lang_pref: "en", modestbranding: 1, rel: 0 },
+            }}
+          />
+        </motion.div>
       </div>
     </section>
   );

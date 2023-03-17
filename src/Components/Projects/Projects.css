@@ -22,11 +22,12 @@
 
 .project1 {
   display: flex;
+  justify-content: center;
 }
 
 .project1 p {
   display: inline-block;
-  width: 300px;
+  width: 50%;
   padding: 1rem;
 }
 
@@ -34,10 +35,19 @@
   padding: 1rem;
 }
 
+.youtube-container {
+  /* background-color: yellowgreen; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .youtube {
+  margin: 0 auto;
+  padding: 2rem;
   /* border: 10px solid blue; */
-  background-color: blue;
-  width: 850px;
+  /* background-color: blue; */
+  /* width: 850px; */
 }
 
 @media (max-width: 375px) {

@@ -1,6 +1,5 @@
-import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
-import SectionHeading from "../SectionHeading/SectionHeading";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 import "./ContactForm.css";
 
 export default function ContactForm() {
@@ -18,30 +17,15 @@ export default function ContactForm() {
     alert("tadaaa!: \n" + JSON.stringify(data) + "Your data");
   };
 
-  const controls = useAnimation();
-  const controlsBorder = useAnimation();
-  const animateRef = useRef(null);
-  const isInView = useInView(animateRef);
-
   const animation = {
     initial: { opacity: 0, y: 10 },
-    animate: { opacity: 1, y: 0, transition: { delay: 0.4, duration: 0.25, ease: "easeOut" } },
+    animate: { opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.25, ease: "easeOut" } },
   };
 
   const animationBorder = {
-    initial: { opacity: 0, width: "50%" },
-    animate: { opacity: 1, width: "90%", transition: { delay: 0.1, duration: 0.25, ease: "easeIn" } },
+    initial: { opacity: 0, width: "70%" },
+    animate: { opacity: 1, width: "90%", transition: { delay: 0.2, duration: 0.25, ease: "easeIn" } },
   };
-
-  useEffect(() => {
-    if (isInView) {
-      controls.start(animation.animate);
-      controlsBorder.start(animationBorder.animate);
-    } else {
-      controls.start(animation.initial);
-      controlsBorder.start(animationBorder.initial);
-    }
-  }, [controls, isInView, animation.animate, animation.initial, animationBorder.animate, animationBorder.initial, controlsBorder]);
 
   return (
     <section className="contact">
@@ -49,15 +33,15 @@ export default function ContactForm() {
       <div className="container">
         <div className="heading">
           <h3>Get in touch!</h3>
-          <motion.p animate={controls} initial={animation.initial}>
+          <motion.p whileInView={animation.animate} initial={animation.initial}>
             Comments, suggestions, or just want to say hello?
           </motion.p>
-          <motion.p animate={controls} initial={animation.initial}>
+          <motion.p whileInView={animation.animate} initial={animation.initial}>
             I'd love to hear from you.
           </motion.p>
         </div>
         <form onSubmit={handleSubmit} className="form">
-          <motion.div className="inputs" animate={controls} initial={animation.initial} ref={animateRef}>
+          <motion.div className="inputs" whileInView={animation.animate} initial={animation.initial}>
             <div className="label-wrapper">
               <label htmlFor="email">Email Address</label>
             </div>
@@ -69,12 +53,12 @@ export default function ContactForm() {
               placeholder="youremail@corp.com"
               ref={emailRef}
               tabIndex={1}
-              animate={controlsBorder}
+              whileInView={animationBorder.animate}
               initial={animationBorder.initial}
             />
           </motion.div>
 
-          <motion.div className="inputs" animate={controls} initial={animation.initial}>
+          <motion.div className="inputs" whileInView={animation.animate} initial={animation.initial}>
             <div className="label-wrapper">
               <label htmlFor="name">Name</label>
             </div>
@@ -86,12 +70,12 @@ export default function ContactForm() {
               placeholder="Optional"
               ref={nameRef}
               tabIndex={2}
-              animate={controlsBorder}
-              initial={animation.initial}
+              whileInView={animationBorder.animate}
+              initial={animationBorder.initial}
             />
           </motion.div>
 
-          <motion.div className="inputs" animate={controls} initial={animation.initial}>
+          <motion.div className="inputs" whileInView={animation.animate} initial={animation.initial}>
             <div className="label-wrapper">
               <label htmlFor="message">Message</label>
             </div>
@@ -101,8 +85,8 @@ export default function ContactForm() {
               name="message"
               ref={messageRef}
               tabIndex={3}
-              animate={controlsBorder}
               initial={animationBorder.initial}
+              whileInView={animationBorder.animate}
             ></motion.textarea>
           </motion.div>
 
