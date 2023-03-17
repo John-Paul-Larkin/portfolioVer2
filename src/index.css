@@ -14,11 +14,10 @@
 
   --max-width: 1200px;
 
-  /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
   font-family: "Roboto", sans-serif;
 }
-/*------------------------------------------------- CSS resets */
 
+/*------------------------------------------------- CSS resets */
 /* Box sizing rules */
 *,
 *::before,
