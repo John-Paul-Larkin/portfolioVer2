@@ -10,7 +10,7 @@ export default function Projects() {
   return (
     <section className="projects">
       <div className="container">
-      <SectionHeading heading="Projects" />
+        <SectionHeading heading="Projects" />
         <div className="project1">
           <div className="project1-description">
             <h3>Kitchen management</h3>
@@ -29,7 +29,7 @@ export default function Projects() {
           videoId="j1p1O0-Bl50"
           opts={{
             width: "800",
-            playerVars: { autoplay: 1, controls: 1, cc_load_policy: 1, cc_lang_pref: "en", modestbranding: 1, rel: 0 },
+            playerVars: { autoplay: 0, controls: 1, cc_load_policy: 1, cc_lang_pref: "en", modestbranding: 1, rel: 0 },
           }}
           className="youtube"
         />

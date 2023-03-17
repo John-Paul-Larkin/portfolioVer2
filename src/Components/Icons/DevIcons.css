@@ -1,0 +1,39 @@
+.dev-icons {
+  font-size: 3rem;
+  background-color: var(--clr-two);
+  color:var(--clr-seven);
+  padding: 4rem 0;
+
+}
+
+.dev-icons .container {
+  max-width: var(--max-width);
+  width:90%;
+  margin: 0 auto;
+  background-color: var(--clr-three);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  padding: 2rem 0;
+}
+
+.colored {
+  padding: 0.5rem;
+  padding-bottom: 0rem;
+  margin: 0.5rem;
+  margin-bottom: 0rem;
+}
+
+.dev-icons li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+}
+
+.dev-icons span {
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 1rem;
+}

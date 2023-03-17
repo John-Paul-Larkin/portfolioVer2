@@ -1,6 +1,5 @@
-
 .projects {
-  background-color: var(--clr-one);
+  background-color: var(--clr-two);
   padding: 4rem 0;
 }
 
@@ -14,7 +13,7 @@
 }
 
 .projects h3 {
-  font-size: 2rem;    
+  font-size: 2rem;
   text-align: center;
   font-weight: bold;
   letter-spacing: 1px;
@@ -22,7 +21,7 @@
 }
 
 .project1 {
-    display: flex;
+  display: flex;
 }
 
 .project1 p {
@@ -36,11 +35,9 @@
 }
 
 .youtube {
-    /* border: 10px solid blue; */
-    background-color: blue;
-    width:850px;
-
-
+  /* border: 10px solid blue; */
+  background-color: blue;
+  width: 850px;
 }
 
 @media (max-width: 375px) {
@@ -50,6 +47,6 @@
   }
   .pos-move {
     padding: 1rem;
-    width:100%
+    width: 100%;
   }
 }

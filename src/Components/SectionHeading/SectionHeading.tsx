@@ -26,7 +26,6 @@ export default function SectionHeading({ heading }: { heading: string }) {
         <motion.span ref={animateRef} animate={controls} initial={animation.initial}>
           {heading}
         </motion.span>
-        
       </h2>
     </div>
   );
