@@ -1,17 +1,19 @@
 import YouTube from "react-youtube";
-import floorPlan from "../../Assets/Images/FloorPlan.jpg";
-import kitchenDisplay from "../../Assets/Images/KitchenDisplay.jpg";
-import posImage from "../../Assets/Images/KitchenPOS.jpg";
+// import floorPlan from "../../Assets/Images/FloorPlan.jpg";
+// import kitchenDisplay from "../../Assets/Images/KitchenDisplay.jpg";
+// import posImage from "../../Assets/Images/KitchenPOS.jpg";
 import posMove from "../../Assets/Images/PosMove.webp";
+import SectionHeading from "../SectionHeading/SectionHeading";
 import "./Projects.css";
 
 export default function Projects() {
   return (
     <section className="projects">
+      <SectionHeading heading='Projects'/>
       <div className="container">
         <div className="project1">
           <div className="project1-description">
-            <h2>Kitchen management</h2>
+            <h3>Kitchen management</h3>
             <p>
               "Kitchen POS" is a point of sale application for restaurants, designed to simplify the process of order taking, while streamlining
               communication between the server in the front of house, and the chefs in the kitchen. I built this app to work in conjunction with a
