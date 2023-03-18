@@ -4,14 +4,14 @@ import "./DevIcons.css";
 export default function DevIcons() {
   const list = {
     visible: {
-      opacity: 1,
+      // opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.05,
+        staggerChildren: 0.1,
       },
     },
     hidden: {
-      opacity: 1,
+      // opacity: 1,
       transition: {
         when: "afterChildren",
       },
@@ -19,13 +19,16 @@ export default function DevIcons() {
   };
 
   const item = {
-    visible: { opacity: 1, y: 0 },
-    hidden: {
-      opacity: 0,
-      y: 50,
+    hidden: { opacity: 0.1, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
       transition: {
-        delay: 1,
+        // delay: 1,
         ease: "easeOut",
+        duration: 1,
+        // type: "spring",
+        // stiffness: 100,
       },
     },
   };
@@ -54,6 +57,11 @@ export default function DevIcons() {
           <span>HTML</span>
         </motion.li>
         <motion.li variants={item}>
+          <i className="devicon-css3-plain colored"></i>
+          <span>CSS</span>
+        </motion.li>
+
+        <motion.li variants={item}>
           <i className="devicon-vscode-plain colored"></i>
           <span>VSCode</span>
         </motion.li>
@@ -73,4 +81,3 @@ export default function DevIcons() {
     </div>
   );
 }
-

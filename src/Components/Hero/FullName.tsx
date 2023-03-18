@@ -10,7 +10,7 @@ export default function FullName() {
 
   const capitals = (index: number) => {
     if (index === jPos || index === pPos || index === lPos) {
-      return { delay: 0.2 };
+      return { delay: 0 };
     } else if (index < pPos) {
       return { delay: 0.7, duration: 0.6 };
     } else if (index < lPos) {
@@ -33,9 +33,9 @@ export default function FullName() {
     <>
       <motion.h1
         className={styles.name}
-        initial={{ y: "30vh", color: "black" }}
-        animate={{ y: 0, color: "white" }}
-        transition={{ delay: 2, duration: 1 }}
+        initial={{ y: 0}}
+        animate={{ y: 0}}
+        transition={{ duration: 1 }}
       >
         {nameArray.map((letter, index) => {
           return (

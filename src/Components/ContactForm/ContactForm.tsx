@@ -18,12 +18,12 @@ export default function ContactForm() {
   };
 
   const animation = {
-    initial: { opacity: 0, y: 10 },
+    initial: { opacity: 0.1, y: 10 },
     animate: { opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.25, ease: "easeOut" } },
   };
 
   const animationBorder = {
-    initial: { opacity: 0, width: "70%" },
+    initial: { opacity: 0.1, width: "70%" },
     animate: { opacity: 1, width: "90%", transition: { delay: 0.2, duration: 0.25, ease: "easeIn" } },
   };
 

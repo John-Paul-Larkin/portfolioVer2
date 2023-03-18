@@ -22,17 +22,24 @@
 
 .project1 {
   display: flex;
-  justify-content: center;
+  justify-content:flex-end;
+  align-items: center;
 }
+
+.project1-description {
+  /* max-width: 50%; */
+}
+
 
 .project1 p {
   display: inline-block;
-  width: 50%;
+  /* width: 50%; */
   padding: 1rem;
 }
 
 .pos-move {
   padding: 1rem;
+  width:200px;
 }
 
 .youtube-container {

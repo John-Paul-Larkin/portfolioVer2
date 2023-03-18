@@ -8,12 +8,12 @@ import "./Projects.css";
 
 export default function Projects() {
   const initial = {
-    opacity: 0,
+    opacity: 0.1,
     y: 30,
   };
 
   const initialLeft = {
-    opacity: 0,
+    opacity: 0.1,
     x: 30,
   };
 
@@ -24,7 +24,8 @@ export default function Projects() {
     transition: {
       ease: "easeOut",
       duration: 0.5,
-      delay: 0.3,
+      // type:'spring'
+      // bounce:1
     },
   };
 
@@ -37,7 +38,7 @@ export default function Projects() {
               Kitchen management
             </motion.h3>
             <motion.p initial={initialLeft} whileInView={animate}>
-              "Kitchen POS" is a point of sale application for restaurants, designed to simplify the process of order taking, while streamlining
+              "Restaurant POS" is a point of sale application for restaurants, designed to simplify the process of order taking, while streamlining
               communication between the server in the front of house, and the chefs in the kitchen. I built this app to work in conjunction with a
               kitchen display application, which is an app for orchestrating the various sections of a commercial kitchen, such that orders are
               displayed, timed and prepared in a logical, sequential manner. The app provides a timeline, which arranges the orders depending on the

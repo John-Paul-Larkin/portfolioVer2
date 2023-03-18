@@ -8,7 +8,7 @@ export default function SectionHeading({ heading }: { heading: string }) {
   const isInView = useInView(animateRef);
 
   const animation = {
-    initial: { opacity: 0, y: 10 },
+    initial: { opacity: 0.1, y: 10 },
     animate: { opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.25, ease: "easeOut" } },
   };
 
