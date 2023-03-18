@@ -52,7 +52,7 @@ export default function FullName() {
             className={styles["web-design"]}
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2.4, duration: 2 }}
+            transition={{ delay: 1.5, duration: 2 }}
           >
             Front-end web developer
           </motion.p>

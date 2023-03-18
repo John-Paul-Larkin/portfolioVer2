@@ -1,15 +1,6 @@
 .projects {
   background-color: var(--clr-two);
-  padding: 4rem 0;
-}
-
-.projects .container {
-  max-width: var(--max-width);
-  width: 90%;
-  margin: 0 auto;
-  color: var(--clr-seven);
-  background-color: var(--clr-three);
-  border-radius: 20px;
+  padding: 2rem 0;
 }
 
 .projects h3 {
@@ -22,14 +13,9 @@
 
 .project1 {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
   align-items: center;
 }
-
-.project1-description {
-  /* max-width: 50%; */
-}
-
 
 .project1 p {
   display: inline-block;
@@ -39,7 +25,7 @@
 
 .pos-move {
   padding: 1rem;
-  width:200px;
+  width: 200px;
 }
 
 .youtube-container {
@@ -47,14 +33,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 2rem;
 }
 
 .youtube {
+  box-shadow: 5px 5px 10px var(--clr-one);
   margin: 0 auto;
-  padding: 2rem;
-  /* border: 10px solid blue; */
-  /* background-color: blue; */
+  padding: 3rem;
+  border: 1px solid var(--clr-four);
+  background-color: var(--clr-one);
   /* width: 850px; */
+  border-radius: 20px;
 }
 
 @media (max-width: 375px) {

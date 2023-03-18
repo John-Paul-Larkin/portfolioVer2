@@ -17,6 +17,22 @@
   font-family: "Roboto", sans-serif;
 }
 
+.container {
+  max-width: var(--max-width);
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--clr-three);
+  border-radius: 20px;
+  color: var(--clr-seven);
+  box-shadow: 5px 5px 10px var(--clr-one);
+}
+
+
+
+
+
+
+
 /*------------------------------------------------- CSS resets */
 /* Box sizing rules */
 *,

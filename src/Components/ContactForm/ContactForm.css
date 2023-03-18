@@ -1,15 +1,6 @@
-
 .contact {
   background-color: var(--clr-two);
-  padding: 4rem 0;
-}
-.contact .container {
-  max-width: var(--max-width);
-  width: 90%;
-  margin: 0 auto;
-  background-color: var(--clr-three);
-  color: var(--clr-seven);
-  border-radius: 20px;
+  padding: 2rem 0;
 }
 
 .contact .heading {
@@ -55,7 +46,7 @@
   padding-bottom: 0.4rem;
 }
 
-label { 
+label {
   border-bottom: 1px solid var(--clr-four);
 }
 
@@ -90,6 +81,7 @@ label {
   color: var(--clr-seven);
   border-radius: 10px;
   font-weight: 600;
+  box-shadow: 5px 5px 10px var(--clr-one);
 }
 
 .contact .btn-send:hover,
