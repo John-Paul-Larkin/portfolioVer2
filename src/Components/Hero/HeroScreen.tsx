@@ -11,12 +11,6 @@ export default function HeroScreen() {
       >
         <FullName />
       </span>
-      {/* <motion.div
-        className={styles["black-screen"]}
-        initial={{ opacity: 1, top: 0 }}
-        animate={{ opacity: 0.1, top: "100vh" }}
-        transition={{ delay: 2, duration: 1, ease: "easeOut" }}
-      ></motion.div> */}
     </section>
   );
 }

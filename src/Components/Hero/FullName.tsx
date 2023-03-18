@@ -31,12 +31,7 @@ export default function FullName() {
 
   return (
     <>
-      <motion.h1
-        className={styles.name}
-        initial={{ y: 0}}
-        animate={{ y: 0}}
-        transition={{ duration: 1 }}
-      >
+      <h1 className={styles.name}>
         {nameArray.map((letter, index) => {
           return (
             <motion.span
@@ -62,7 +57,7 @@ export default function FullName() {
             Front-end web developer
           </motion.p>
         </div>
-      </motion.h1>
+      </h1>
     </>
   );
 }
