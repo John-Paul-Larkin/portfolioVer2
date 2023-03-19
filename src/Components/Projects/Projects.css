@@ -13,8 +13,9 @@
 
 .project1 {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  /* justify-content: flex-end; */
+  /* align-items: center; */
+  flex-wrap: wrap;
 }
 
 .project1 p {
@@ -34,15 +35,18 @@
   align-items: center;
   justify-content: center;
   padding-bottom: 2rem;
+  /* max-width: 90%; */
+  /* width:100px; */
 }
 
 .youtube {
   box-shadow: 5px 5px 10px var(--clr-one);
   margin: 0 auto;
-  padding: 3rem;
+  padding: 1rem;
   border: 1px solid var(--clr-four);
   background-color: var(--clr-one);
   /* width: 850px; */
+  width: 100%;
   border-radius: 20px;
 }
 

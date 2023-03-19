@@ -59,7 +59,7 @@ export default function Projects() {
             className="youtube"
             videoId="j1p1O0-Bl50"
             opts={{
-              width: "800",
+              // width: "200",
               playerVars: { autoplay: 0, controls: 1, cc_load_policy: 1, cc_lang_pref: "en", modestbranding: 1, rel: 0 },
             }}
           />
