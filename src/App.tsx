@@ -7,13 +7,13 @@ import Projects from "./Components/Projects/Projects";
 
 function App() {
   return (
-    <div>
+    <>
       <HeroScreen />
       <Projects />
       <DevIcons />
       <ContactForm />
       <Footer />
-    </div>
+    </>
   );
 }
 

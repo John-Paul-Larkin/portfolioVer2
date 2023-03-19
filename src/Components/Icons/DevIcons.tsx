@@ -23,7 +23,7 @@ export default function DevIcons() {
   };
 
   return (
-    <div className="dev-icons">
+    <section className="dev-icons">
       <motion.ul
         className="container"
         initial="hidden"
@@ -77,6 +77,6 @@ export default function DevIcons() {
           <span>Typescript</span>
         </motion.li>
       </motion.ul>
-    </div>
+    </section>
   );
 }
