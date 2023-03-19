@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
-import YouTube from "react-youtube";
 // import floorPlan from "../../Assets/Images/FloorPlan.jpg";
 // import kitchenDisplay from "../../Assets/Images/KitchenDisplay.jpg";
 // import posImage from "../../Assets/Images/KitchenPOS.jpg";
 import posMove from "../../Assets/Images/PosMove.webp";
 import "./Projects.css";
+
+import ReactPlayer from "react-player/youtube";
+// import ReactPlayer from "react-player/lazy";
 
 export default function Projects() {
   const initial = {
@@ -46,22 +48,21 @@ export default function Projects() {
               to the ingredients and the remaining time before the order should be sent.
             </motion.p>
           </div>
-          <motion.img
-            initial={initialLeft}
-            whileInView={animate}
-            className="pos-move"
-            src={posMove}
-            alt="animated image of the point of sale app in action"
-          />
+          <div className="pos-move">
+            <motion.img initial={initialLeft} whileInView={animate} src={posMove} alt="animated image of the point of sale app in action" />
+          </div>
         </div>
-        <motion.div className="youtube-container" initial={initialLeft} whileInView={animate}>
-          <YouTube
-            className="youtube"
-            videoId="j1p1O0-Bl50"
-            opts={{
-              // width: "200",
-              playerVars: { autoplay: 0, controls: 1, cc_load_policy: 1, cc_lang_pref: "en", modestbranding: 1, rel: 0 },
-            }}
+
+        <motion.div initial={initialLeft} whileInView={animate} className="player-wrapper">
+          <ReactPlayer
+            className="react-player"
+            width="90%"
+            height="90%"
+            url="https://www.youtube.com/watch?v=D0f20o1ADF0"
+            light={true}
+            volume={1}
+            controls={true}
+            muted={true}
           />
         </motion.div>
       </div>
