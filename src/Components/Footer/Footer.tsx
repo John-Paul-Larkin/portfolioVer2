@@ -1,17 +1,55 @@
-import "./Footer.css";
-
 import { faFacebook, faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { faHammer, faPersonDigging, faScrewdriver, faScrewdriverWrench, faWrench } from "@fortawesome/free-solid-svg-icons";
-
+import { faPersonDigging } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import "./Footer.css";
 
 export default function Footer() {
+  const quotes = [
+    [["Live as if you were to die tomorrow. Learn as if you were to live forever."], ["- Mahatma Gandhi"]],
+    [["It does not matter how slowly you go as long as you do not stop."], ["- Confucius"]],
+    [["It always seems impossible until it's done."], ["- Nelson Mandela"]],
+    [["Perseverance is not a long race; it is many short races one after the other."], ["- Walter Elliot"]],
+    [["Ever tried. Ever failed. No matter. Try again. Fail again. Fail better."], ["- Samuel Beckett"]],
+  ];
+
+  const QuoteDisplay = () => {
+    const [quoteIndex, setQuoteIndex] = useState(0);
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setQuoteIndex(() => {
+          if (quoteIndex === quotes.length - 1) return 0;
+          else return quoteIndex + 1;
+        });
+      }, 10000);
+
+      return () => {
+        clearInterval(interval);
+      };
+    }, [quoteIndex]);
+
+    const quote = { animate: { transition: { staggerChildren: 2 } } };
+    const author = { initial: { opacity: 0.5 }, animate: { opacity: 1, transition: { duration: 3 } } };
+    const author2 = { initial: { opacity: 0 }, animate: { opacity: 1, transition: { duration: 3 } } };
+
+    return (
+      <div className="quote-wrapper" key={quoteIndex}>
+        <motion.div className="quote" initial="initial" animate="animate" variants={quote}>
+          <motion.p variants={author}>{quotes[quoteIndex][0]}</motion.p>
+          <motion.p className="author" variants={author2}>
+            {quotes[quoteIndex][1]}
+          </motion.p>
+        </motion.div>
+      </div>
+    );
+  };
+
   return (
     <footer className="footer">
-      <p>logo</p>
-      <p>Living, learning, & leveling up one day at a time.</p>
-      <p>social logos Mail</p>
+      <QuoteDisplay />
+      {/* <p>logo</p> */}
 
       <ul className="icons">
         {/* <li>
@@ -44,20 +82,12 @@ export default function Footer() {
           </a>
         </li>
       </ul>
-      <p>
+
+      <p className="hand-crafted">
         Handcrafted by JP
-        <>
-          {" "}
-          {/* <FontAwesomeIcon icon={faHammer} className="hammer" /> */}
-          {/* <FontAwesomeIcon icon={faScrewdriver} className="screw" /> */}
-          <FontAwesomeIcon icon={faPersonDigging} className="digger" />
- 
-        </>
+        <FontAwesomeIcon icon={faPersonDigging} className="digger" />
         in twentytwentythree
       </p>
-{/* 
-      <FontAwesomeIcon icon={faHammer} />
-      <FontAwesomeIcon icon={faWrench} /> */}
     </footer>
   );
 }

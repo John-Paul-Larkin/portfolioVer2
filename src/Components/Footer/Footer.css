@@ -9,10 +9,10 @@
 }
 
 .footer .icons {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   display: flex;
   justify-content: space-around;
-  width: 13rem;
+  width: 13em;
   margin: 0 auto;
   list-style-type: none;
   padding: 1rem;
@@ -28,13 +28,13 @@
 
 .footer a > * {
   position: relative;
-  top: 0.75px;
-  left: 0.25px;
+  top: 5px;
+  left: 0px;
 }
 
 .footer li {
-  height: 1.7em;
-  width: 1.7em;
+  height: 2em;
+  width: 2em;
   border-radius: 999px;
   display: flex;
   align-items: center;
@@ -49,24 +49,34 @@
   background-color: var(--clr-four);
 }
 
-.digger {
-  font-size: 2.5rem;
-  padding: 0.5rem;
-  transform: translateY(2rem);
+.footer .digger {
+  font-size: 2rem;
+  padding: 1rem;
+  padding-top: 0;
   color: var(--clr-four);
-  border-bottom: 10px solid;
+  border-bottom: 0.5rem ridge var(--clr-four);
+  position: relative;
+  top: 2rem;
 }
 
-.hammer {
-  font-size: 1rem;
-  padding: 0.5rem;
-  transform: translateY(1rem);
-  color: var(--clr-four);
+.footer .hand-crafted {
+  position: relative;
+  top: -2rem;
+  padding-bottom: 2rem;
+  font-size: 0.8rem;
 }
 
-.screw {
-  font-size: 1rem;
-  padding: 0.5rem;
-  /* transform:translateY(-1rem); */
-  color: var(--clr-four);
+.footer .quote-wrapper {
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .quote {
+  text-align: end;
+}
+
+.footer .author {
+  display: inline;
 }
