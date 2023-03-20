@@ -1,12 +1,9 @@
 import { motion } from "framer-motion";
-// import floorPlan from "../../Assets/Images/FloorPlan.jpg";
-// import kitchenDisplay from "../../Assets/Images/KitchenDisplay.jpg";
-// import posImage from "../../Assets/Images/KitchenPOS.jpg";
+import ReactPlayer from "react-player/youtube";
+import kitchenDisplay from "../../Assets/Images/KitchenDisplay.jpg";
+import PhoneBorder from "../../Assets/Images/PhoneBorder.png";
 import posMove from "../../Assets/Images/PosMove.webp";
 import "./Projects.css";
-
-import ReactPlayer from "react-player/youtube";
-// import ReactPlayer from "react-player/lazy";
 
 export default function Projects() {
   const initial = {
@@ -35,25 +32,31 @@ export default function Projects() {
     <section className="projects">
       <div className="container">
         <div className="project1">
-          <div className="project1-description">
+          <div className="description">
             <motion.h3 initial={initial} whileInView={animate}>
               Kitchen management
             </motion.h3>
             <motion.p initial={initialLeft} whileInView={animate}>
               "Restaurant POS" is a point of sale application for restaurants, designed to simplify the process of order taking, while streamlining
-              communication between the server in the front of house, and the chefs in the kitchen. I built this app to work in conjunction with a
-              kitchen display application, which is an app for orchestrating the various sections of a commercial kitchen, such that orders are
-              displayed, timed and prepared in a logical, sequential manner. The app provides a timeline, which arranges the orders depending on the
-              station(grill, fry), so that each chef can, at a glance, determine which item they should be preparing, if there are any modifications
-              to the ingredients and the remaining time before the order should be sent.
+              communication between the server in the front of house, and the chefs in the kitchen.
+            </motion.p>
+            <motion.p initial={initialLeft} whileInView={animate}>
+              I built this app to work in conjunction with a kitchen display application, which is an app for orchestrating the various sections of a
+              commercial kitchen, such that orders are displayed, timed and prepared in a logical, sequential manner. The app provides a timeline,
+              which arranges the orders depending on the station(grill, fry), so| that each chef can, at a glance, determine which item they should be
+              preparing, if there are any modifications to the ingredients and the remaining time before the order should be sent.
             </motion.p>
           </div>
           <div className="pos-move">
-            <motion.img initial={initialLeft} whileInView={animate} src={posMove} alt="animated image of the point of sale app in action" />
+            <img src={PhoneBorder} className="phone-outline" alt="phone border outline" />
+            <img src={posMove} alt="animated image of the point of sale app in action" />
+          </div>
+          <div className="kitchen-display">
+            <img className="kitchen-display" src={kitchenDisplay} alt="" />
           </div>
         </div>
 
-        <motion.div initial={initialLeft} whileInView={animate} className="player-wrapper">
+        <div className="player-wrapper">
           <ReactPlayer
             className="react-player"
             width="90%"
@@ -64,16 +67,8 @@ export default function Projects() {
             controls={true}
             muted={true}
           />
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 }
-
-//
-//
-//
-
-/* <img className="floor-plan" src={FloorPlan} alt="" /> */
-/* <img className="pos-image" src={posImage} alt="" /> */
-/* <img className="kitchen-display" src={kitchenDisplay} alt="" /> */
