@@ -1,0 +1,31 @@
+.player-outer-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+  background-color: blue;
+  border-radius: 20px;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  border: 1px solid var(--clr-four);
+  background-color: var(--clr-one);
+  border-radius: 20px;
+  z-index: 1;
+  opacity: 0.95;
+  box-shadow: 5px 5px 10px var(--clr-one);
+}
+
+@media (min-width: 650px) {
+    .react-player {
+        opacity: 1;
+      }
+}

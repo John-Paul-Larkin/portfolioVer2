@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import ReactPlayer from "react-player/youtube";
 import kitchenDisplay from "../../Assets/Images/KitchenDisplay.jpg";
 import PhoneBorder from "../../Assets/Images/PhoneBorder.png";
 import posMove from "../../Assets/Images/PosMove.webp";
 import "./Projects.css";
+import YouTube from "./YouTube";
 
 export default function Projects() {
   const initial = {
@@ -47,27 +47,20 @@ export default function Projects() {
               preparing, if there are any modifications to the ingredients and the remaining time before the order should be sent.
             </motion.p>
           </div>
-          <motion.div initial={initialLeft} whileInView={animate} className="pos-move">
+          <motion.div initial={initialLeft} whileInView={animate} className="pos-wrapper">
             <img src={PhoneBorder} className="phone-outline" alt="phone border outline" />
-            <img src={posMove} alt="animated image of the point of sale app in action" />
+            <img className="pos-image" src={posMove} alt="animated image of the point of sale app in action" />
           </motion.div>
         </div>
-        <motion.div initial={initialLeft} whileInView={animate} className="kitchen-display">
-          <img src={kitchenDisplay} alt="" />
-        </motion.div>
-
-        <div className="player-wrapper">
-          <ReactPlayer
-            className="react-player"
-            width="90%"
-            height="90%"
-            url="https://www.youtube.com/watch?v=D0f20o1ADF0"
-            // light={true}
-            volume={1}
-            controls={true}
-            muted={true}
-          />
+        <div className="kitchen-display-wrapper">
+          <motion.div initial={initialLeft} whileInView={animate} className="kitchen-display">
+            <img src={kitchenDisplay} alt="" />
+          </motion.div>
         </div>
+
+        <YouTube/>
+
+     
       </div>
     </section>
   );
