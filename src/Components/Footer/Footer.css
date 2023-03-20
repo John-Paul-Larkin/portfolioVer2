@@ -8,13 +8,13 @@
 }
 
 .footer .icons {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   display: flex;
   justify-content: space-around;
   width: 13em;
   margin: 0 auto;
   list-style-type: none;
-  padding: 1rem;
+  padding: .4em;
   border: 1px solid var(--clr-four);
   border-radius: 50px;
 }
@@ -29,8 +29,8 @@
 
 .footer a > * {
   position: relative;
-  top: 5px;
-  left: 0px;
+  top: .22em;
+  left: .05em;
 }
 
 .footer li {
@@ -52,11 +52,10 @@
 
 .footer .hand-crafted {
   position: relative;
-  top: -2rem;
+  top: -2em;
   /* padding-bottom: 2rem ; */
-  padding: 2rem 0;
-
-  font-size: 0.8rem;
+  padding: 2em 0;
+  font-size: .8em;
 }
 
 .footer .digger {
@@ -72,6 +71,7 @@
 .footer .quote-wrapper {
   margin: 0 auto;
   padding: 2rem 0;
+  min-height: 2rem;
   display: flex;
   justify-content: center;
 }

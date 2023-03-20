@@ -1,4 +1,5 @@
 import ReactPlayer from "react-player/youtube";
+// import ReactPlayer from 'react-player/lazy'
 import './YouTube.css'
 
 export default function YouTube() {
@@ -10,10 +11,11 @@ export default function YouTube() {
         width="100%"
         height="100%"
         url="https://www.youtube.com/watch?v=D0f20o1ADF0"
-        // light={true}
+        light={true}
         volume={1}
         controls={true}
         muted={true}
+        playing={true}
       />
     </div>
   </div>

@@ -43,13 +43,25 @@ export default function Projects() {
             <motion.p initial={initialLeft} whileInView={animate}>
               I built this app to work in conjunction with a kitchen display application, which is an app for orchestrating the various sections of a
               commercial kitchen, such that orders are displayed, timed and prepared in a logical, sequential manner. The app provides a timeline,
-              which arranges the orders depending on the station(grill, fry), so| that each chef can, at a glance, determine which item they should be
+              which arranges the orders depending on the station(grill, fry), so that each chef can, at a glance, determine which item they should be
               preparing, if there are any modifications to the ingredients and the remaining time before the order should be sent.
             </motion.p>
           </div>
-          <motion.div initial={initialLeft} whileInView={animate} className="pos-wrapper">
+          <motion.div initial={initialLeft} whileInView={animate} className="pos-wrapper img-btn-container">
             <img src={PhoneBorder} className="phone-outline" alt="phone border outline" />
             <img className="pos-image" src={posMove} alt="animated image of the point of sale app in action" />
+
+            <div className="overlay"></div>
+            <form target="_blank">
+              <button className="highlight-btn github-btn" type="submit" formAction="https://github.com/Fishamble/kitchenpos">
+                GitHub
+              </button>
+            </form>
+            <form target="_blank">
+              <button className="highlight-btn live-btn" type="submit" formAction="https://kitchenpos.netlify.app/">
+                Live
+              </button>
+            </form>
           </motion.div>
         </div>
         <div className="kitchen-display-wrapper">
