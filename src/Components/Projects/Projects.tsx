@@ -47,14 +47,14 @@ export default function Projects() {
               preparing, if there are any modifications to the ingredients and the remaining time before the order should be sent.
             </motion.p>
           </div>
-          <div className="pos-move">
+          <motion.div initial={initialLeft} whileInView={animate} className="pos-move">
             <img src={PhoneBorder} className="phone-outline" alt="phone border outline" />
             <img src={posMove} alt="animated image of the point of sale app in action" />
-          </div>
-          <div className="kitchen-display">
-            <img className="kitchen-display" src={kitchenDisplay} alt="" />
-          </div>
+          </motion.div>
         </div>
+        <motion.div initial={initialLeft} whileInView={animate} className="kitchen-display">
+          <img src={kitchenDisplay} alt="" />
+        </motion.div>
 
         <div className="player-wrapper">
           <ReactPlayer
@@ -62,7 +62,7 @@ export default function Projects() {
             width="90%"
             height="90%"
             url="https://www.youtube.com/watch?v=D0f20o1ADF0"
-            light={true}
+            // light={true}
             volume={1}
             controls={true}
             muted={true}
