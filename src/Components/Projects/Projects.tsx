@@ -53,14 +53,23 @@ export default function Projects() {
           </motion.div>
         </div>
         <div className="kitchen-display-wrapper">
-          <motion.div initial={initialLeft} whileInView={animate} className="kitchen-display">
+          <motion.div initial={initialLeft} whileInView={animate} className="kitchen-display img-btn-container">
             <img src={kitchenDisplay} alt="" />
+            <div className="overlay"></div>
+            <form target="_blank">
+              <button className="highlight-btn github-btn" type="submit" formAction="https://github.com/Fishamble/kitchen_back_end">
+                GitHub
+              </button>
+            </form>
+            <form target="_blank">
+              <button className="highlight-btn live-btn" type="submit" formAction="https://kitchendisplay.netlify.app/">
+                Live
+              </button>
+            </form>
           </motion.div>
         </div>
 
-        <YouTube/>
-
-     
+        <YouTube />
       </div>
     </section>
   );

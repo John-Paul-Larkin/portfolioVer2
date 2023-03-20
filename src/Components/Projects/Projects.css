@@ -48,14 +48,7 @@
   display: none;
 }
 
-
 @media (min-width: 650px) {
-  .projects h3 {
-  }
-
-  .project1 {
-  }
-
   .project1 .description {
     padding: 1rem;
     max-width: 50%;
@@ -73,7 +66,6 @@
   .pos-image {
     position: relative;
     /* border-radius: 20px; */
-    cursor: pointer;
     z-index: 1;
   }
 
@@ -98,10 +90,66 @@
     border-radius: 20px;
     padding: 1rem;
     border: 1px solid var(--clr-four);
-    cursor: pointer;
     width: 50%;
     box-shadow: 5px 5px 10px var(--clr-one);
   }
+}
 
+.img-btn-container {
+  position: relative;
+}
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+  border-radius: 20px;
+}
+
+.img-btn-container:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.highlight-btn {
+  position: absolute;
+  top: 66%;
+
+  width: 4rem;
+
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  cursor: pointer;
+
+  background-color: var(--clr-seven);
+  color: var(--clr-four);
+
+  border: 1px solid var(--clr-four);
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.highlight-btn:hover {
+  background-color: var(--clr-two);
+  color: var(--clr-seven);
+
+  outline: 2px solid var(--clr-four);
+}
+
+.github-btn {
+  left: 33%;
+}
+
+.live-btn {
+  left: 66%;
+}
+
+.img-btn-container:hover .highlight-btn {
+  opacity: 1;
 }
