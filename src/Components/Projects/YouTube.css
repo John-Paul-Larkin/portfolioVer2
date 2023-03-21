@@ -1,7 +1,8 @@
 .player-outer-wrapper {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  /* margin: 0 auto; */
   padding: 2rem 0;
+  z-index: 3;
 }
 
 .player-wrapper {
@@ -19,13 +20,13 @@
   border: 1px solid var(--clr-four);
   background-color: var(--clr-one);
   border-radius: 20px;
-  z-index: 1;
+  z-index: 3;
   opacity: 0.95;
   box-shadow: 5px 5px 10px var(--clr-one);
 }
 
 @media (min-width: 650px) {
-    .react-player {
-        opacity: 1;
-      }
+  .react-player {
+    opacity: 1;
+  }
 }

@@ -26,6 +26,9 @@
   .hero-wrapper {
     font-size: 105px;
   }
+  .name {
+    top: 10vh;
+  }
 }
 
 @media (max-width: 425px) {

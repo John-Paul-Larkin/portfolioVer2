@@ -1,23 +1,39 @@
+import { motion } from "framer-motion";
 import ReactPlayer from "react-player/youtube";
 // import ReactPlayer from 'react-player/lazy'
-import './YouTube.css'
+import "./YouTube.css";
 
 export default function YouTube() {
+  const initialRight = {
+    opacity: 0.1,
+    x: 100,
+  };
+
+  const animate = {
+    opacity: 1,
+    y: 0,
+    x: 0,
+    transition: {
+      ease: "easeOut",
+      duration: 0.5,
+    },
+  };
+
   return (
-    <div className="player-outer-wrapper">
-    <div className="player-wrapper">
-      <ReactPlayer
-        className="react-player"
-        width="100%"
-        height="100%"
-        url="https://www.youtube.com/watch?v=D0f20o1ADF0"
-        light={true}
-        volume={1}
-        controls={true}
-        muted={true}
-        playing={true}
-      />
-    </div>
-  </div>
-  )
+    <motion.div initial={initialRight} whileInView={animate} className="player-outer-wrapper">
+      <div className="player-wrapper">
+        <ReactPlayer
+          className="react-player"
+          width="100%"
+          height="100%"
+          url="https://www.youtube.com/watch?v=D0f20o1ADF0"
+          light={true}
+          volume={1}
+          controls={true}
+          muted={true}
+          playing={true}
+        />
+      </div>
+    </motion.div>
+  );
 }

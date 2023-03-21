@@ -3,14 +3,6 @@
   padding: 2rem 0;
 }
 
-.projects h3 {
-  font-size: 2rem;
-  text-align: center;
-  font-weight: bold;
-  letter-spacing: 1px;
-  padding: 1rem 1rem;
-}
-
 .project1 {
   display: flex;
   flex-wrap: wrap;
@@ -19,157 +11,98 @@
   position: relative;
 }
 
-.project1 .description {
-  padding: 1rem;
-  font-size: 0.9rem;
-  display: inline-block;
-  background-color: var(--clr-one);
-  border-radius: 20px;
-  z-index: 2;
-  opacity: 0.85;
-  border: 1px solid var(--clr-four);
+
+
+/* CSS for image overlay   */
+/* reveals the buttons for projects links */
+
+.github-btn {
+  display: none;
 }
 
-.pos-wrapper {
-  display: inline-block;
-  width: 250px;
-  position: absolute;
-  top: 20%;
-  z-index: 1;
-  filter: brightness(40%);
-}
-
-.pos-wrapper img {
-  border-radius: 14px;
-}
-
-.kitchen-display,
-.phone-outline {
+.live-btn {
   display: none;
 }
 
 @media (min-width: 650px) {
-  .project1 .description {
-    padding: 1rem;
-    max-width: 50%;
-    opacity: 1;
-    height: fit-content;
-    box-shadow: 5px 5px 10px var(--clr-one);
-  }
-
-  .pos-wrapper {
+  .img-btn-container {
     position: relative;
-    filter: none;
-    /* z-index: 1; */
   }
 
-  .pos-image {
-    position: relative;
-    /* border-radius: 20px; */
-    /* z-index: 100; */
-  }
-
-  .phone-outline {
+  .overlay {
     position: absolute;
-    top: -28px;
-    left: -164px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.5s ease;
+    border-radius: 18px;
+  }
+
+  .overlay-text {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    opacity: 0;
+    font-size: 2rem;
+  }
+
+  .overlay-text p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .img-btn-container:hover .overlay {
     display: block;
-    width: 577px;
-    height: 608px;
-    max-width: none;
+    background: rgba(0, 0, 0, 0.7);
   }
 
-  .kitchen-display-wrapper {
-    width: 90%;
-    margin: 0 auto;
-  }
+  .highlight-btn {
+    position: absolute;
+    top: 66%;
 
-  .kitchen-display {
-    display: inline-block;
-    background-color: var(--clr-one);
-    border-radius: 20px;
-    padding: 1rem;
+    width: 4rem;
+
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    cursor: pointer;
+
+    background-color: var(--clr-seven);
+    color: var(--clr-four);
+
     border: 1px solid var(--clr-four);
-    width: 50%;
-    box-shadow: 5px 5px 10px var(--clr-one);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: 700;
+    outline: 2px solid var(--clr-seven);
   }
-}
 
-.img-btn-container {
-  position: relative;
-}
+  .highlight-btn:hover {
+    background-color: var(--clr-two);
+    color: var(--clr-seven);
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0);
-  transition: background 0.5s ease;
-  border-radius: 18px;
-}
+    outline: 2px solid var(--clr-four);
+  }
 
-.overlay-text {
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  transform: translateX(-50%);
-  opacity: 0;
-  font-size: 2rem;
-}
+  .github-btn {
+    left: 33%;
+    display: block;
+  }
 
-.overlay-text p {
-  font-size: 1rem;
-  text-align: center;
-}
+  .live-btn {
+    left: 66%;
+    display: block;
 
-.img-btn-container:hover .overlay {
-  display: block;
-  background: rgba(0, 0, 0, 0.7);
-}
+  }
 
-.highlight-btn {
-  position: absolute;
-  top: 66%;
+  .img-btn-container:hover .highlight-btn {
+    opacity: 1;
+  }
 
-  width: 4rem;
-
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.35s ease;
-  cursor: pointer;
-
-  background-color: var(--clr-seven);
-  color: var(--clr-four);
-
-  border: 1px solid var(--clr-four);
-  padding: 0.5rem;
-  border-radius: 5px;
-  font-weight: 700;
-  outline: 2px solid var(--clr-seven);
-
-}
-
-.highlight-btn:hover {
-  background-color: var(--clr-two);
-  color: var(--clr-seven);
-
-  outline: 2px solid var(--clr-four);
-}
-
-.github-btn {
-  left: 33%;
-}
-
-.live-btn {
-  left: 66%;
-}
-
-.img-btn-container:hover .highlight-btn {
-  opacity: 1;
-}
-
-.img-btn-container:hover .overlay-text {
-  opacity: 1;
+  .img-btn-container:hover .overlay-text {
+    opacity: 1;
+  }
 }
