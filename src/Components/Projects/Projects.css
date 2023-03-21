@@ -110,6 +110,20 @@
   border-radius: 18px;
 }
 
+.overlay-text {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  opacity: 0;
+  font-size: 2rem;
+}
+
+.overlay-text p {
+  font-size: 1rem;
+  text-align: center;
+}
+
 .img-btn-container:hover .overlay {
   display: block;
   background: rgba(0, 0, 0, 0.7);
@@ -133,6 +147,8 @@
   padding: 0.5rem;
   border-radius: 5px;
   font-weight: 700;
+  outline: 2px solid var(--clr-seven);
+
 }
 
 .highlight-btn:hover {
@@ -151,5 +167,9 @@
 }
 
 .img-btn-container:hover .highlight-btn {
+  opacity: 1;
+}
+
+.img-btn-container:hover .overlay-text {
   opacity: 1;
 }

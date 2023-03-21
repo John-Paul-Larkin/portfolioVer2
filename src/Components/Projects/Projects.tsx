@@ -13,8 +13,14 @@ export default function Projects() {
 
   const initialLeft = {
     opacity: 0.1,
-    x: 30,
+    x: -100,
   };
+
+  const initialRight = {
+    opacity: 0.1,
+    x: 100,
+  };
+
 
   const animate = {
     opacity: 1,
@@ -32,7 +38,7 @@ export default function Projects() {
     <section className="projects">
       <div className="container">
         <div className="project1">
-          <div className="description">
+          <motion.div initial={initialRight} whileInView={animate} className="description">
             <motion.h3 initial={initial} whileInView={animate}>
               Kitchen management
             </motion.h3>
@@ -46,7 +52,7 @@ export default function Projects() {
               which arranges the orders depending on the station(grill, fry), so that each chef can, at a glance, determine which item they should be
               preparing, if there are any modifications to the ingredients and the remaining time before the order should be sent.
             </motion.p>
-          </div>
+          </motion.div>
           <motion.div initial={initialLeft} whileInView={animate} className="pos-wrapper img-btn-container">
             <img src={PhoneBorder} className="phone-outline" alt="phone border outline" />
             <img className="pos-image" src={posMove} alt="animated image of the point of sale app in action" />
@@ -67,7 +73,12 @@ export default function Projects() {
         <div className="kitchen-display-wrapper">
           <motion.div initial={initialLeft} whileInView={animate} className="kitchen-display img-btn-container">
             <img src={kitchenDisplay} alt="" />
-            <div className="overlay"></div>
+            <div className="overlay">
+              <div className="overlay-text">
+                <h3>Kitchen display</h3>
+                <p>Note required pos app</p>
+              </div>
+            </div>
             <form target="_blank">
               <button className="highlight-btn github-btn" type="submit" formAction="https://github.com/Fishamble/kitchen_back_end">
                 GitHub

@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
+import { useRef } from "react";
 import "./DevIcons.css";
 
 export default function DevIcons() {
+  // const scrollRef = useRef<HTMLElement>(null);
+
   const list = {
     visible: {
       transition: {
@@ -11,7 +14,7 @@ export default function DevIcons() {
   };
 
   const item = {
-    hidden: { opacity: 0.1, y: 0 },
+    hidden: { opacity: 0, y: 0 },
     visible: {
       opacity: 1,
       y: 0,
@@ -24,17 +27,7 @@ export default function DevIcons() {
 
   return (
     <section className="dev-icons">
-      <motion.ul
-        className="container"
-        initial="hidden"
-        whileInView="visible"
-        variants={list}
-        viewport={
-          {
-            // once: true,
-          }
-        }
-      >
+      <motion.ul className="container" initial="hidden" whileInView="visible" variants={list} viewport={{ margin: "0px 0px -100px 0px" }}>
         <motion.li variants={item}>
           <i className="devicon-html5-plain colored"></i>
           <span>HTML</span>
