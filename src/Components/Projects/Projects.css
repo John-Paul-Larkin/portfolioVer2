@@ -6,12 +6,11 @@
 .project1 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 2rem;
+  /* justify-content: space-around; */
   position: relative;
+  gap: 1rem;
+  height: auto;
 }
-
-
 
 /* CSS for image overlay   */
 /* reveals the buttons for projects links */
@@ -24,7 +23,11 @@
   display: none;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 700px) {
+  .project1 {
+    padding: 2rem;
+  }
+
   .img-btn-container {
     position: relative;
   }
@@ -95,7 +98,6 @@
   .live-btn {
     left: 66%;
     display: block;
-
   }
 
   .img-btn-container:hover .highlight-btn {

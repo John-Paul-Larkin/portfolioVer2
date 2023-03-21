@@ -10,9 +10,9 @@ export default function Projects() {
       <div className="container">
         <div className="project1">
           <PosDescription />
+          <PosImage />
           <KitchenDisplayImage />
           <YouTube />
-          <PosImage />
         </div>
       </div>
     </section>

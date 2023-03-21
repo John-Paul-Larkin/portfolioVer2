@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import kitchenDisplay from "../../Assets/Images/KitchenDisplay.jpg";
-import './KitchenDisplayImage.css';
+import "./KitchenDisplayImage.css";
 
 export default function KitchenDisplayImage() {
   const animate = {
@@ -13,14 +13,14 @@ export default function KitchenDisplayImage() {
     },
   };
 
-  const initialLeft = {
+  const initialRight = {
     opacity: 0.1,
-    x: -100,
+    x: 100,
   };
 
   return (
     <div className="kitchen-display-wrapper">
-      <motion.div initial={initialLeft} whileInView={animate} className="kitchen-display img-btn-container">
+      <motion.div initial={initialRight} whileInView={animate} className="kitchen-display img-btn-container">
         <img src={kitchenDisplay} alt="" />
         <div className="overlay">
           <div className="overlay-text">

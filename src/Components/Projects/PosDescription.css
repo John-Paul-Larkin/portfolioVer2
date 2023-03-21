@@ -1,10 +1,18 @@
+.description-wrapper {
+  z-index: 3;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  padding-top: 2rem;  
+}
+
 .project1 .description {
+  width:90%;
   padding: 1rem;
   font-size: 0.9rem;
-  display: inline-block;
-  background-color: var(--clr-one);
+  /* display: inline-block; */
   border-radius: 20px;
-  z-index: 3;
   border: 1px solid var(--clr-four);
   background: rgba(27, 42, 65, 0.85); /* --clr-two as rgb   */
 }
@@ -17,12 +25,17 @@
   padding: 1rem 1rem;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 700px) {
   .project1 .description {
-    padding: 1rem;
-    max-width: 50%;
+    padding: 2rem;
     opacity: 1;
     height: fit-content;
     box-shadow: 5px 5px 10px var(--clr-one);
   }
+
+  .description-wrapper {
+    max-width: calc(60% - 0.5rem);
+  }
 }
+
+

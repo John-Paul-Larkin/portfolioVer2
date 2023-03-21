@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import PhoneBorder from "../../Assets/Images/PhoneBorder.png";
 import posMove from "../../Assets/Images/PosMove.webp";
-import './PosImage.css';
+import "./PosImage.css";
 
 const initialRight = {
   opacity: 0.1,
@@ -22,21 +22,28 @@ const animate = {
 
 export default function PosImage() {
   return (
-    <motion.div initial={initialRight} whileInView={animate} className="pos-wrapper img-btn-container">
-      <img src={PhoneBorder} className="phone-outline" alt="phone border outline" />
-      <img src={posMove} className="pos-image" alt="animated image of the point of sale app in action" />
+    <motion.div initial={initialRight} whileInView={animate} className="pos-outer-wrapper">
+      <div className="pos-wrapper">
+        {/* <img src={PhoneBorder} className="phone-outline" alt="phone border outline" /> */}
+        <div className="pos-image-wrapper img-btn-container">
+          <img src={posMove} className="pos-image" alt="animated image of the point of sale app in action" />
+          <div className="notch n1"></div>
+          <div className="notch n2"></div>
+          <div className="notch n3"></div>
 
-      <div className="overlay"></div>
-      <form target="_blank">
-        <button className="highlight-btn github-btn" type="submit" formAction="https://github.com/Fishamble/kitchenpos">
-          GitHub
-        </button>
-      </form>
-      <form target="_blank">
-        <button className="highlight-btn live-btn" type="submit" formAction="https://kitchenpos.netlify.app/">
-          Live
-        </button>
-      </form>
+          <div className="overlay"></div>
+          <form target="_blank">
+            <button className="highlight-btn github-btn" type="submit" formAction="https://github.com/Fishamble/kitchenpos">
+              GitHub
+            </button>
+          </form>
+          <form target="_blank">
+            <button className="highlight-btn live-btn" type="submit" formAction="https://kitchenpos.netlify.app/">
+              Live
+            </button>
+          </form>
+        </div>
+      </div>
     </motion.div>
   );
 }

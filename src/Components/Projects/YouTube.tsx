@@ -4,13 +4,13 @@ import ReactPlayer from "react-player/youtube";
 import "./YouTube.css";
 
 export default function YouTube() {
-  const initialRight = {
+  const initialLeft = {
     opacity: 0.1,
-    x: 100,
+    x: -100,
   };
 
   const animate = {
-    opacity: 1,
+    opacity: .85,
     y: 0,
     x: 0,
     transition: {
@@ -20,7 +20,7 @@ export default function YouTube() {
   };
 
   return (
-    <motion.div initial={initialRight} whileInView={animate} className="player-outer-wrapper">
+    <motion.div initial={initialLeft} whileInView={animate} className="player-outer-wrapper">
       <div className="player-wrapper">
         <ReactPlayer
           className="react-player"
