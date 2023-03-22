@@ -1,24 +1,16 @@
 .projects {
-  background-color: var(--clr-two);
-  padding: 2rem 0;
+  padding-top: 2rem;
 }
 
 .project1 {
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: space-around; */
   position: relative;
-  gap: 1rem;
-  height: auto;
+  display: block;
 }
 
 /* CSS for image overlay   */
 /* reveals the buttons for projects links */
 
-.github-btn {
-  display: none;
-}
-
+.github-btn,
 .live-btn {
   display: none;
 }
@@ -26,6 +18,8 @@
 @media (min-width: 700px) {
   .project1 {
     padding: 2rem;
+    display: grid;
+    grid-template-columns: 50% 1fr;
   }
 
   .img-btn-container {

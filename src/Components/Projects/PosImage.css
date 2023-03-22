@@ -1,90 +1,63 @@
-.pos-outer-wrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-}
-
-.pos-wrapper {
-  filter: brightness(40%);
+.pos-container {
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
-
-.pos-image-wrapper {
-  display: flex;
-  justify-content: center;
-  height: 90%;
-  width: fit-content;
+  position: absolute;
+  top: 0;
+  filter: brightness(50%);
 }
 
 .pos-image {
-  border: 7px solid black;
+  height: 80%;
   border-radius: 25px;
 }
 
-.notch {
-  position: absolute;
-  width: 6px;
-  height: 45px;
-  background-color: black;
-  left: 15px;
-  border-radius: 100px 0 0 100px;
-}
-
-.n1 {
-  top: 70px;
-  height: 30px;
-}
-
-.n2 {
-  top: 120px;
-}
-
-.n3 {
-  top: 180px;
-}
-
-.pos-wrapper img {
-  /* border-radius: 14px; */
-}
-
-.phone-outline {
-  display: none;
-}
+/* --------------------------------------------------------------------------------------------- */
 
 @media (min-width: 700px) {
-  .pos-outer-wrapper {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    position: static;
-    /* width: 200px; */
-  }
-
-  .pos-wrapper {
+  .pos-container {
+    height: fit-content;
+    width: fit-content;
+    display: block;
     filter: none;
-    /* position: relative; */
-    /* z-index: 1; */
+    justify-self: center;
+    position: relative;
   }
 
   .pos-image {
+    /* width:300px; */
+    border: 7px solid black;
     position: relative;
-    /* border-radius: 20px; */
-    /* z-index: 100; */
   }
 
-  .phone-outline {
+  .notch {
     position: absolute;
-    top: -28px;
-    left: -164px;
-    display: block;
-    width: 577px;
-    height: 608px;
-    max-width: none;
+    width: 6px;
+    height: 2.812em;
+    background-color: black;
+    left: -5px;
+    border-radius: 100px 0 0 100px;
+  }
+
+  .n1 {
+    top: 70px;
+    height: 30px;
+  }
+
+  .n2 {
+    top: 120px;
+  }
+
+  .n3 {
+    top: 180px;
+  }
+
+  .n4 {
+    left: 430px;
+    top: 180px;
+    transform: rotateY(180deg);
+    height: 70px;
   }
 }

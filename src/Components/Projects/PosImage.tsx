@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import PhoneBorder from "../../Assets/Images/PhoneBorder.png";
 import posMove from "../../Assets/Images/PosMove.webp";
 import "./PosImage.css";
 
@@ -22,14 +21,12 @@ const animate = {
 
 export default function PosImage() {
   return (
-    <motion.div initial={initialRight} whileInView={animate} className="pos-outer-wrapper">
-      <div className="pos-wrapper">
-        {/* <img src={PhoneBorder} className="phone-outline" alt="phone border outline" /> */}
-        <div className="pos-image-wrapper img-btn-container">
+    <motion.div initial={initialRight} whileInView={animate} className="pos-container img-btn-container">
           <img src={posMove} className="pos-image" alt="animated image of the point of sale app in action" />
           <div className="notch n1"></div>
           <div className="notch n2"></div>
           <div className="notch n3"></div>
+          <div className="notch n4"></div>
 
           <div className="overlay"></div>
           <form target="_blank">
@@ -42,8 +39,6 @@ export default function PosImage() {
               Live
             </button>
           </form>
-        </div>
-      </div>
     </motion.div>
   );
 }

@@ -4,7 +4,7 @@
 
 @media (min-width: 700px) {
     .kitchen-display-wrapper {
-        max-width: calc(50% - .5rem);
+        /* max-width: calc(45% - 2rem); */
         margin: 0 auto;
         display: flex;
         align-items: center;
@@ -18,5 +18,6 @@
         border: 1px solid var(--clr-four);
         width: 100%;
         box-shadow: 5px 5px 10px var(--clr-one);
-      }
+
+    }
 }

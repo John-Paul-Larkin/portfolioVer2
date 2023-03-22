@@ -20,7 +20,7 @@ export default function YouTube() {
   };
 
   return (
-    <motion.div initial={initialLeft} whileInView={animate} className="player-outer-wrapper">
+    <motion.div initial={initialLeft} whileInView={animate} className="player-container">
       <div className="player-wrapper">
         <ReactPlayer
           className="react-player"

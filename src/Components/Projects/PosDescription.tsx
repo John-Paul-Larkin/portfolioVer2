@@ -23,7 +23,7 @@ export default function PosDescription() {
   };
 
   return (
-    <motion.div initial={initialLeft} whileInView={animate} className="description-wrapper">
+    <motion.div initial={initialLeft} whileInView={animate} className="description-container">
       <motion.div initial={initialLeft} whileInView={animate} className="description">
         <motion.h3 initial={initial} whileInView={animate}>
           Kitchen management

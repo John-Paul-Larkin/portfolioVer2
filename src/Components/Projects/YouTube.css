@@ -1,12 +1,11 @@
-.player-outer-wrapper {
-  width: 100%;
-  margin: 2rem;
+.player-container {
+  padding:2rem;
+  padding-top: 0;
   z-index: 3;
-  margin-top: 0;
+  position: relative;
 }
 
 .player-wrapper {
-  /* width: 90%; */
   position: relative;
   padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
   background-color: blue;
@@ -18,7 +17,10 @@
   top: 0;
   left: 0;
   padding: 1rem;
-  border: 1px solid var(--clr-four);
+  border: 2px solid var(--clr-four);
+  
+
+
   background-color: var(--clr-one);
   border-radius: 20px;
   z-index: 3;
@@ -31,6 +33,7 @@
   }
 
   .player-outer-wrapper {
-    max-width: 60%;
+    /* max-width: calc(45% - 2rem); */
+    margin: 1rem;
   }
 }

@@ -4,6 +4,7 @@ import Footer from "./Components/Footer/Footer";
 import HeroScreen from "./Components/Hero/HeroScreen";
 import DevIcons from "./Components/Icons/DevIcons";
 import Projects from "./Components/Projects/Projects";
+import Test from "./Components/Projects/Test";
 
 function App() {
   return (

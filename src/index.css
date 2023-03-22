@@ -15,11 +15,15 @@
   --max-width: 1200px;
 
   font-family: "Roboto", sans-serif;
+  background-color: var(--clr-two);
+  
 }
+
 
 .container {
   max-width: var(--max-width);
   width: 90%;
+  height:100%;
   margin: 0 auto;
   background-color: var(--clr-three);
   border-radius: 20px;
