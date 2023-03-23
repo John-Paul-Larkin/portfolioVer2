@@ -21,9 +21,11 @@
     filter: none;
     position: relative;
 
-    grid-area: 1 / 5 / 10 / -1;
+    grid-area: 1 / 2 / 4 / 3;
     height: fit-content;
     width: fit-content;
+    align-self: center;
+    
   }
 
   .pos-image {
@@ -33,7 +35,19 @@
     position: relative;
   }
 
-  .notch {
+  .pos-container::after {
+    content:'POS app';
+    position:absolute;
+    top: -2rem;
+    left:0;
+    width:100px;
+    padding: 1rem;
+    background-color: brown;
+    /* z-index: 999999; */
+
+  }
+
+  /* .notch {
     position: absolute;
     width: 6px;
     height: 2.812em;
@@ -60,5 +74,5 @@
     top: 180px;
     transform: rotateY(180deg);
     height: 70px;
-  }
+  } */
 }

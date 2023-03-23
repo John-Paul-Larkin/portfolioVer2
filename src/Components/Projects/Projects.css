@@ -2,6 +2,17 @@
   padding-top: 2rem;
 }
 
+.container {
+  max-width: var(--max-width);
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: var(--clr-three);
+  border-radius: 20px;
+  color: var(--clr-seven);
+  box-shadow: 5px 5px 10px var(--clr-one);
+}
+
 .project1 {
   position: relative;
   display: block;
@@ -19,8 +30,8 @@
   .project1 {
     padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: repeat(20,1fr);
+    grid-template-columns: 1fr 395px;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 2rem;
   }
 

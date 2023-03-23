@@ -1,11 +1,29 @@
+import { useEffect, useRef } from "react";
 import FullName from "./FullName";
-import styles from "./Hero.module.css";
+import  "./Hero.css";
 
 export default function HeroScreen() {
+
+  const ref = useRef<HTMLSpanElement>(null)
+  const classVar = 'hero-image-br';
+  
+  useEffect(() => {
+    const timeout = setTimeout(()=>{
+      // classVar =
+      
+    },3000)
+    return () => {
+      clearTimeout(timeout);
+    }
+  }, [])
+  
+
+
   return (
-    <section className={styles["hero-wrapper"]}>
+    <section className="hero-wrapper">
       <span
-        className={styles["hero-image-br"]}
+        className="hero-image-br"
+        ref = {ref}
         role="img"
         aria-label="John Paul Larkin, sitting on a bench, on a hillside in County Kerry, overlooking the ocean."
       >

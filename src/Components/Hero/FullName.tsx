@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styles from "./Hero.module.css";
+import "./Hero.css";
 
 export default function FullName() {
   const name = "John Paul Larkin";
@@ -31,11 +31,11 @@ export default function FullName() {
 
   return (
     <>
-      <h1 className={styles.name}>
+      <h1 className="name">
         {nameArray.map((letter, index) => {
           return (
             <motion.span
-              className={styles.letters}
+              className="letters"
               key={index}
               style={lrgInitials(index)}
               initial={{ opacity: 0 }}
@@ -47,13 +47,8 @@ export default function FullName() {
           );
         })}
 
-        <div className={styles["web-design-wrapper"]}>
-          <motion.p
-            className={styles["web-design"]}
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.5, duration: 2 }}
-          >
+        <div className="web-design-wrapper">
+          <motion.p className="web-design" initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5, duration: 2 }}>
             Front-end web developer
           </motion.p>
         </div>

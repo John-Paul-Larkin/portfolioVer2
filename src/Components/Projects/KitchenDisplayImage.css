@@ -13,7 +13,7 @@
     border: 2px solid var(--clr-four);
     /* width: 100%; */
     box-shadow: 5px 5px 10px var(--clr-one);
-
-    grid-area: 12 / 1 / 21 / 10;
+align-self: center;
+    /* grid-area: 12 / 1 / 21 / 10; */
   }
 }
