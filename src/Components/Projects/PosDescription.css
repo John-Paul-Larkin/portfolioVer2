@@ -21,16 +21,17 @@
 }
 
 @media (min-width: 700px) {
-  .project1 .description {
-  background: rgba(27, 42, 65, 1); /* --clr-two as rgb   */
+  .description-container {
+    grid-area: 1 / 1 / 1 / 12;
+    padding:0;
+  }
 
+  .project1 .description {
+    background: rgba(27, 42, 65, 1); /* --clr-two as rgb   */
     padding: 2rem;
     opacity: 1;
     height: fit-content;
     box-shadow: 5px 5px 10px var(--clr-one);
   }
 
-  .description-wrapper {
-    /* max-width: calc(50% - 1rem); */
-  }
 }

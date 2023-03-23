@@ -19,7 +19,9 @@
   .project1 {
     padding: 2rem;
     display: grid;
-    grid-template-columns: 50% 1fr;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20,1fr);
+    gap: 2rem;
   }
 
   .img-btn-container {

@@ -18,16 +18,17 @@
 
 @media (min-width: 700px) {
   .pos-container {
+    filter: none;
+    position: relative;
+
+    grid-area: 1 / 5 / 10 / -1;
     height: fit-content;
     width: fit-content;
-    display: block;
-    filter: none;
-    justify-self: center;
-    position: relative;
   }
 
   .pos-image {
-    /* width:300px; */
+    height: auto;
+    width: auto;
     border: 7px solid black;
     position: relative;
   }

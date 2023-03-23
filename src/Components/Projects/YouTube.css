@@ -1,8 +1,9 @@
 .player-container {
-  padding:2rem;
+  padding: 2rem;
   padding-top: 0;
   z-index: 3;
   position: relative;
+  grid-area: 10 / 1 / 20 / 10;
 }
 
 .player-wrapper {
@@ -18,8 +19,6 @@
   left: 0;
   padding: 1rem;
   border: 2px solid var(--clr-four);
-  
-
 
   background-color: var(--clr-one);
   border-radius: 20px;
@@ -28,9 +27,20 @@
 }
 
 @media (min-width: 700px) {
-  .react-player {
-    opacity: 1;
+  .player-container {
+    padding: 0;
   }
+
+  .player-container::before {
+    position: relative;
+    content:'Intro video 30 seconds';
+    background-color: red;
+    padding: 1rem;
+    z-index: 10;
+    white-space: pre-wrap;
+
+  }
+
 
   .player-outer-wrapper {
     /* max-width: calc(45% - 2rem); */

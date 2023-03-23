@@ -1,0 +1,24 @@
+.test-container {
+  height: 200vh;
+  background-color: blue;
+}
+
+.cont {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  border: 10px solid black;
+  grid-template-rows: 1fr 2fr 3fr;
+  grid-template-columns: 100px 300px 100px 100px 100px 1fr;
+  gap: 1rem;
+}
+
+.box {
+  background-color: red;
+  border: 4px solid black;
+}
+
+.one {
+  grid-column: 1/6;
+  grid-row: 1/3;
+}

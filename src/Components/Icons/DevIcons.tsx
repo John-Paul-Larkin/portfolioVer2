@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useRef } from "react";
 import "./DevIcons.css";
 
 export default function DevIcons() {

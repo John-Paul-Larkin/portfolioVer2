@@ -1,23 +1,19 @@
-.kitchen-display {
+.kitchen-display-container {
   display: none;
 }
 
 @media (min-width: 700px) {
-    .kitchen-display-wrapper {
-        /* max-width: calc(45% - 2rem); */
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-      }
-    
-      .kitchen-display {
-        display: inline-block;
-        background-color: var(--clr-one);
-        border-radius: 20px;
-        padding: 1rem;
-        border: 1px solid var(--clr-four);
-        width: 100%;
-        box-shadow: 5px 5px 10px var(--clr-one);
+  .kitchen-display-container {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: var(--clr-one);
+    border-radius: 20px;
+    padding: 1rem;
+    border: 2px solid var(--clr-four);
+    /* width: 100%; */
+    box-shadow: 5px 5px 10px var(--clr-one);
 
-    }
+    grid-area: 12 / 1 / 21 / 10;
+  }
 }
