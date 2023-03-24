@@ -51,7 +51,7 @@ label {
   border-bottom: 1px solid var(--clr-four);
 }
 
-.contact .name,
+.contact .contact-name,
 .email,
 .message {
   width: 90%;
@@ -63,7 +63,7 @@ label {
   transition: all 2s ease-out;
 }
 
-.contact .name:focus,
+.contact .contact-name:focus,
 .email:focus,
 .message:focus {
   outline: 3px solid var(--clr-four);

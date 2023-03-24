@@ -12,14 +12,11 @@
   --clr-six: #7a5c61;
   --clr-seven: #e8f0ff;
 
-  --max-width: 1200px;
+  --max-width: 1600px;
 
   font-family: "Roboto", sans-serif;
   background-color: var(--clr-two);
-  
 }
-
-
 
 /*------------------------------------------------- CSS resets */
 /* Box sizing rules */

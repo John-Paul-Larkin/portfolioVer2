@@ -5,8 +5,8 @@
 }
 
 .project1 .description {
-  padding: 1rem;
-  font-size: 0.9rem;
+  padding: 1em;
+  font-size: 1rem;
   border-radius: 20px;
   border: 2px solid var(--clr-four);
   background: rgba(27, 42, 65, 0.85); /* --clr-two as rgb   */
@@ -22,7 +22,7 @@
 
 @media (min-width: 700px) {
   .description-container {
-    /* grid-area: 1 / 1 / 1 / 12; */
+    grid-area: 1 / 1 / 1 / 3;
     padding:0;
     align-self: center;
   }

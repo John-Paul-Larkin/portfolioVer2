@@ -66,7 +66,7 @@ export default function ContactForm() {
               type="text"
               name="name"
               id="name"
-              className="name"
+              className="contact-name"
               placeholder="Optional"
               ref={nameRef}
               tabIndex={2}

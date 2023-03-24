@@ -11,6 +11,7 @@
   border-radius: 20px;
   color: var(--clr-seven);
   box-shadow: 5px 5px 10px var(--clr-one);
+
 }
 
 .project1 {
@@ -30,8 +31,9 @@
   .project1 {
     padding: 2rem;
     display: grid;
-    grid-template-columns: 1fr 395px;
-    grid-template-rows: 1fr 1fr 1fr;
+    
+    grid-template-columns: 1.3fr 1.3fr 1fr; /* 395 */
+    /* grid-template-rows: 1fr 1fr 1fr; */
     gap: 2rem;
   }
 

@@ -13,7 +13,20 @@
     border: 2px solid var(--clr-four);
     /* width: 100%; */
     box-shadow: 5px 5px 10px var(--clr-one);
-align-self: center;
-    /* grid-area: 12 / 1 / 21 / 10; */
+    align-self: center;
+    /* grid-area: 3 / 1 / 4 / -1; */
+  }
+  .kitchen-display-container::after {
+    content: "Kitchen display";
+    position: absolute;
+    font-size: 1rem;
+    top: -2em;
+    left: 2em;
+    background-color: var(--clr-two);
+    padding: 0.5em;
+    font-weight: 700;
+    border: 2px solid var(--clr-four);
+    border-radius: 1rem;
+    z-index: 99;
   }
 }

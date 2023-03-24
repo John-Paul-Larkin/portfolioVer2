@@ -3,18 +3,18 @@ import ContactForm from "./Components/ContactForm/ContactForm";
 import Footer from "./Components/Footer/Footer";
 import HeroScreen from "./Components/Hero/HeroScreen";
 import DevIcons from "./Components/Icons/DevIcons";
-import Gridtest from "./Components/Projects/Gridtest";
 import Projects from "./Components/Projects/Projects";
+import Test from "./Components/Test/Test";
 
 function App() {
   return (
     <>
+      {/* <Test /> */}
       <HeroScreen />
       <Projects />
       <DevIcons />
       <ContactForm />
       <Footer />
-      <Gridtest />
     </>
   );
 }

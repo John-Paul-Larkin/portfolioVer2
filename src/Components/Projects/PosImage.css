@@ -21,30 +21,33 @@
     filter: none;
     position: relative;
 
-    grid-area: 1 / 2 / 4 / 3;
+    grid-area: 1 / 3 / 3 / 4;
     height: fit-content;
     width: fit-content;
     align-self: center;
-    
   }
 
   .pos-image {
-    height: auto;
-    width: auto;
+    /* height: auto; */
+    /* width: auto; */
     border: 7px solid black;
     position: relative;
+    outline: 2px solid var(--clr-four);
+
   }
 
   .pos-container::after {
-    content:'POS app';
-    position:absolute;
-    top: -2rem;
-    left:0;
-    width:100px;
-    padding: 1rem;
-    background-color: brown;
-    /* z-index: 999999; */
-
+    content: "POS app";
+    position: absolute;
+    font-size: 1rem;
+    top: -2em;
+    left: 2em;
+    background-color: var(--clr-two);
+    padding: 0.5em;
+    font-weight: 700;
+    border: 2px solid var(--clr-four);
+    border-radius: 1rem;
+    z-index: 99;
   }
 
   /* .notch {

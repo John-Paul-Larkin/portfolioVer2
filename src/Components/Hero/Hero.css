@@ -85,16 +85,32 @@
 
 .hero-image-br {
   display: block;
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
   /* background-image: url("../../Assets/Images/BenchKerryCompressed.webp"); */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../Assets/Images/BenchKerryCompressed.webp");
   background-attachment: fixed, fixed;
   background-size: cover, cover;
   background-repeat: no-repeat, no-repeat;
-  background-position: center;
+  background-position: bottom;
   /* background-position: 50% -10vh, 0 -70vh; */
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%); */
+  /* border-radius: 0 0 0 10000px/1000px; */
+  position: relative;
+}
+
+.hero-image-br::after {
+  content: "";
+  position: absolute;
+  background-color: var(--clr-two);
+  height: 300px;
+  width: 100%;
+  bottom: 0;
+
+  -webkit-mask-image: url(../../Assets/SVG/Curve.svg);
+  mask-image: url(../../Assets/SVG/Curve.svg);
+  mask-repeat: no-repeat;
+  mask-position: bottom;
 }
 
 .hero-wrapper {

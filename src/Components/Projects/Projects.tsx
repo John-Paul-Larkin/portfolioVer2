@@ -1,10 +1,13 @@
+import { motion } from "framer-motion";
 import KitchenDisplayImage from "./KitchenDisplayImage";
 import PosDescription from "./PosDescription";
 import PosImage from "./PosImage";
 import "./Projects.css";
 import YouTube from "./YouTube";
+  export default function Projects() {
+  // const initial = { y: "20vw" };
+  // const animate = { y: 0, transition: { delay: 2, duration: 2, ease: "easeOut" } };
 
-export default function Projects() {
   return (
     <section className="projects">
       <div className="container">
@@ -16,5 +19,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  );
+  );  
 }
