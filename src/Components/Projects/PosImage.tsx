@@ -1,23 +1,9 @@
 import { motion } from "framer-motion";
 import posMove from "../../Assets/Images/PosMove.webp";
+import { animate, initial, initialRight } from "../../Assets/AnimateValues";
+
 import "./PosImage.css";
 
-const initialRight = {
-  opacity: 0.1,
-  x: 100,
-};
-
-const animate = {
-  opacity: 1,
-  y: 0,
-  x: 0,
-  transition: {
-    ease: "easeOut",
-    duration: 0.5,
-    // type:'spring'
-    // bounce:1
-  },
-};
 
 export default function PosImage() {
   return (

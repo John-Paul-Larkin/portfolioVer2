@@ -34,16 +34,20 @@
     position: relative;
     outline: 2px solid var(--clr-four);
 
+
+    /* mask-image: linear-gradient(blue,transparent); */
+
   }
 
   .pos-container::after {
     content: "POS app";
     position: absolute;
-    font-size: 1rem;
+    font-size: 0.8rem;
     top: -2em;
     left: 2em;
+    color:var(--clr-six); 
     background-color: var(--clr-two);
-    padding: 0.5em;
+    padding: .5em 1.5em;
     font-weight: 700;
     border: 2px solid var(--clr-four);
     border-radius: 1rem;

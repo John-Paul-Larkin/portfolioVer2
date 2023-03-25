@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import FullName from "./FullName";
+import { useRef } from "react";
+// import FullNameTest from "./FullNameTest";
 import "./HeroTest.css";
 
 export default function HeroScreen() {
@@ -24,7 +24,7 @@ export default function HeroScreen() {
         role="img"
         aria-label="John Paul Larkin, sitting on a bench, on a hillside in County Kerry, overlooking the ocean."
       >
-        <FullName />
+        <h1 className="name">John Paul Larkin</h1>
       </span>
     </section>
   );

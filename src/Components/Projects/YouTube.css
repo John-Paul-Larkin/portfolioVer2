@@ -35,7 +35,7 @@
   .player-container::before {
     content: "Intro video 30 seconds";
     position: absolute;
-    font-size: 1rem;
+    font-size: .8rem;
     top: -2em;
     left: 2em;
     background-color: var(--clr-two);
@@ -43,8 +43,8 @@
     font-weight: 700;
     border: 2px solid var(--clr-four);
     border-radius: 1rem;
-    z-index: 99; 
-   }
+    z-index: 99;
+  }
 
   .player-outer-wrapper {
     /* max-width: calc(45% - 2rem); */

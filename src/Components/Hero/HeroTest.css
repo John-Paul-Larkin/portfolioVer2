@@ -1,22 +1,35 @@
-
-
 .name {
-  text-align: center;
-  color: white;
+  /* text-align: center; */
+  /* color: white; */
+  /* display: block; */
 
-  text-shadow: 0.01em 0 black, 0 0.01em black, -0.01em 0 black, 0 -0.01em black;
-  font-family: "Valencia";
-  position: relative;
+  /* text-shadow: 0.01em 0 black, 0 0.01em black, -0.01em 0 black, 0 -0.01em black; */
+  /* font-family: "Valencia"; */
+  /* position: relative; */
   /* z-index: 1; */
-  font-weight: 400;
+  /* font-weight: 00; */
   /* padding:1rem; */
   /* background-color: black; */
-  /* background-image: url("../../Assets/Images/BenchKerryCompressed.webp"); */
-  /* background-clip: text; */
   /* color: transparent; */
   /* background-position: bottom; */
   background-size: cover;
+  /* height: 100%; */
+  /* width: fit-content; */
+  background-clip: text;
+  color: transparent;
+  /* color: white; */
+  display: block;
+  line-height: 0.9;
 }
+
+h1 span {
+  /* background-color: white; */
+  /* background-image: url("../../Assets/Images/BenchKerryCompressed.webp"); */
+  /* background-position: bottom; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+}
+
 /* 
 .name::after {
   content: "";
@@ -56,16 +69,16 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../Assets/Images/BenchKerryCompressed.webp");
   background-size: cover, cover;
   background-repeat: no-repeat, no-repeat;
-  background-position: bottom; 
+  background-position: bottom;
   position: relative;
-  
-    /* background-clip: text; */
-    /* background-image: url("../../Assets/Images/BenchKerryCompressed.webp"); */
+
+  /* background-clip: text; */
+  /* background-image: url("../../Assets/Images/BenchKerryCompressed.webp"); */
   /* background-position: 50% -10vh, 0 -70vh; */
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%); */
   /* border-radius: 0 0 0 10000px/1000px; */
   /* isolation: isolate; */
-   /* background-attachment: fixed, fixed; */
+  /* background-attachment: fixed, fixed; */
 }
 
 /* .hero-image-br::after {

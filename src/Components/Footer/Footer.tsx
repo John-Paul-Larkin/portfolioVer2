@@ -2,6 +2,7 @@ import { faFacebook, faGithub, faTwitter } from "@fortawesome/free-brands-svg-ic
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faPersonDigging } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import "./Footer.css";

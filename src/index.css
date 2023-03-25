@@ -9,14 +9,30 @@
   --clr-three: #324a5f;
   --clr-four: #6874e8;
   --clr-five: #ee589e;
-  --clr-six: #7a5c61;
+  --clr-six: yellow;
   --clr-seven: #e8f0ff;
 
-  --max-width: 1600px;
+  --max-width: 1400px;
 
   font-family: "Roboto", sans-serif;
   background-color: var(--clr-two);
+  /* background: radial-gradient(circle, rgba(51, 91, 126, 1), rgba(50, 54, 95, 1), rgb(89, 94, 152)); */
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+  /* background-size: 400% 400%; */
+  /* animation: gradient 20s ease infinite; */
 }
+
+/* @keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
 
 /*------------------------------------------------- CSS resets */
 /* Box sizing rules */
