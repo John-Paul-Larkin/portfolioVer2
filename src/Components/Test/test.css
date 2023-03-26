@@ -1,23 +1,38 @@
-.test-wrapper {
+/* .parallax-wrapper {
   height: 100vh;
-  color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+  transform-style: preserve-3d;
+
+  position: relative;
+} */
+
+.hero__title {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  font-size: 4rem;
+  transform: translateZ(-1px) scale(2);
 }
 
-.box {
-  /* display: inline-block; */
-  width: 200px;
-  height: 200px;
+.parallax-content {
+  transform: translateZ(0) scale(2);
+  position: absolute;
+  inset: 0;
+
+  /* height: 100vh; */
+  /* width: 100vw;   */
+   background-image: url("../../Assets/Images/BenchKerryCompressed.webp");
+  background-repeat: none;
+  background-position: center;
+  background-size: contain;
+
+
 }
 
-.one {
-  background-color: aqua;
-}
-
-.two {
-  background-color: blanchedalmond;
-}
-
-.three {
-  background-color: blue;
-  margin-top: -100;
+.parallax-content img {
+  /* height: 100%; */
+  /* width: 100%; */
+  /* object-fit: contain; */
 }

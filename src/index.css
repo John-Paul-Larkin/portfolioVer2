@@ -1,3 +1,20 @@
+/* test */
+#root {
+  /* height: 100%; */
+  /* overflow-x: hidden; */
+  /* overflow-y: auto; */
+  /* overflow-y: scroll; */
+
+
+
+  /* perspective: 10px; */
+  /* transform-style: preserve-3d; */
+
+  /* position: relative; */
+}
+
+/* test */
+
 @font-face {
   src: local("Valencia"), url(./Assets/Fonts/Valencia.ttf) format("truetype");
   font-family: "Valencia";
@@ -16,23 +33,7 @@
 
   font-family: "Roboto", sans-serif;
   background-color: var(--clr-two);
-  /* background: radial-gradient(circle, rgba(51, 91, 126, 1), rgba(50, 54, 95, 1), rgb(89, 94, 152)); */
-  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-  /* background-size: 400% 400%; */
-  /* animation: gradient 20s ease infinite; */
 }
-
-/* @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-} */
 
 /*------------------------------------------------- CSS resets */
 /* Box sizing rules */

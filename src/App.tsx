@@ -1,20 +1,21 @@
 import "./App.css";
 import ContactForm from "./Components/ContactForm/ContactForm";
 import Footer from "./Components/Footer/Footer";
-import HeroScreenTest from "./Components/Hero/HeroScreenTest";
 import DevIcons from "./Components/Icons/DevIcons";
 import Projects from "./Components/Projects/Projects";
-import Test from "./Components/Test/Test";
+// import "../src/Components/Hero/HeroTest.css";
+import HeroScreenTest from "./Components/Hero/HeroScreenTest";
+// import Test from "./Components/Test/Test";
 
 function App() {
   return (
     <>
-      {/* <Test /> */}
-      <HeroScreenTest />
-      <Projects />
-      <DevIcons />
-      <ContactForm />
-      <Footer />
+        {/* <Test /> */}
+        <HeroScreenTest />
+        <Projects />
+        <DevIcons />
+        <ContactForm />
+        <Footer />
     </>
   );
 }
