@@ -9,7 +9,8 @@
   font-size: 1rem;
   border-radius: 20px;
   border: 2px solid var(--clr-four);
-  background: rgba(27, 42, 65, 0.85); /* --clr-two as rgb   */
+  background: rgba(27, 42, 65, 0.85); /*--clr-two as rgb */
+  
 }
 
 .project-heading {
@@ -47,8 +48,10 @@
   }
 
   .project1 .description {
-    background: rgba(27, 42, 65, 1); /* --clr-two as rgb   */
-    padding: 2rem;
+  
+   background: rgb(46,61,107);
+background: radial-gradient(circle, rgba(46,61,107,1) 50%, rgba(43,47,89,1) 93%);
+   padding: 2rem;
     opacity: 1;
     /* height: fit-content; */
     box-shadow: 5px 5px 10px var(--clr-one);

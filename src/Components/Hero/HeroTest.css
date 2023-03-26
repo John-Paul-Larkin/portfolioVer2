@@ -1,6 +1,6 @@
 .hero-wrapper {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("../../Assets/Images/BenchKerryCompressed.webp");
-  background-position: bottom;
+  background-position: center ;
   background-size: cover;
   min-height: 100vh;
   background-attachment: fixed;
@@ -8,6 +8,7 @@
   /* overflow:visible; */
   /* overflow-x: hidden; */
   contain: paint;
+  transition: all 1s ease-out;
 }
 
 .name {
@@ -24,11 +25,23 @@
 
   font-weight: 900;
   line-height: 1em;
-  text-shadow: 15px 15px white;
+  text-shadow: 15px 15px var(--clr-six);
+}
+
+.name::after {
+  content: '';
+  position: absolute;
+  width:10px;
+  height: .5em;
+  bottom: -.4em;
+  left: 4em;
+  background-color: var(--clr-six);
+
 }
 
 .name span::first-letter {
   font-size: 1.2em;
+  /* color:white */
 }
 
 /* .hero-wrapper {
@@ -53,7 +66,7 @@
   background-attachment: fixed;
 } */
 
-.name {
+
   /* z-index: 999; */
   /* position: absolute; */
   /* font-size: 0.5em; */
@@ -80,9 +93,8 @@
   /* background-color: antiquewhite; */
   /* background-blend-mode: difference; */
   /* position: relative; */
-}
 
-.name::after {
+/* .name::after { */
   /* position: absolute; */
   /* inset: 0; */
   /* inset-block-end: 20rem; */
@@ -96,7 +108,6 @@
   background-clip: text; */
   /* color: transparent; */
   /* background: transparent; */
-}
 
 span {
   display: block;
@@ -110,9 +121,8 @@ span:nth-of-type(3) {
   padding-left: 2ch;
 }
 
-span::first-letter {
   /* color: black; */
-}
+
 
 /* 
 .name::after {

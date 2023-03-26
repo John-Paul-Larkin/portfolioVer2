@@ -1,5 +1,8 @@
 .projects {
   padding-top: 2rem;
+  border: 5px solid var(--clr-six);
+  border-bottom: 0;
+  position: relative;
 }
 
 .container {
@@ -12,9 +15,7 @@
   box-shadow: 5px 5px 10px var(--clr-one);
   background-color: var(--clr-three);
   /* background: radial-gradient(circle, rgba(51,91,126,1) 9%, rgba(50,54,95,1) 93%); */
-  
 }
- 
 
 .project1 {
   position: relative;
@@ -33,7 +34,7 @@
   .project1 {
     padding: 2rem;
     display: grid;
-    
+
     grid-template-columns: 1.3fr 1.3fr 1fr; /* 395 */
     /* grid-template-rows: 1fr 1fr 1fr; */
     gap: 2rem;
