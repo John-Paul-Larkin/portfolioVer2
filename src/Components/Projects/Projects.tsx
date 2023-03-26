@@ -9,7 +9,7 @@ import YouTube from "./YouTube";
   // const animate = { y: 0, transition: { delay: 2, duration: 2, ease: "easeOut" } };
 
   return (
-    <section className="projects">
+     <section className="projects" id='projects'>
       <div className="container">
         <div className="project1">
           <PosDescription />

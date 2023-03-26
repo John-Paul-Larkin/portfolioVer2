@@ -12,26 +12,28 @@
 }
 
 .name {
-  font-size: 0.5em;
+  /* width:33%; */
+  font-size:1em;
   position: sticky;
-  /* bottom: 1em; */
   top: 1em;
+  bottom: 1em;
   margin-bottom: 0.4em;
   background: linear-gradient(to top, black 10%, rgba(50, 74, 95, 1) 100%);
   -webkit-background-clip: text;
-  background-attachment: fixed;
   background-clip: text;
+  /* background-attachment: fixed; */
   color: transparent;
 
   font-weight: 900;
   line-height: 1em;
   text-shadow: 15px 15px var(--clr-six);
+  /* text-align: center; */
 }
 
 .name::after {
   content: '';
   position: absolute;
-  width:10px;
+  width: .06em;
   height: .5em;
   bottom: -.4em;
   left: 4em;
@@ -44,71 +46,6 @@
   /* color:white */
 }
 
-/* .hero-wrapper {
-  position: relative;
-  overflow: hidden;
-  min-height: 100vh;
-  width: 100%;
-  transform-style: inherit;
-} */
-
-/* .hero-wrapper::before {
-  content: "";
-  display: block;
-  inset: 0;
-  position: absolute;
-  min-height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("../../Assets/Images/BenchKerryCompressed.webp");
-  background-position: bottom;
-  background-size: cover;
-  transform-style: preserve-3d;
-  transform: translateZ(-1px) scale(2);
-  background-attachment: fixed;
-} */
-
-
-  /* z-index: 999; */
-  /* position: absolute; */
-  /* font-size: 0.5em; */
-  /* background-color: red; */
-  /* transform: translateZ(0) ; */
-  /* transform-style: preserve-3d; */
-  /* top: 50%; */
-  /* left: 50%; */
-  /* transform: translateZ(-1px) scale(2) translate(-25%, -25%); */
-
-  /* height: 100vh; */
-  /* width: fit-content; */
-  /* background-color: var(--clr-three); */
-  /* background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .1)), url("../../Assets/Images/BenchKerryCompressed.webp"); */
-  /* background:linear-gradient(var(--clr-three),var(--clr-one)); */
-  /* background: linear-gradient(90deg, black 10%, rgba(50, 74, 95, 1) 40%); */
-  /* background-image: url("../../Assets/Images/BenchKerryCompressed.webp");
-  background-size: cover;
-  background-position: bottom;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent; */
-  /* text-align: center; */
-  /* background-color: antiquewhite; */
-  /* background-blend-mode: difference; */
-  /* position: relative; */
-
-/* .name::after { */
-  /* position: absolute; */
-  /* inset: 0; */
-  /* inset-block-end: 20rem; */
-  /* background-color: aqua; */
-  /* top: 0; */
-  /* left: 0; */
-  /* width: 7ch; */
-  /* height: 5ch; */
-  /* content: "sdafffffffffffffffffffffffffffffff"; */
-  /* -webkit-background-clip: text;
-  background-clip: text; */
-  /* color: transparent; */
-  /* background: transparent; */
-
 span {
   display: block;
 }
@@ -120,20 +57,6 @@ span:nth-of-type(2) {
 span:nth-of-type(3) {
   padding-left: 2ch;
 }
-
-  /* color: black; */
-
-
-/* 
-.name::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: #355f08;
-  z-index: -1;
-  mix-blend-mode:screen;
-
-} */
 
 .letters {
   display: inline;
@@ -174,8 +97,8 @@ span:nth-of-type(3) {
   /* isolation: isolate; */
   /* background-attachment: fixed, fixed; */
 }
-
-/* .hero-image-br::after {
+/* 
+.hero-image-br::after {
   content: "";
   position: absolute;
   background-color: var(--clr-two);
@@ -187,35 +110,36 @@ span:nth-of-type(3) {
   mask-image: url(../../Assets/SVG/Curve.svg);
   mask-repeat: no-repeat;
   mask-position: bottom;
-} */
+} 
+  */
 
 @media (min-width: 2560px) {
   .hero-wrapper {
-    font-size: 250px;
+    font-size: 180px;
   }
 }
 
 @media (max-width: 2560px) {
   .hero-wrapper {
-    font-size: 250px;
+    font-size: 130px;
   }
 }
 
 @media (max-width: 1440px) {
   .hero-wrapper {
-    font-size: 200px;
+    font-size: 100px;
   }
 }
 
 @media (max-width: 1024px) {
   .hero-wrapper {
-    font-size: 150px;
+    font-size: 90px;
   }
 }
 
 @media (max-width: 768px) {
   .hero-wrapper {
-    font-size: 105px;
+    font-size: 80px;
   }
   .name {
     top: 10vh;
@@ -224,21 +148,21 @@ span:nth-of-type(3) {
 
 @media (max-width: 425px) {
   .hero-wrapper {
-    font-size: 92px;
+    font-size: 70px;
   }
   .name {
-    top: 20vh;
+    top: 10vh;
   }
 }
 
 @media all and (max-width: 375px) {
   .hero-wrapper {
-    font-size: 78px;
+    font-size: 55px;
   }
 }
 
 @media all and (max-width: 320px) {
   .hero-wrapper {
-    font-size: 65px;
+    font-size: 50px;
   }
 }
