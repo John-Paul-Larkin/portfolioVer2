@@ -2,13 +2,11 @@ import { motion, useAnimationControls } from "framer-motion";
 import { useContext, useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-// import FullNameTest from "./FullNameTest";
-// import kerryBench from "../../Assets/Images/BenchKerryCompressed.webp";
 import { PortfolioContext } from "../../Context/PortfolioContext";
-// import useOnScreen from "../../Hooks/useOnScreen";
 import "./HeroTest.css";
 
 export default function HeroScreen() {
+  // animates the projects screen by reducing the size of the hero.
   const heroWrapperRef = useRef<HTMLElement>(null);
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -20,9 +18,8 @@ export default function HeroScreen() {
     };
   }, []);
 
+  
   const portfolioContext = useContext(PortfolioContext);
-
-  // const elementRef = useRef<HTMLDivElement>(null);
 
   const [projectRef, setProjectRef] = useState<HTMLElement | null>(null);
   useEffect(() => {
@@ -31,37 +28,26 @@ export default function HeroScreen() {
     }
   }, [portfolioContext]);
 
-  // const isOnScreen = useOnScreen({ ref: elementRef, projectRef });
-
   const { ref, inView, entry } = useInView({
     root: heroWrapperRef.current,
     rootMargin: "0px",
     threshold: 1,
 
     onChange: () => {
-      // console.log(entry);
-      if (entry !== undefined) {
+      if (entry !== undefined && inView === true) {
         projectRef!.style.borderTop = "5px solid var(--clr-six)";
         frontEndRef.current!.className = "front-end";
-        // frontEndRef.current!.
-        // controls.start({ y: 0, transition: { duration: 2 } });
+      } else if (entry !== undefined && inView === false) {
+        projectRef!.style.borderTop = "5px solid transparent";
+        frontEndRef.current!.className = "front-end-before";
       }
     },
   });
 
-  // console.log(inView, "inview", projectRef);
-
   const frontEndRef = useRef<HTMLSpanElement>(null);
-
-  const controls = useAnimationControls();
-
-  // useEffect(() => {
-  //   controls.start({ y: 0, transition: { duration: 2 } });
-  // }, [controls]);
 
   return (
     <section className="hero-wrapper" ref={heroWrapperRef}>
-      
       <h1 className="name">
         <span>John </span> <span>Paul</span> <span>Larkin</span>
         <div className="int-obs-test" ref={ref}></div>

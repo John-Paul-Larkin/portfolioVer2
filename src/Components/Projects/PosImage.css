@@ -10,13 +10,20 @@
 }
 
 .pos-image {
-  height: 80%;
+  max-width: 90%;
+  max-height: 80%;
   border-radius: 25px;
 }
 
 /* --------------------------------------------------------------------------------------------- */
 
 @media (min-width: 700px) {
+
+  
+}
+
+
+@media (min-width: 1200px) {
   .pos-container {
     filter: none;
     position: relative;
@@ -28,13 +35,9 @@
   }
 
   .pos-image {
-    /* height: auto; */
-    /* width: auto; */
     border: 7px solid black;
     position: relative;
     outline: 2px solid var(--clr-four);
-
-    /* mask-image: linear-gradient(blue,transparent); */
   }
 
   .pos-container::after {
@@ -43,34 +46,10 @@
     font-size: 0.8rem;
     top: -2em;
     left: 2em;
-    /* color:var(--clr-six);  */
     background-color: var(--clr-two);
     padding: 0.5em 1.5em;
     font-weight: 700;
     border: 2px solid var(--clr-four);
     border-radius: 1rem;
-    /* z-index: 99;  test may require media query */
-  }
-
-  .notch {
-    position: absolute;
-    width: 6px;
-    height: 2.812em;
-    background-color: black;
-    left: -5px;
-    border-radius: 100px 0 0 100px;
-  }
-
-  .n1 {
-    top: 70px;
-    height: 30px;
-  }
-
-  .n2 {
-    top: 120px;
-  }
-
-  .n3 {
-    top: 180px;
   }
 }

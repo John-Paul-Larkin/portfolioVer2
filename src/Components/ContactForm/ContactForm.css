@@ -10,15 +10,6 @@
   flex-direction: column;
 }
 
-.contact h3 {
-  margin-top: 3rem;
-  font-size: 3.5rem;
-  text-align: center;
-  font-weight: bold;
-  letter-spacing: 1px;
-  /* color:var(--clr-four); */
-}
-
 .contact p {
   text-align: center;
   font-size: 1.3rem;

@@ -1,11 +1,8 @@
 .projects {
   padding-top: 2rem;
-  border: 5px solid transparent;
   border-bottom: 0;
   position: relative;
-  /* background-color: aqua; */
-  transition: all .25 ease;
-
+  width: 100%;
 }
 
 .container {
@@ -17,31 +14,33 @@
   color: var(--clr-seven);
   box-shadow: 5px 5px 10px var(--clr-one);
   background-color: var(--clr-three);
-/* decide on color */
-  background: radial-gradient(circle, rgba(51,91,126,1) 9%, rgba(50,54,95,1) 93%);
+  /* decide on color */
+  background: radial-gradient(circle, rgba(51, 91, 126, 1) 9%, rgba(50, 54, 95, 1) 93%);
 }
 
-/* .project1 { */
-  /* position: relative; */
-  /* display: block; */
-/* } */
+.project1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 
 /* CSS for image overlay   */
 /* reveals the buttons for projects links */
 
 .github-btn,
-.live-btn {
+.live-btn,
+.overlay-text {
   display: none;
 }
 
 @media (min-width: 700px) {
   .project1 {
-    padding: 2rem;
     display: grid;
-
-    grid-template-columns: 1.3fr 1.3fr 1fr; /* 395 */
-    /* grid-template-rows: 1fr 1fr 1fr; */
+    grid-template-columns: 1fr 1fr; /* 395 */
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 2rem;
+    padding: 2rem;
+  
   }
 
   .img-btn-container {
@@ -66,6 +65,7 @@
     transform: translateX(-50%);
     opacity: 0;
     font-size: 2rem;
+    text-align: center;
   }
 
   .overlay-text p {
@@ -122,5 +122,16 @@
 
   .img-btn-container:hover .overlay-text {
     opacity: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project1 {
+    padding: 2rem;
+    display: grid;
+
+    grid-template-columns: 1.3fr 1.3fr 1fr; /* 395 */
+    grid-template-rows: auto;
+    gap: 2rem;
   }
 }

@@ -1,6 +1,6 @@
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faGithub } from "@fortawesome/free-brands-svg-icons";
-// import { faPlayCircle } from "@fortawesome/free-regular-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faPlayCircle } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { motion } from "framer-motion";
 import "./PosDescription.css";
@@ -33,8 +33,10 @@ export default function PosDescription() {
           <TextScrollHighlight>at a glance</TextScrollHighlight>, determine which item they should be preparing, if there are any modifications to the
           ingredients and the remaining time before the order should be sent.
         </p>
-        {/* <FontAwesomeIcon className="description-icons" title="GitHub" icon={faGithub} /> */}
-        {/* <FontAwesomeIcon className="description-icons" icon={faPlayCircle} /> */}
+        <TextScrollHighlight>
+        <FontAwesomeIcon className="description-icons" title="GitHub" icon={faGithub} />
+        </TextScrollHighlight>
+        <FontAwesomeIcon className="description-icons" icon={faPlayCircle} />
       </motion.div>
     </motion.div>
   );

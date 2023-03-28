@@ -9,7 +9,7 @@ export default function KitchenDisplayImage() {
       <img src={kitchenDisplay} alt="" />
       <div className="overlay">
         <div className="overlay-text">
-          <h3>Kitchen display</h3>
+          <h4>Kitchen display</h4>
           <p>Note required pos app</p>
         </div>
       </div>

@@ -3,6 +3,12 @@
 }
 
 @media (min-width: 700px) {
+
+  
+}
+
+
+@media (min-width: 1200px) {
   .kitchen-display-container {
     display: flex;
     align-items: center;

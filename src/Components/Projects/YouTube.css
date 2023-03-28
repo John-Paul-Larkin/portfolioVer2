@@ -1,9 +1,7 @@
 .player-container {
   padding: 2rem;
   padding-top: 0;
-  /* z-index: 3;       test media q */
   position: relative;
-  /* grid-area: 10 / 1 / 20 / 10; */
 }
 
 .player-wrapper {
@@ -19,14 +17,19 @@
   left: 0;
   padding: 1rem;
   border: 2px solid var(--clr-four);
-
   background-color: var(--clr-one);
   border-radius: 20px;
-  /* z-index: 3;           test media q */
   box-shadow: 5px 5px 10px var(--clr-one);
 }
 
 @media (min-width: 700px) {
+
+  
+}
+
+
+
+@media (min-width: 1200px) {
   .player-container {
     padding: 0;
     align-self: center;
@@ -46,7 +49,6 @@
     z-index: 99;   }
 
   .player-outer-wrapper {
-    /* max-width: calc(45% - 2rem); */
     margin: 1rem;
   }
 }

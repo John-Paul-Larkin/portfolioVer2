@@ -7,6 +7,8 @@ import "./Projects.css";
 import YouTube from "./YouTube";
 
 export default function Projects() {
+
+  //ref for animating hero
   const portfolioContext = useContext(PortfolioContext);
 
   return (
