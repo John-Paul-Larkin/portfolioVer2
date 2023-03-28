@@ -6,16 +6,21 @@ import Projects from "./Components/Projects/Projects";
 // import "../src/Components/Hero/HeroTest.css";
 import HeroScreenTest from "./Components/Hero/HeroScreenTest";
 // import Test from "./Components/Test/Test";
+import React from "react";
+import PortfolioStore from "./Context/PortfolioContext";
+import HeroScreen from "./Components/Hero/HeroScreen";
 
 function App() {
   return (
     <>
+      <PortfolioStore>
         {/* <Test /> */}
-        <HeroScreenTest />
-        <Projects />
+          <HeroScreenTest />
+          <Projects />
         <DevIcons />
         <ContactForm />
         <Footer />
+      </PortfolioStore>
     </>
   );
 }

@@ -30,6 +30,6 @@
     font-weight: 700;
     border: 2px solid var(--clr-four);
     border-radius: 1rem;
-    z-index: 99;
+    /* z-index: 99; */
   }
 }

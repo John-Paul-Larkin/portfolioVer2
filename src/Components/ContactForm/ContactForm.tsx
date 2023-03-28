@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import TextScrollHighlight from "../Projects/TextScrollHighlight";
 import "./ContactForm.css";
 
 export default function ContactForm() {
@@ -32,7 +33,9 @@ export default function ContactForm() {
       {/* <SectionHeading heading="Get in touch!" /> */}
       <div className="container">
         <div className="heading">
+        <TextScrollHighlight>
           <h3>Get in touch!</h3>
+          </TextScrollHighlight>
           <motion.p whileInView={animation.animate} initial={animation.initial}>
             Comments, suggestions, or just want to say hello?
           </motion.p>

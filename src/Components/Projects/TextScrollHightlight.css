@@ -1,0 +1,10 @@
+
+.inView {
+    color: var(--clr-six);
+  }
+  
+  .border-highlight {
+    /* border-bottom: 3px solid black; */
+     background-color: orangered;
+    color:white
+  }

@@ -1,15 +1,16 @@
-import { motion } from "framer-motion";
+import { useContext } from "react";
+import { PortfolioContext } from "../../Context/PortfolioContext";
 import KitchenDisplayImage from "./KitchenDisplayImage";
 import PosDescription from "./PosDescription";
 import PosImage from "./PosImage";
 import "./Projects.css";
 import YouTube from "./YouTube";
-  export default function Projects() {
-  // const initial = { y: "20vw" };
-  // const animate = { y: 0, transition: { delay: 2, duration: 2, ease: "easeOut" } };
+
+export default function Projects() {
+  const portfolioContext = useContext(PortfolioContext);
 
   return (
-     <section className="projects" id='projects'>
+    <section className="projects" ref={portfolioContext}>
       <div className="container">
         <div className="project1">
           <PosDescription />
@@ -19,5 +20,5 @@ import YouTube from "./YouTube";
         </div>
       </div>
     </section>
-  );  
+  );
 }

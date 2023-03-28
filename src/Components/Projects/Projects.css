@@ -1,8 +1,11 @@
 .projects {
   padding-top: 2rem;
-  border: 5px solid var(--clr-six);
+  border: 5px solid transparent;
   border-bottom: 0;
   position: relative;
+  /* background-color: aqua; */
+  transition: all .25 ease;
+
 }
 
 .container {
@@ -14,13 +17,14 @@
   color: var(--clr-seven);
   box-shadow: 5px 5px 10px var(--clr-one);
   background-color: var(--clr-three);
-  /* background: radial-gradient(circle, rgba(51,91,126,1) 9%, rgba(50,54,95,1) 93%); */
+/* decide on color */
+  background: radial-gradient(circle, rgba(51,91,126,1) 9%, rgba(50,54,95,1) 93%);
 }
 
-.project1 {
-  position: relative;
-  display: block;
-}
+/* .project1 { */
+  /* position: relative; */
+  /* display: block; */
+/* } */
 
 /* CSS for image overlay   */
 /* reveals the buttons for projects links */

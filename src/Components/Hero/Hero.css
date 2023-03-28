@@ -84,7 +84,8 @@
 
 .hero-wrapper {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden;      */
+        /* test for z-index */
 }
 
 @media (min-width: 2560px) {

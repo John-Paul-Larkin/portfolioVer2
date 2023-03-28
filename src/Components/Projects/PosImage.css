@@ -34,9 +34,7 @@
     position: relative;
     outline: 2px solid var(--clr-four);
 
-
     /* mask-image: linear-gradient(blue,transparent); */
-
   }
 
   .pos-container::after {
@@ -45,16 +43,16 @@
     font-size: 0.8rem;
     top: -2em;
     left: 2em;
-    color:var(--clr-six); 
+    /* color:var(--clr-six);  */
     background-color: var(--clr-two);
-    padding: .5em 1.5em;
+    padding: 0.5em 1.5em;
     font-weight: 700;
     border: 2px solid var(--clr-four);
     border-radius: 1rem;
-    z-index: 99;
+    /* z-index: 99;  test may require media query */
   }
 
-  /* .notch {
+  .notch {
     position: absolute;
     width: 6px;
     height: 2.812em;
@@ -75,11 +73,4 @@
   .n3 {
     top: 180px;
   }
-
-  .n4 {
-    left: 430px;
-    top: 180px;
-    transform: rotateY(180deg);
-    height: 70px;
-  } */
 }
