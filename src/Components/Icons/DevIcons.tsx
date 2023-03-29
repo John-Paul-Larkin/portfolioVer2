@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import TextScrollHighlight from "../Projects/TextScrollHighlight";
+import TextScrollHighlight from "../Projects/MainProject/TextScrollHighlight";
+
 import "./DevIcons.css";
 
 export default function DevIcons() {

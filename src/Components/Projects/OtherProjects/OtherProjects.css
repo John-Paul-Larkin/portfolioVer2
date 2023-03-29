@@ -1,0 +1,20 @@
+.other-projects-container {
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: 2px solid var(--clr-four);
+  background: rgba(27, 42, 65, 0.85); /*--clr-two as rgb */
+  box-shadow: 5px 5px 10px var(--clr-one);
+}
+
+.other-projects-wrapper {
+    padding:1rem;
+}
+
+@media (min-width:700px){
+    .other-projects-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

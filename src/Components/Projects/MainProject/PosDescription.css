@@ -2,7 +2,6 @@
   position: relative;
   z-index: 3;
   padding: 1rem 0;
-
 }
 
 .project1 .description {
@@ -15,7 +14,7 @@
 }
 
 .project-heading {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   font-weight: bold;
   letter-spacing: 1px;

@@ -1,6 +1,6 @@
 .contact {
   /* background-color: var(--clr-two); */
-  /* padding: 2rem 0; */
+  padding: 0;
 }
 
 .contact .heading {
@@ -12,8 +12,8 @@
 
 .contact p {
   text-align: center;
-  font-size: 1.3rem;
   line-height: 2rem;
+  padding: 0 1rem;
 }
 
 .contact .form {

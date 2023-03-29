@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import TextScrollHighlight from "../Projects/TextScrollHighlight";
+import TextScrollHighlight from "../Projects/MainProject/TextScrollHighlight";
 import "./ContactForm.css";
 
 export default function ContactForm() {

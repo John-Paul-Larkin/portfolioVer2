@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { PortfolioContext } from "../../Context/PortfolioContext";
+import { PortfolioContext } from "../../../Context/PortfolioContext";
+import OtherProjects from "../OtherProjects/OtherProjects";
 import KitchenDisplayImage from "./KitchenDisplayImage";
 import PosDescription from "./PosDescription";
 import PosImage from "./PosImage";
@@ -23,6 +24,7 @@ export default function Projects() {
           <KitchenDisplayImage />
           <YouTube />
         </div>
+        <OtherProjects />
       </div>
     </section>
   );

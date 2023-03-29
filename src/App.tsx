@@ -2,13 +2,13 @@ import "./App.css";
 import ContactForm from "./Components/ContactForm/ContactForm";
 import Footer from "./Components/Footer/Footer";
 import DevIcons from "./Components/Icons/DevIcons";
-import Projects from "./Components/Projects/Projects";
+import Projects from "./Components/Projects/MainProject/Projects";
 // import "../src/Components/Hero/HeroTest.css";
 import HeroScreenTest from "./Components/Hero/HeroScreenTest";
 // import Test from "./Components/Test/Test";
 import React from "react";
 import PortfolioStore from "./Context/PortfolioContext";
-import HeroScreen from "./Components/Hero/HeroScreen";
+// import HeroScreen from "./Components/Hero/HeroScreen";
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { animate, initialRight } from "../../Assets/AnimateValues";
-import posMove from "../../Assets/Images/PosMove.webp";
+import { animate, initialRight } from "../../../Assets/AnimateValues";
+import posMove from "../../../Assets/Images/PosMove.webp";
 
 import "./PosImage.css";
 

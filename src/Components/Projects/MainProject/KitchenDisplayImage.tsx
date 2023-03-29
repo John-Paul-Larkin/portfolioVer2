@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { animate, initialLeft } from "../../Assets/AnimateValues";
-import kitchenDisplay from "../../Assets/Images/KitchenDisplay.jpg";
+import { animate, initialLeft } from "../../../Assets/AnimateValues";
+import kitchenDisplay from "../../../Assets/Images/KitchenDisplay.jpg";
 import "./KitchenDisplayImage.css";
 
 export default function KitchenDisplayImage() {
