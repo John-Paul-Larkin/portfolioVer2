@@ -42,3 +42,36 @@
     /* height: 105%; */
   }
 }
+
+/* overlay font size for hover on image */
+
+
+@media (min-width: 700px) {
+  .kitchen-display-container .overlay {
+    font-size: .8rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .kitchen-display-container .overlay {
+    font-size: 1rem;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .kitchen-display-container .overlay {
+    font-size: .8rem;
+  }
+/* 
+  .kitchen-display-container button {
+      font-size:.7em;
+      width: 3rem;
+  } */
+}
+
+@media (min-width: 1440px) {
+  .kitchen-display-container .overlay {
+    font-size: 1rem;
+  }
+}

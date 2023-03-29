@@ -31,7 +31,7 @@
     box-shadow: 5px 5px 10px var(--clr-one);
     border: 7px solid black;
     outline: 2px solid var(--clr-four);
-    border-radius: 25px;
+    border-radius: 24px;
   }
 
   .pos-container::after {

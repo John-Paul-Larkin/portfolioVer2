@@ -1,4 +1,3 @@
-import { motion, useAnimationControls } from "framer-motion";
 import { useContext, useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -10,7 +9,7 @@ export default function HeroScreen() {
   const heroWrapperRef = useRef<HTMLElement>(null);
   useEffect(() => {
     const timeout = setTimeout(() => {
-      heroWrapperRef.current!.style.minHeight = "70vh";
+      heroWrapperRef.current!.style.minHeight = "10vh";
       heroWrapperRef.current!.style.backgroundPosition = "bottom";
     }, 1500);
     return () => {
@@ -18,7 +17,6 @@ export default function HeroScreen() {
     };
   }, []);
 
-  
   const portfolioContext = useContext(PortfolioContext);
 
   const [projectRef, setProjectRef] = useState<HTMLElement | null>(null);
