@@ -24,6 +24,7 @@ export default function Projects() {
           <KitchenDisplayImage />
           <YouTube />
         </div>
+        <hr />
         <OtherProjects />
       </div>
     </section>

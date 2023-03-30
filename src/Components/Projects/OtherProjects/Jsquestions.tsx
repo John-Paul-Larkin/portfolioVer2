@@ -1,7 +1,7 @@
 export default function Jsquestions() {
   return (
-    <div className="other-projects-container Js-Questions">
+    <aside className="other-projects-container js-questions">
       <h3 className="project-heading">Jsquestions</h3>
-    </div>
+    </aside>
   );
 }

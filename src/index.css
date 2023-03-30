@@ -30,6 +30,13 @@ h2 {
   color: inherit;
 }
 
+hr {
+  color: var(--clr-four);
+  border-top: 2px solid var(--clr-four);
+  width: 90%;
+  margin: auto;
+}
+
 /*------------------------------------------------- CSS resets */
 /* Box sizing rules */
 *,

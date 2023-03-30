@@ -1,9 +1,15 @@
 import JpMazon from "../../../Assets/Images/JpMazon.jpg";
 export default function Jpmazon() {
   return (
-    <div className="other-projects-container Jpmazon">
+    <aside className="other-projects-container jpmazon">
       <h3 className="project-heading">Jpmazon</h3>
-      <img src={JpMazon} alt="" />
-    </div>
+      <div className="project-img-wrapper">
+        <img src={JpMazon} alt="" />
+      </div>
+      <div className="description">
+      <p>An amazon clone which </p>
+      </div>
+
+    </aside>
   );
 }
