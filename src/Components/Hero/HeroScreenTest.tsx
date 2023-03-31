@@ -9,7 +9,7 @@ export default function HeroScreen() {
   const heroWrapperRef = useRef<HTMLElement>(null);
   useEffect(() => {
     const timeout = setTimeout(() => {
-      heroWrapperRef.current!.style.height = "70vh";
+      // heroWrapperRef.current!.style.height = "70vh";
       // heroWrapperRef.current!.style.backgroundPosition = "bottom"; no effect due to background attachment fixed
     }, 1500);
     return () => {

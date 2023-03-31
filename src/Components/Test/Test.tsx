@@ -1,56 +1,58 @@
-import kerryBench from "../../Assets/Images/BenchKerryCompressed.webp";
-// import "./test.css";
+import { useEffect, useRef, useState } from "react";
+import "./test.css";
 
 export default function Test() {
+  const lineRef = useRef<SVGPathElement>(null);
+
+  // const [scrollTop, setScrollTop] = useState(0);
+
+  const [pathLength, setPathLength] = useState(0);
+
+  useEffect(() => {
+    if (lineRef.current !== null) {
+      setPathLength(lineRef.current.getTotalLength());
+
+      lineRef.current.style.strokeDasharray = pathLength + " " + pathLength;
+      lineRef.current.style.strokeDashoffset = pathLength.toString();
+    }
+
+    const handleScroll = () => {
+      // setScrollTop(window.scrollY);
+
+      // What % is it?
+      const scrollPercentage =
+        (document.documentElement.scrollTop + document.body.scrollTop) /
+        (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+      // Length to offset the dashes
+      const drawLength = pathLength * scrollPercentage;
+
+      /// Draw in reverse
+      if (lineRef.current !== null) {
+        lineRef.current.style.strokeDashoffset = (pathLength - drawLength).toString();
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [pathLength]);
+
+  console.log(pathLength, "PATHLENGTH");
+  console.log(lineRef.current, "line ref");
+
   return (
-    <>
-      <div className="parallax-wrapper">
-        <div className="hero parallax-content">
-          {/* <img
-            // src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/sterling-davis-4iXagiKXn3Y-unsplash-min.jpg"
-            src={kerryBench}
-            alt="Photo of city during a sunset by Sterling Davis"
-          /> */}
-        </div>
-
-        <div className="hero__title">
-          <h1>CSS Parallax Hero</h1>
-          <p>
-            Photo by Sterling Davis on <a href="https://unsplash.com/photos/4iXagiKXn3Y">Unsplash</a>
-          </p>
-        </div>
-      </div>
-
-      <div className="main-content">
-        <h2>No one's called him Baby Buster since high school.</h2>
-        <p>
-          So you take your mom to work every day? Bummer. Moms are such a pain in the ass, huh? It's, like, die already! Pound is tic-tac-toe, right?
-          Heyyyy Uncle Father Oscar. I run a pretty tight ship around here. With a pool table. It's a gaming ship. They're not gonna strip, right? I
-          told them not to, but I can't guarantee their instincts won't kick in. One for the ladies.
-        </p>
-        <p>
-          Did you enjoy your lunch, mom? You drank it fast enough. The worst that could happen is that I could spill coffee all over this $3,000 suit.
-          COME ON. Get rid of the Seaward. Lucille: I'll leave when I'm good and ready.
-        </p>
-        <p>
-          Hey, it was one night of wild passion! And yet you didn't notice her body? I like to look in the mirror. GENE!! [screams] Come on, this is a
-          Bluth family celebration. It's no place for children. Yeah, that's a cultural problem is what it is. You know, your average American male is
-          in a perpetual state of adolescence, you know, arrested development. (Hey. That's the name of the show!) Did you know that more frozen
-          bananas are sold right here on this boardwalk than anywhere in the OC? One of the guys told me to take my head out of my BOTTOM and get back
-          to work…my BOTTOM! That's how Tony Wonder lost a nut.
-        </p>
-        <p>
-          Oh, like when they say "poofter" to mean "tourist", yes. I need a fake passport, preferably to France… I like the way they think. Tobias
-          Fünke costume. I know what an erection feels like, Michael. You were just a turd out there, you know? You couldn't kick, and you couldn't
-          run, you know? You were just a turd. I'm not a prostitute. Michael: Then I shall let you live! Second-of-ly, I know you're the big marriage
-          expert. Oh I'm sorry, I forgot, your wife is dead.
-        </p>
-        <p>
-          Each year, Oscar attempts the four hundred mile walk from Newport Beach to Berkeley, California. In the twelve years that he's attempted
-          this, he's never made it farther than UC Irvine. ♪♪ Big yellow joint, big yellow joint, I'll meet you down at the big yellow joint. ♪♪
-          Someone order 140 pounds of upper body strength? Chickens don't clap!
-        </p>
-      </div>
-    </>
+    <div className="line-container">
+      <svg viewBox="0 0 504 2089" fill="none" preserveAspectRatio="xMidYMax meet">
+        <path
+          ref={lineRef}
+          d="M252 1C239.2 719.4 269.333 899 286 899M286 899L348 910L438 961.158M286 899H252L148 919L54 994L5 1120L49 1247L133 1323L265 1356L377 1334L443 1288M443 1288L265 1129L443 964L438 961.158M443 1288L186 1810V2089M438 961.158L433 1083L401 1100V1146L438 1179M438 1179L491 1152L485 1100L438 1078L499 1094L491 1157L438 1179Z"
+          stroke="#C91F1F"
+          strokeWidth="8"
+        />
+      </svg>
+    </div>
   );
 }

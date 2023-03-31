@@ -1,42 +1,16 @@
-/* .parallax-wrapper {
-  height: 100vh;
-  
-  
-  
-  
-  -x: hidden;
-  overflow-y: auto;
-  perspective: 1px;
-  transform-style: preserve-3d;
 
-  position: relative;
-} */
-
-.hero__title {
-  position: absolute;
-  top: 40%;
-  left: 20%;
-  font-size: 4rem;
-  transform: translateZ(-1px) scale(2);
+.line-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 99999999;
 }
 
-.parallax-content {
-  transform: translateZ(0) scale(2);
-  position: absolute;
-  inset: 0;
+.line-container svg {
 
-  /* height: 100vh; */
-  /* width: 100vw;   */
-   background-image: url("../../Assets/Images/BenchKerryCompressed.webp");
-  background-repeat: none;
-  background-position: center;
-  background-size: contain;
-
-
-}
-
-.parallax-content img {
-  /* height: 100%; */
-  /* width: 100%; */
-  /* object-fit: contain; */
+  display: inline-block;
+  height:100%;
 }

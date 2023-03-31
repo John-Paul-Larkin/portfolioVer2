@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import {  useRef } from "react";
 import FullName from "./FullName";
 import "./HeroTest.css";
 

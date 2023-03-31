@@ -1,9 +1,10 @@
 .hero-wrapper {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("../../Assets/Images/BenchKerryCompressed.webp");
   background-size: cover;
-  height: 100vh;
+  height: 70vh;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: bottom;   /* had no effect  */
+  background-position: bottom;
   transition: all 1s ease-out;
   position: relative;
 }
