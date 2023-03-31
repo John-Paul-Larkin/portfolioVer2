@@ -24,9 +24,14 @@ export default function Test() {
         (document.documentElement.scrollTop + document.body.scrollTop) /
         (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 
+      // console.log(document.documentElement.scrollTop, "dest");
+      // console.log(document.body.scrollTop, "bst");
+      // console.log(document.documentElement.scrollHeight, "desh");
+      // console.log(document.documentElement.clientHeight, "dech");
+      // console.log(scrollPercentage,'sp');
       // Length to offset the dashes
       const drawLength = pathLength * scrollPercentage;
-
+      console.log(drawLength, "dl");
       /// Draw in reverse
       if (lineRef.current !== null) {
         lineRef.current.style.strokeDashoffset = (pathLength - drawLength).toString();
@@ -40,18 +45,25 @@ export default function Test() {
     };
   }, [pathLength]);
 
-  console.log(pathLength, "PATHLENGTH");
-  console.log(lineRef.current, "line ref");
+  // console.log(pathLength, "PATHLENGTH");
+  // console.log(typeof pathLength, "type");
+
+  // console.log(lineRef.current?.style.strokeDashoffset, "dashOffset");
+  // console.log(lineRef.current?.style.strokeDasharray, "dasharray");
 
   return (
     <div className="line-container">
-      <svg viewBox="0 0 504 2089" fill="none" preserveAspectRatio="xMidYMax meet">
+      {/* <svg viewBox="0 0 504 2089" fill="none" preserveAspectRatio="xMidYMax meet">
         <path
           ref={lineRef}
           d="M252 1C239.2 719.4 269.333 899 286 899M286 899L348 910L438 961.158M286 899H252L148 919L54 994L5 1120L49 1247L133 1323L265 1356L377 1334L443 1288M443 1288L265 1129L443 964L438 961.158M443 1288L186 1810V2089M438 961.158L433 1083L401 1100V1146L438 1179M438 1179L491 1152L485 1100L438 1078L499 1094L491 1157L438 1179Z"
-          stroke="#C91F1F"
-          strokeWidth="8"
+          stroke="#ffff00"
+          strokeWidth="5"
         />
+      </svg> */}
+
+      <svg viewBox="0 0 772 2057" fill="none" preserveAspectRatio="xMidYMax meet">
+        <path ref={lineRef} d="M212 2L4 422L766 846L86 1318C306 1562.67 742.4 2052.4 728 2054" stroke="black" strokeWidth="6" />
       </svg>
     </div>
   );
