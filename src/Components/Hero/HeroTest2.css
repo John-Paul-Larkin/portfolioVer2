@@ -1,0 +1,30 @@
+.hero-wrapper {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("../../Assets/Images/BenchKerryCompressed.webp");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  transition: all 1s ease-out;
+  position: relative;
+
+}
+
+
+
+.jpl-svg {
+  /* position: absolute; */
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 80%;
+  height: 80%;
+  /* text-align: center; */
+  z-index: 99999999;
+}
+
+.jpl-svg svg {
+  display: inline-block;
+  height: 100%;
+}
+`

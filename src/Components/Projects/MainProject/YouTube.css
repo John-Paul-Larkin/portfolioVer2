@@ -1,6 +1,7 @@
 .player-container {
   padding: 1rem 0;
   position: relative;
+  z-index: 6;
 }
 
 .player-wrapper {
