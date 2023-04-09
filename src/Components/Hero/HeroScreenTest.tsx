@@ -17,14 +17,16 @@ export default function HeroScreen() {
     };
   }, []);
 
-  const portfolioContext = useContext(PortfolioContext);
+  // const portfolioContext = useContext(PortfolioContext);
+const {containerRef} = useContext(PortfolioContext);
+
 
   const [projectRef, setProjectRef] = useState<HTMLElement | null>(null);
   useEffect(() => {
-    if (portfolioContext !== null) {
-      setProjectRef(portfolioContext.current);
+    if (containerRef !== null) {
+      setProjectRef(containerRef.current);
     }
-  }, [portfolioContext]);
+  }, [containerRef]);
 
   const { ref, inView, entry } = useInView({
     root: heroWrapperRef.current,

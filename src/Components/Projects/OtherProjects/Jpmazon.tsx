@@ -1,9 +1,12 @@
 import JpMazon from "../../../Assets/Images/JpMazon.jpg";
+import TextScrollHighlight from "../MainProject/TextScrollHighlight";
 export default function Jpmazon() {
   return (
     <aside className="other-projects-container jpmazon">
       <div className="other-projects-description">
-        <h3 className="project-heading">JPMazon</h3>
+        <TextScrollHighlight>
+          <h3 className="project-heading">JPMazon</h3>
+        </TextScrollHighlight>
         <p>
           An amazon clone built using react. I used dummyjson.com, which provides fake product data and images through REST endpoints, to create
           responsive product pages and a basic shopping cart.

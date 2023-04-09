@@ -10,10 +10,10 @@ import YouTube from "./YouTube";
 
 export default function Projects() {
   //ref for animating hero
-  const portfolioContext = useContext(PortfolioContext);
+const {containerRef} = useContext(PortfolioContext);
 
   return (
-    <section className="projects" ref={portfolioContext}>
+    <section className="projects" ref={containerRef}>
       <div className="container">
         <TextScrollHighlight>
           <h2>Projects</h2>

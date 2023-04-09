@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { PortfolioContext } from "../../Context/PortfolioContext";
 import "./test.css";
 
 export default function Test() {
@@ -8,7 +9,7 @@ export default function Test() {
 
   const [pathLength, setPathLength] = useState(0);
 
-  
+  const { drawLength, setDrawLength } = useContext(PortfolioContext);
 
   useEffect(() => {
     if (lineRef.current !== null) {
@@ -34,7 +35,7 @@ export default function Test() {
       // console.log(pathLength + " " + pathLength);
 
       // Length to offset the dashes
-      const drawLength = pathLength * scrollPercentage;
+      setDrawLength(pathLength * scrollPercentage);
       // console.log(drawLength, "dl");
       /// Draw in reverse
       if (lineRef.current !== null) {
@@ -47,9 +48,11 @@ export default function Test() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [pathLength]);
+  }, [drawLength, pathLength, setDrawLength]);
 
   // console.log(pathLength, "PATHLENGTH");
+  // console.log(drawLength, "drawLENGTH");
+
   // console.log(typeof pathLength, "type");
 
   // console.log(lineRef.current?.style.strokeDashoffset, "dashOffset");
@@ -70,9 +73,13 @@ export default function Test() {
       <svg width="342" height="2102" viewBox="0 0 342 2102" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet">
         <path ref={lineRef} d="M325 0V718L65 844L1 964L155 1124L341 1178L325 1560V2102" stroke="black" />
       </svg> */}
-
+      {/* 
       <svg viewBox="0 0 721 2100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet">
         <path ref={lineRef} d="M416 1L388 867H0H720L388 891V1237L22 1055L406 1247L388 2099" stroke="yellow" strokeWidth={6} />
+      </svg> */}
+
+      <svg viewBox="0 0 2 2102" fill="none" preserveAspectRatio="xMidYMax meet">
+        <path ref={lineRef} d="M1 0V2102" stroke="yellow" strokeWidth={6} />
       </svg>
 
       {/* <svg viewBox="0 0 772 2057" fill="none" preserveAspectRatio="xMidYMax meet">
