@@ -13,7 +13,9 @@ export default function PosDescription() {
     <motion.div initial={initialLeft} whileInView={animate} className="description-container">
       <motion.div initial={initialLeft} whileInView={animate} className="description">
         <motion.h3 className="project-heading" initial={initial} whileInView={animate}>
-          <TextScrollHighlight>Kitchen management</TextScrollHighlight>
+          <TextScrollHighlight>
+            <>Kitchen management</>
+          </TextScrollHighlight>
         </motion.h3>
         <p>
           <TextScrollHighlight>
@@ -30,8 +32,11 @@ export default function PosDescription() {
           application, which is an app for orchestrating the various sections of a commercial kitchen, such that orders are displayed and timed, so
           they can be prepared in a sequential manner. The app provides a timeline, which arranges the orders depending on the station(grill, fry), so
           that each chef can,
-          <TextScrollHighlight> at a glance</TextScrollHighlight>, determine which item they should be preparing, if there are any modifications to the
-          ingredients and the remaining time before the order should be sent.
+          <TextScrollHighlight>
+            <> at a glance</>
+          </TextScrollHighlight>
+          , determine which item they should be preparing, if there are any modifications to the ingredients and the remaining time before the order
+          should be sent.
         </p>
         {/* <TextScrollHighlight>
         <FontAwesomeIcon className="description-icons" title="GitHub" icon={faGithub} />

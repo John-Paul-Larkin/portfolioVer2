@@ -10,7 +10,7 @@ import YouTube from "./YouTube";
 
 export default function Projects() {
   //ref for animating hero
-const {containerRef} = useContext(PortfolioContext);
+  const { containerRef } = useContext(PortfolioContext);
 
   return (
     <section className="projects" ref={containerRef}>

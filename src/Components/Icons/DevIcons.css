@@ -4,7 +4,7 @@
   color: var(--clr-seven);
   padding: 2rem 0;
 }
-
+ 
 .dev-icons-container {
   display: flex;
   justify-content: center;
@@ -32,3 +32,5 @@
 .dev-icons span {
   font-size: 1rem;
 }
+
+
