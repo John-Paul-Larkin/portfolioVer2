@@ -1,9 +1,54 @@
-.inView {
-  color: var(--clr-six);
+.notInView {
+  /* visibility: hidden; */
+  display: block;
+  height: 116px;
+  width: 100%;
+  z-index: 9999999999;
 
-  /* border: 2px solid var(--clr-six); */
 }
 
-.inView:first-child {
-  border: 2px solid blue;
+.inView {
+  color: var(--clr-six);
+  display: block;
+  height: 116px;
+  width: 100%;
+  z-index: 9999999999;
+}
+
+.inViewSvg {
+  stroke: yellow;
+  fill: transparent;
+  stroke-width: 8;
+  width: 100%;
+  height: 100%;
+  stroke-dashoffset: 1770;
+  stroke-dasharray: 1770;
+  transition: all 1s;
+}
+
+.inViewSvg-animate {
+ 
+  stroke-dashoffset: 0;
+  /* stroke-dasharray: 0; */
+}
+
+.svg-highlight-wrapper {
+  position: relative;
+  height: 116px;
+}
+
+.svg-highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.children-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

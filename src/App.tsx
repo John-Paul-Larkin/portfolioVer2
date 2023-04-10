@@ -9,7 +9,7 @@ import Projects from "./Components/Projects/MainProject/Projects";
 import React from "react";
 import Test from "./Components/Test/Test";
 import PortfolioStore from "./Context/PortfolioContext";
-// import HeroScreenTest2 from "./Components/Hero/HeroScreenTest2";
+import HeroScreenTest2 from "./Components/Hero/HeroScreenTest2";
 // import HeroScreen from "./Components/Hero/HeroScreen";
 
 function App() {
@@ -17,7 +17,8 @@ function App() {
     <>
       <PortfolioStore>
         <Test />
-        {/* <HeroScreenTest /> */}
+        {/* <HeroScreen/> */}
+        <HeroScreenTest2 />
         <Projects />
         <DevIcons />
         <ContactForm />

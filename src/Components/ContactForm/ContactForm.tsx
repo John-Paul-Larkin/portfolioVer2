@@ -33,7 +33,7 @@ export default function ContactForm() {
       <div className="container">
         <div className="heading">
           <TextScrollHighlight>
-            <h2>Get in touch!</h2>
+              <h2>Get in touch!</h2>
           </TextScrollHighlight>
           <motion.p whileInView={animation.animate} initial={animation.initial}>
             Comments, suggestions, or just want to say hello?
