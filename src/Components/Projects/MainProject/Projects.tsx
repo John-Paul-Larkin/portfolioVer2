@@ -13,7 +13,7 @@ export default function Projects() {
   const { containerRef } = useContext(PortfolioContext);
 
   return (
-    <section className="projects" ref={containerRef}>
+    <section className="projects" id="projects" ref={containerRef}>
       <div className="container">
         <TextScrollHighlight>
           <h2>Projects</h2>

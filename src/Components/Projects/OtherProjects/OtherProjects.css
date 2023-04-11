@@ -5,7 +5,7 @@
   border: 2px solid var(--clr-four);
   background: rgba(27, 42, 65, 0.85);
   box-shadow: 5px 5px 10px var(--clr-one);
-  z-index: 6;
+  z-index: 2;
 
 }
 

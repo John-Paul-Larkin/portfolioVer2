@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+ import { motion } from "framer-motion";
 import { useRef } from "react";
 import TextScrollHighlight from "../Projects/MainProject/TextScrollHighlight";
 import "./ContactForm.css";

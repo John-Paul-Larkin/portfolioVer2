@@ -40,9 +40,23 @@ export default function Test() {
 
   return (
     <div className="line-container">
-      <svg viewBox="0 0 2 2102" fill="none" preserveAspectRatio="xMidYMax meet">
-        <path ref={lineRef} d="M1 0V2102" stroke="yellow" strokeWidth={6} />
+      <svg className="svg-line" viewBox="0 0 60 2102" fill="none">
+        <path d="M1 0V2102" stroke="blue" strokeWidth={20} />
+        <path ref={lineRef} d="M1 0V2102" stroke="yellow" strokeWidth={20} />
+        <circle
+          cx="0"
+          cy="600"
+          r="50"
+          stroke="pink"
+          fill="pink"
+          strokeWidth={20}
+          onClick={() => {
+            document.getElementById(`projects`)?.scrollIntoView();
+          }}
+        />
       </svg>
     </div>
   );
 }
+
+// preserveAspectRatio="xMidYMax meet"

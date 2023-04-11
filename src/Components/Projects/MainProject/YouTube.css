@@ -1,7 +1,7 @@
 .player-container {
   padding: 1rem 0;
   position: relative;
-  z-index: 6;
+  z-index: 2;
 }
 
 .player-wrapper {
@@ -53,7 +53,7 @@
     font-weight: 700;
     border: 2px solid var(--clr-four);
     border-radius: 1rem;
-    z-index: 99;   }
+    z-index: 2;   }
 
 }
 

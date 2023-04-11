@@ -49,7 +49,7 @@ const {containerRef} = useContext(PortfolioContext);
   return (
     <section className="hero-wrapper" ref={heroWrapperRef}>
       <h1 className="name">
-        <span>John </span> <span>Paul</span> <span>Larkin</span>
+        <span>John</span> <span>Paul</span> <span>Larkin</span>
         <div className="int-obs-test" ref={ref}></div>
       </h1>
       <span className="front-end-wrapper">

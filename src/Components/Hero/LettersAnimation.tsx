@@ -13,10 +13,12 @@ export default function LettersAnimation({ pathDetails, delay }: { pathDetails: 
       initialsRef.current.style.strokeDashoffset = pathLength.toString();
     }
 
+    let drawTimer:number;
+
     const handleScroll = () => {
       // console.log(drawLength);
       // console.log(pathLength);
-        setTimeout(() => {
+       drawTimer = setTimeout(() => {
         let drawLength = 0;
         const drawInterval = setInterval(() => {
           drawLength = drawLength + 5;
@@ -40,6 +42,7 @@ export default function LettersAnimation({ pathDetails, delay }: { pathDetails: 
 
     return () => {
       window.removeEventListener("load", handleScroll);
+      clearTimeout(drawTimer);
     };
   }, [pathLength, delay]);
 
