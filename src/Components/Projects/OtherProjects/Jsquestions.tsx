@@ -1,4 +1,5 @@
-import jsQuestions from "../../../Assets/Images/QuestionsApp.jpg";
+// import jsQuestions from "../../../Assets/Images/QuestionsApp.jpg";
+import jsQuestions from "../../../Assets/Images/QuestionsAppCompressed.webp";
 
 export default function Jsquestions() {
   return (
@@ -11,7 +12,9 @@ export default function Jsquestions() {
         </p>
       </div>
       <div className="project-img-wrapper img-btn-container">
-        <img width='1921' height='1561' src={jsQuestions} alt="landing page for the coding questions app" />
+        {/* <img width='1921' height='1561' src={jsQuestions} alt="landing page for the coding questions app" /> */}
+        <img width="500" height="406" src={jsQuestions} alt="landing page for the coding questions app" />
+
         <div className="overlay"></div>
         <div className="overlay-text">
           <h4>Coding questions</h4>

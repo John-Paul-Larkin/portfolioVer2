@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
 import { animate, initialLeft } from "../../../Assets/AnimateValues";
-import kitchenDisplay from "../../../Assets/Images/KitchenDisplay.jpg";
+// import kitchenDisplay from "../../../Assets/Images/KitchenDisplay.jpg";
+import kitchenDisplay from "../../../Assets/Images/KitchenDisplayCompressed.webp";
+
 import "./KitchenDisplayImage.css";
 
 export default function KitchenDisplayImage() {
   return (
     <motion.div initial={initialLeft} whileInView={animate} className="kitchen-display-container img-btn-container">
-      <img width='1915' height='968' src={kitchenDisplay} alt="" />
+      {/* <img width='1915' height='968' src={kitchenDisplay} alt="" /> */}
+      <img width="500" height="253" src={kitchenDisplay} alt="" />
+
       <div className="overlay">
         <div className="overlay-text">
           <h4>Kitchen display</h4>

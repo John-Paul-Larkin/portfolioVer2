@@ -1,4 +1,5 @@
-import JpMazon from "../../../Assets/Images/JpMazon.jpg";
+import JpMazon from "../../../Assets/Images/JpMazonv2Compressed.webp";
+
 // import TextScrollHighlight from "../MainProject/TextScrollHighlight";
 export default function Jpmazon() {
   return (
@@ -11,7 +12,8 @@ export default function Jpmazon() {
         </p>
       </div>
       <div className="project-img-wrapper img-btn-container">
-        <img width='1921' height='1561' src={JpMazon} alt="landing page for the jpmazon project" />
+        <img width='500' height='406' src={JpMazon} alt="landing page for the jpmazon project" />
+
         <div className="overlay"></div>
         <div className="overlay-text">
           <h4>JpMazon</h4>
