@@ -7,15 +7,12 @@
   background-position: bottom;
   transition: all 1s ease-out;
   position: relative;
-
 }
-
-
 
 .jpl-svg {
   /* position: absolute; */
   position: absolute;
-  top: 30%;
+  top: 0%;
   left: 0%;
 
   width: 100%;
@@ -24,3 +21,33 @@
   z-index: 99999999;
 }
 
+@keyframes lineanim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.initials-svg-before1 {
+  transition: all 3s;
+  stroke-dashoffset: 1049px;
+  stroke-dasharray: 1049px;
+  animation: lineanim 2s ease forwards;
+}
+
+.initials-svg-before2 {
+  animation: lineanim 3s ease 500ms forwards;
+
+  stroke-dashoffset: 1250px;
+  stroke-dasharray: 1250px;
+}
+
+.initials-svg-before3 {
+  animation: lineanim 4s ease 1000ms forwards;
+
+  stroke-dashoffset: 1050px;
+  stroke-dasharray: 1050px;
+}
+
+/* .initials-svg {
+  stroke-dashoffset: 0px;
+} */
