@@ -6,7 +6,7 @@ import "./KitchenDisplayImage.css";
 export default function KitchenDisplayImage() {
   return (
     <motion.div initial={initialLeft} whileInView={animate} className="kitchen-display-container img-btn-container">
-      <img src={kitchenDisplay} alt="" />
+      <img width='1915' height='968' src={kitchenDisplay} alt="" />
       <div className="overlay">
         <div className="overlay-text">
           <h4>Kitchen display</h4>

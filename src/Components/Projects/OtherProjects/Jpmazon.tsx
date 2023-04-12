@@ -11,7 +11,7 @@ export default function Jpmazon() {
         </p>
       </div>
       <div className="project-img-wrapper img-btn-container">
-        <img src={JpMazon} alt="landing page for the jpmazon project" />
+        <img width='1921' height='1561' src={JpMazon} alt="landing page for the jpmazon project" />
         <div className="overlay"></div>
         <div className="overlay-text">
           <h4>JpMazon</h4>

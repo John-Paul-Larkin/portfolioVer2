@@ -7,7 +7,7 @@ import "./PosImage.css";
 export default function PosImage() {
   return (
     <motion.div initial={initialRight} whileInView={animate} className="pos-container img-btn-container">
-      <img src={posMove} className="pos-image" alt="animated image of the point of sale app in action" />
+      <img width='412' height='912' src={posMove} className="pos-image" alt="animated image of the point of sale app in action" />
 
       <div className="overlay"></div>
       <div className="overlay-text">
