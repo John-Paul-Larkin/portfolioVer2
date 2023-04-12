@@ -18,13 +18,14 @@
 .inViewSvg {
   stroke: yellow;
   stroke-width: 2;
-  transition: all 1s;
-  fill:none;
+  transition: stroke-dashoffset 3s;
+  /* transition: fill 4s; */
+
+  fill: none;
 }
 
 .inViewSvg-animate {
   fill: black;
-
 }
 
 .svg-highlight-wrapper {
@@ -33,7 +34,6 @@
 }
 
 .svg-highlight {
-
   width: 100%;
   height: 100%;
 }
@@ -44,4 +44,9 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.svg-highlight-3 {
+  position: absolute;
+  /* left:-100px; */
 }

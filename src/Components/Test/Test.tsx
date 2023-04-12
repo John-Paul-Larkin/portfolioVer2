@@ -40,10 +40,10 @@ export default function Test() {
 
   return (
     <div className="line-container">
-      <svg className="svg-line" viewBox="0 0 60 2102" fill="none">
-        <path d="M1 0V2102" stroke="blue" strokeWidth={20} />
-        <path ref={lineRef} d="M1 0V2102" stroke="yellow" strokeWidth={20} />
-        <circle
+      <svg className="svg-line" viewBox="0 0 2 2102" fill="none">
+        <path d="M1 0V2102" stroke="blue" strokeWidth={2} />
+        <path ref={lineRef} d="M1 0V2102" stroke="yellow" strokeWidth={2} />
+        {/* <circle
           cx="0"
           cy="600"
           r="50"
@@ -53,7 +53,7 @@ export default function Test() {
           onClick={() => {
             document.getElementById(`projects`)?.scrollIntoView();
           }}
-        />
+        /> */}
       </svg>
     </div>
   );

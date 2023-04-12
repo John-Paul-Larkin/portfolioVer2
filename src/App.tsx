@@ -7,16 +7,16 @@ import Projects from "./Components/Projects/MainProject/Projects";
 import HeroScreenTest from "./Components/Hero/HeroScreenTest";
 // import Test from "./Components/Test/Test";
 import React from "react";
-import Test from "./Components/Test/Test";
+// import Test from "./Components/Test/Test";
 import PortfolioStore from "./Context/PortfolioContext";
-import HeroScreenTest2 from "./Components/Hero/HeroScreenTest2";
-import HeroScreen from "./Components/Hero/HeroScreen";
+// import HeroScreenTest2 from "./Components/Hero/HeroScreenTest2";
+// import HeroScreen from "./Components/Hero/HeroScreen";
 
 function App() {
   return (
     <>
       <PortfolioStore>
-        <Test />
+        {/* <Test /> */}
         {/* <HeroScreen/> */}
         <HeroScreenTest />
         <Projects />
