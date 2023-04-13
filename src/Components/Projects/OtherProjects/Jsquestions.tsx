@@ -1,9 +1,11 @@
 // import jsQuestions from "../../../Assets/Images/QuestionsApp.jpg";
+import { motion } from "framer-motion";
+import { animate, initialRight } from "../../../Assets/AnimateValues";
 import jsQuestions from "../../../Assets/Images/QuestionsAppCompressed.webp";
 
 export default function Jsquestions() {
   return (
-    <aside className="other-projects-container jsquestions">
+    <motion.aside initial={initialRight} whileInView={animate} className="other-projects-container jsquestions">
       <div className="other-projects-description">
         <h3 className="project-heading">Coding questions</h3>
         <p>
@@ -32,6 +34,6 @@ export default function Jsquestions() {
           </button>
         </form>
       </div>
-    </aside>
+    </motion.aside>
   );
 }

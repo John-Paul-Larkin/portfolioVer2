@@ -15,7 +15,7 @@ export default function ContactForm() {
       email: emailRef.current!.value,
       message: messageRef.current!.value,
     };
-    alert("tadaaa!: \n" + JSON.stringify(data) + "Your data");
+    alert(JSON.stringify(data) + "Your data");
   };
 
   const animation = {
@@ -24,7 +24,7 @@ export default function ContactForm() {
   };
 
   const animationBorder = {
-    initial: { opacity: 0.1, width: "70%" },
+    initial: { opacity: 0.1, width: "80%" },
     animate: { opacity: 1, width: "90%", transition: { delay: 0.2, duration: 0.25, ease: "easeIn" } },
   };
 

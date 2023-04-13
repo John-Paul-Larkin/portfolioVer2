@@ -1,9 +1,11 @@
 import JpMazon from "../../../Assets/Images/JpMazonv2Compressed.webp";
+import { animate, initialLeft } from "../../../Assets/AnimateValues";
+import { motion } from "framer-motion";
 
 // import TextScrollHighlight from "../MainProject/TextScrollHighlight";
 export default function Jpmazon() {
   return (
-    <aside className="other-projects-container jpmazon">
+    <motion.aside initial={initialLeft} whileInView={animate}  className="other-projects-container jpmazon">
       <div className="other-projects-description">
         <h3 className="project-heading">JPMazon</h3>
         <p>
@@ -31,6 +33,6 @@ export default function Jpmazon() {
           </button>
         </form>
       </div>
-    </aside>
+    </motion.aside>
   );
 }
