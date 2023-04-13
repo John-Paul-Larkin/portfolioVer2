@@ -25,7 +25,7 @@ export default function DevIcons() {
   };
 
   return (
-    <section className="dev-icons">
+    <section className="dev-icons" id="dev-icons">
       <div className="container">
         <TextScrollHighlight>
           <h2>Skills</h2>

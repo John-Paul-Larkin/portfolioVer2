@@ -6,12 +6,14 @@ import Footer from "./Components/Footer/Footer";
 import HeroScreen from "./Components/Hero/HeroScreen";
 import DevIcons from "./Components/Icons/DevIcons";
 import Projects from "./Components/Projects/MainProject/Projects";
+import Navbar from "./Components/NavBar/Navbar";
 
 // const ContactForm = lazy(() => import("./Components/ContactForm/ContactForm"));
 
 function App() {
   return (
     <>
+      <Navbar/>
       <PortfolioStore>
         {/* <Test /> */}
         <HeroScreen />

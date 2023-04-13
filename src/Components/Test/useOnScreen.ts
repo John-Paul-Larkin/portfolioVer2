@@ -9,7 +9,7 @@ export default function useOnScreen({ ref, projectRef }: Props) {
   const observerRef = useRef<IntersectionObserver | null>(null);
   const [isOnScreen, setIsOnScreen] = useState(false);
 
-  console.log("here");
+  console.log("here on screen");
 
   useEffect(() => {
     // const rootTEst = document.getElementById("projects");

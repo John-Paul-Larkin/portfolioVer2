@@ -22,6 +22,7 @@ export default function Test() {
       const scrollPercentage =
         (document.documentElement.scrollTop + document.body.scrollTop) /
         (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+      console.log("scroll test line");
 
       setDrawLength(window.innerHeight * scrollPercentage);
 
