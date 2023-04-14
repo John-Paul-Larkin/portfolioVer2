@@ -6,6 +6,26 @@
   background: rgba(27, 42, 65, 0.85);
   box-shadow: 5px 5px 10px var(--clr-one);
   z-index: 2;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.project-img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-one);
+  border-radius: 20px;
+  padding: 1rem;
+  border: 2px solid var(--clr-four);
+  box-shadow: 5px 5px 10px var(--clr-one);
+  width: 90%;
+}
+
+.outer {
+  display: flex;
+  justify-content: center;
 }
 
 .jpmazon {
@@ -14,13 +34,13 @@
 
 .other-projects-container img {
   margin: 0 auto;
-
-
 }
 
 .other-projects-wrapper {
   max-width: 100%;
 }
+
+
 
 @media (min-width: 425px) {
   .other-projects-wrapper {
@@ -45,4 +65,8 @@
     display: block;
     margin: 2rem;
   }
+  .other-projects-wrapper hr {
+    display: none;
+  }
 }
+

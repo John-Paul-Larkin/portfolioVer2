@@ -2,6 +2,8 @@
   background-color: var(--clr-one);
   color: var(--clr-seven);
   margin-top: 2rem;
+  box-shadow: 5px 5px 10px var(--clr-seven);
+
 }
 
 .footer p {

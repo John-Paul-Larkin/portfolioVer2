@@ -58,6 +58,8 @@ label {
 .email:focus,
 .message:focus {
   outline: 3px solid var(--clr-four);
+  border: 1px solid var(--clr-four);
+
 }
 
 .contact .message {
@@ -94,3 +96,13 @@ textarea {
   resize: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px var(--clr-one) inset !important;
+}
+
+input:-webkit-autofill{
+  -webkit-text-fill-color: white !important;
+}
