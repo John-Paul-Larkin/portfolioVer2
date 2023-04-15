@@ -15,16 +15,16 @@
 }
 
 .nav-initial {
-  transition: top 3s ease;
+  transition: top 2s ease-in-out;
 }
 
 .nav-after {
-  transition: top 7s ease;
+  transition: top .2s ease-out;
 }
 
 .nav-up {
   top: -110px;
-  transition: top .2s ease;
+  transition: top .8s ease;
 }
 
 .nav__fullname {

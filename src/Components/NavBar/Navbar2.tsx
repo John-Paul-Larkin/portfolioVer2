@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 
-export default function Navbar() {
+export default function Navbar2() {
   const [scrollDown, setScrollDown] = useState(false);
+  const [navVisibleClass, setNavVisibleClass] = useState("nav nav-up");
   const [initialLoad, setInitialLoad] = useState(true);
 
   useEffect(() => {
@@ -14,9 +15,6 @@ export default function Navbar() {
 
     const updateScrollDown = () => {
       const scrollY = window.pageYOffset;
-
-      console.log(scrollY);
-
       if (Math.abs(scrollY - lastScrollY) < threshold) {
         ticking = false;
         return;
@@ -34,32 +32,33 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", onScroll);
-    // console.log(scrollDown, "sd");
+    console.log(scrollDown, "sd");
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollDown]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setScrollDown(true);
-    }, 1500);
-
-    const setLoadedOnFirstScroll = () => {
+    let navTimeOut: number;
+    console.log('nnn')
+    if (initialLoad && window.pageYOffset === 0) {
+      navTimeOut = setTimeout(() => {
+        setNavVisibleClass("nav nav-initial");
+      }, 1500);
+    } else if (initialLoad) {
       setInitialLoad(false);
-      window.removeEventListener("scroll", setLoadedOnFirstScroll);
+    } else if (scrollDown === true) {
+      setNavVisibleClass("nav nav-up");
+    } else {
+      setNavVisibleClass("nav nav-after");
+    }
+
+    return () => {
+      clearTimeout(navTimeOut);
     };
-
-    window.addEventListener("scroll", setLoadedOnFirstScroll);
-
-    return () => window.removeEventListener("scroll", setLoadedOnFirstScroll);
-  }, []);
-
-  console.log(initialLoad, scrollDown);
+  }, [initialLoad, scrollDown]);
 
   return (
-    // <nav className={scrollDown ? "nav nav-up" : "nav"}>
-    // <nav className={scrollDown ? (initialLoad ? "nav" : "nav nav-up") : initialLoad ? "nav nav-up" : "nav nav-initial"}>
-    <nav className={initialLoad ? (scrollDown ? "nav nav-initial" : "nav nav-up") : scrollDown ? "nav nav-up" : "nav nav-after"}>
+    <nav className={navVisibleClass}>
       <ul>
         <li className="nav__fullname">
           <a href="#">

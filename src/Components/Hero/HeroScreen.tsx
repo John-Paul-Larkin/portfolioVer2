@@ -11,7 +11,7 @@ export default function HeroScreen() {
   const wrapperSmRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    console.log("here");
+    // console.log("here");
     let width = window.innerWidth;
 
     if (wrapperSmRef.current && wrapperLrgRef.current && fullnameLrgRef.current) {
