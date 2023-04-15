@@ -1,11 +1,11 @@
-import JpMazon from "../../../Assets/Images/JpMazonv2Compressed.webp";
-import { animate, initialLeft } from "../../../Assets/AnimateValues";
 import { motion } from "framer-motion";
+import { animate, initialLeft } from "../../../Assets/AnimateValues";
+import JpMazon from "../../../Assets/Images/JpMazonv2Compressed.webp";
 
 // import TextScrollHighlight from "../MainProject/TextScrollHighlight";
 export default function Jpmazon() {
   return (
-    <motion.aside initial={initialLeft} whileInView={animate}  className="other-projects-container jpmazon">
+    <motion.aside initial={initialLeft} whileInView={animate} className="other-projects-container jpmazon">
       <div className="other-projects-description">
         <h3 className="project-heading">JPMazon</h3>
         <p>
@@ -13,25 +13,27 @@ export default function Jpmazon() {
           responsive product pages and a basic shopping cart.
         </p>
       </div>
-      <div className="project-img-wrapper img-btn-container">
-        <img width='500' height='406' src={JpMazon} alt="landing page for the jpmazon project" />
+      <div className="outer">
+        <div className="project-img-wrapper img-btn-container">
+          <img width="500" height="406" src={JpMazon} alt="landing page for the jpmazon project" />
 
-        <div className="overlay"></div>
-        <div className="overlay-text">
-          <h4>JpMazon</h4>
-          <p>JPMAZON: Mediocre prices on books, clothes and other crap you dont need.</p>
+          <div className="overlay"></div>
+          <div className="overlay-text">
+            <h4>JpMazon</h4>
+            <p>JPMAZON: Mediocre prices on books, clothes and other crap you dont need.</p>
+          </div>
+
+          <form target="_blank">
+            <button className="highlight-btn github-btn" type="submit" formAction="https://github.com/Fishamble/jpmazonV2">
+              GitHub
+            </button>
+          </form>
+          <form target="_blank">
+            <button className="highlight-btn live-btn" type="submit" formAction="https://jpmazon.netlify.app/">
+              Live
+            </button>
+          </form>
         </div>
-
-        <form target="_blank">
-          <button className="highlight-btn github-btn" type="submit" formAction="https://github.com/Fishamble/jpmazonV2">
-            GitHub
-          </button>
-        </form>
-        <form target="_blank">
-          <button className="highlight-btn live-btn" type="submit" formAction="https://jpmazon.netlify.app/">
-            Live
-          </button>
-        </form>
       </div>
     </motion.aside>
   );

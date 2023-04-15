@@ -8,7 +8,7 @@
   z-index: 2;
   /* display: flex;
   align-items: center;
-  justify-content: center; */
+  justify-content: flex-end; */
 }
 
 .project-img-wrapper {
@@ -20,12 +20,14 @@
   padding: 1rem;
   border: 2px solid var(--clr-four);
   box-shadow: 5px 5px 10px var(--clr-one);
-  width: 90%;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .outer {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .jpmazon {
@@ -40,7 +42,9 @@
   max-width: 100%;
 }
 
-
+.other-projects-wrapper hr {
+  width:97%;
+}
 
 @media (min-width: 425px) {
   .other-projects-wrapper {

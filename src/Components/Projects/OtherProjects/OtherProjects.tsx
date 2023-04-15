@@ -6,7 +6,7 @@ export default function OtherProjects() {
   return (
     <div className="other-projects-wrapper">
       <Jpmazon />
-<hr/>
+      <hr />
       <Jsquestions />
     </div>
   );

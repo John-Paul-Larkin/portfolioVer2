@@ -1,71 +1,50 @@
 .nav {
   position: fixed;
-  height: 55px;
+  height: 100px;
   width: 100vw;
   z-index: 10;
-  /* background-color: rgba(255, 255, 255,.6); */
   background-color: var(--clr-two);
-
-  transition: top 1s ease;
   overflow: hidden;
   top: 0px;
   box-shadow: -5px 5px 5px var(--clr-one);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.nav__nav-wrapper {
-  max-width: var(--max-width);
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.nav__fullname-wrapper {
- display: none;
-  flex-grow: 1;
+  transition: top 0.3s ease;
+  border-bottom: 2px solid var(--clr-four);
 }
 
 .nav-down {
-  top: -65px;
-  /* height: 100px; */
+  top: -110px;
+  transition: top 1s ease;
 }
 
-.down {
-  padding: 2em;
+.nav__fullname {
+  display: none;
+  flex-grow: 1;
 }
 
 .nav ul {
+  max-width: var(--max-width);
+  flex-grow: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
-  padding-right: 1.5em;
-}
-
-.nav ul li {
-  /* padding-left: 0.5em;
-  padding-right: 0.5em; */
-}
-
-.nav__contact {
-  text-decoration: none;
-  font-weight: 700;
-  padding: 0.7em;
-  transition: all 1s ease;
-  color: var(--clr-four);
-  border-radius: 8px;
-  background-color: var(--clr-one);
-  border: 2px solid white;
+  /* padding-right: 1.5em; */
 }
 
 .nav__link {
   text-decoration: none;
   font-weight: 700;
-  padding: 0.7em;
-  transition: all 1s ease;
   color: var(--clr-four);
+}
+
+.nav__contact {
+  padding: 0.7em;
+  border-radius: 8px;
+  background-color: var(--clr-one);
+  border: 2px solid white;
 }
 
 .nav__link:hover {
@@ -73,25 +52,21 @@
 }
 
 .nav__contact:hover {
-  color: var(--clr-seven);
   background-color: var(--clr-two);
   border: 2px solid var(--clr-four);
 }
 
-.down {
-  padding-top: 0;
-  padding-bottom: 0;
+@media (min-width: 428px) {
 }
 
 @media (min-width: 700px) {
-  .nav ul li {
+  .nav li {
     padding-left: 0.5em;
     padding-right: 0.5em;
   }
-  .nav__fullname-wrapper {
-   display: block;
+  .nav__fullname {
+    display: block;
     flex-grow: 1;
     padding-left: 2rem;
   }
-
 }
