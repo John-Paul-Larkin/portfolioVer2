@@ -5,18 +5,26 @@
   z-index: 10;
   background-color: var(--clr-two);
   overflow: hidden;
-  top: 0px;
   box-shadow: -5px 5px 5px var(--clr-one);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: top 0.3s ease;
   border-bottom: 2px solid var(--clr-four);
+  font-size: 0.8rem;
+  top: 0px;
 }
 
-.nav-down {
+.nav-initial {
+  transition: top 3s ease;
+}
+
+.nav-after {
+  transition: top 7s ease;
+}
+
+.nav-up {
   top: -110px;
-  transition: top 1s ease;
+  transition: top .2s ease;
 }
 
 .nav__fullname {
@@ -56,7 +64,10 @@
   border: 2px solid var(--clr-four);
 }
 
-@media (min-width: 428px) {
+@media (min-width: 400px) {
+  .nav {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 700px) {

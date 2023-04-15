@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
-  const [scrollDir, setScrollDir] = useState(true);
+  const [scrollDir, setScrollDir] = useState(false);
+  const [initialLoad, setInitialLoad] = useState(true);
 
   useEffect(() => {
     const threshold = 0;
@@ -36,13 +37,14 @@ export default function Navbar() {
 
   useEffect(() => {
     setTimeout(() => {
-      setScrollDir(false);
-    }, 2000);
+      setInitialLoad(false);
+    }, 1500);
+
   }, []);
 
   return (
-    <nav className={scrollDir ? "nav nav-down" : "nav"}>
-      {/* <div className="nav__nav-wrapper"> */}
+    // <nav className={scrollDir ? "nav nav-up" : "nav"}>
+    <nav className={scrollDir ? (initialLoad ? "nav" : "nav nav-up") : initialLoad ? "nav nav-up" : "nav nav-after"}>
       <ul>
         <li className="nav__fullname">
           <a href="#">
