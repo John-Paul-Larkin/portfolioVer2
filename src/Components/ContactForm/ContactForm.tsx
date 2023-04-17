@@ -42,7 +42,7 @@ export default function ContactForm() {
             I'd love to hear from you.
           </motion.p>
         </div>
-        <form name="contactF" method="POST" className="form" data-netlify="true">
+        <form name="contactF" className="form" method="POST" data-netlify="true">
           <motion.div className="inputs" whileInView={animation.animate} initial={animation.initial}>
             <div className="label-wrapper">
               <label htmlFor="email">Email Address</label>
@@ -66,7 +66,7 @@ export default function ContactForm() {
             </div>
             <motion.input
               type="text"
-              name="name"
+              name="conatactname"
               id="name"
               className="contact-name"
               placeholder="Optional"
