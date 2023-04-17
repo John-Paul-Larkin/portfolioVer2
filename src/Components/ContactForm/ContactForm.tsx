@@ -7,27 +7,26 @@ export default function ContactForm() {
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
-  // eslint-disable-next-line
-  const handleSubmit = (event: { preventDefault: () => void; target: any }) => {
+
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    // const data = {
-    //   firstName: nameRef.current!.value,
-    //   email: emailRef.current!.value,
-    //   message: messageRef.current!.value,
-    // };
+    const data = {
+      firstName: nameRef.current!.value,
+      email: emailRef.current!.value,
+      message: messageRef.current!.value,
+    };
 
     // alert(JSON.stringify(data) + "Your data");
 
     // event.preventDefault();
 
-    const myForm = event.target;
-    // eslint-disable-next-line
-    const formData: any = new FormData(myForm);
+    // const myForm = event.target;
+    // const formData = new FormData(myForm);
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      body: new URLSearchParams(data).toString(),
     })
       .then(() => console.log("Form successfully submitted"))
       .catch((error) => alert(error));
@@ -60,6 +59,12 @@ export default function ContactForm() {
 
         <form name="contactF" className="form" data-netlify="true">
           {/* <input type="hidden" name="form-name" value="contactF" /> */}
+          {/* add method = post */}
+          {/* <form name="contactF" netlify netlify-honeypot="bot-field" hidden>
+             <input type="email" name="email" />
+              <input type="text" name="name" />
+              <textarea name="message"></textarea>
+              </form>  */}
 
           <motion.div className="inputs" whileInView={animation.animate} initial={animation.initial}>
             <div className="label-wrapper">

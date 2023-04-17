@@ -8,6 +8,7 @@ import DevIcons from "./Components/Icons/DevIcons";
 import Projects from "./Components/Projects/MainProject/Projects";
 // import Navbar from "./Components/NavBar/Navbar";
 import Navbar from "./Components/NavBar/Navbar";
+import Test from "./Components/Test/Test";
 
 // const ContactForm = lazy(() => import("./Components/ContactForm/ContactForm"));
 
@@ -16,7 +17,7 @@ function App() {
     <>
       <Navbar />
       <PortfolioStore>
-        {/* <Test /> */}
+        <Test />
         <HeroScreen />
         <Projects />
         <DevIcons />

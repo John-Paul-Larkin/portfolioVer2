@@ -7,7 +7,7 @@ export default function Test() {
 
   const [pathLength, setPathLength] = useState(0);
 
-  const { setDrawLength } = useContext(PortfolioContext);
+  const { drawLength, setDrawLength } = useContext(PortfolioContext);
 
   useEffect(() => {
     if (lineRef.current !== null) {
@@ -44,17 +44,17 @@ export default function Test() {
       <svg className="svg-line" viewBox="0 0 2 2102" fill="none">
         <path d="M1 0V2102" stroke="blue" strokeWidth={2} />
         <path ref={lineRef} d="M1 0V2102" stroke="yellow" strokeWidth={2} />
-        {/* <circle
+        <circle
           cx="0"
-          cy="600"
-          r="50"
+          cy={(drawLength + 0) * 2}
+          r="10"
           stroke="pink"
           fill="pink"
           strokeWidth={20}
           onClick={() => {
             document.getElementById(`projects`)?.scrollIntoView();
           }}
-        /> */}
+        />
       </svg>
     </div>
   );
