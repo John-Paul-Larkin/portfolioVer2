@@ -1,4 +1,4 @@
- import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
 import TextScrollHighlight from "../Projects/MainProject/TextScrollHighlight";
 import "./ContactForm.css";
@@ -33,7 +33,7 @@ export default function ContactForm() {
       <div className="container">
         <div className="heading">
           <TextScrollHighlight>
-              <h2>Get in touch!</h2>
+            <h2>Get in touch!</h2>
           </TextScrollHighlight>
           <motion.p whileInView={animation.animate} initial={animation.initial}>
             Comments, suggestions, or just want to say hello?
@@ -42,7 +42,7 @@ export default function ContactForm() {
             I'd love to hear from you.
           </motion.p>
         </div>
-        <form onSubmit={handleSubmit} className="form">
+        <form onSubmit={handleSubmit} className="form" data-netlify="true">
           <motion.div className="inputs" whileInView={animation.animate} initial={animation.initial}>
             <div className="label-wrapper">
               <label htmlFor="email">Email Address</label>

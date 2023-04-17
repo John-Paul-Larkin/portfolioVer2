@@ -19,7 +19,7 @@ export default function Jsquestions() {
           <div className="overlay"></div>
           <div className="overlay-text">
             <h4>Coding questions</h4>
-            <p>Fill in some inforamtion here</p>
+            <p>An app for testing javascript and other programming knowlegde</p>
           </div>
 
           <form target="_blank">
