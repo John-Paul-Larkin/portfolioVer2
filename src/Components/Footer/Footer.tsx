@@ -9,6 +9,7 @@ import "./Footer.css";
 
 export default function Footer() {
   const quotes = [
+    [["Details make perfection, and perfection is not a detail."], ["- Leonardo Da Vinci"]],
     [["Live as if you were to die tomorrow. Learn as if you were to live forever."], ["- Mahatma Gandhi"]],
     [["It does not matter how slowly you go as long as you do not stop."], ["- Confucius"]],
     [["It always seems impossible until it's done."], ["- Nelson Mandela"]],

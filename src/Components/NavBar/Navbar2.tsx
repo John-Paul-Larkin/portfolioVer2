@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 
@@ -10,11 +11,11 @@ export default function Navbar2() {
     // sets whether the scroll direction is up or down
 
     const threshold = 0;
-    let lastScrollY = window.pageYOffset;
+    let lastScrollY = window.scrollY;
     let ticking = false;
 
     const updateScrollDown = () => {
-      const scrollY = window.pageYOffset;
+      const scrollY = window.scrollY;
       if (Math.abs(scrollY - lastScrollY) < threshold) {
         ticking = false;
         return;
@@ -32,20 +33,21 @@ export default function Navbar2() {
     };
 
     window.addEventListener("scroll", onScroll);
-    console.log(scrollDown, "sd");
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollDown]);
 
   useEffect(() => {
     let navTimeOut: number;
-    console.log('nnn')
-    if (initialLoad && window.pageYOffset === 0) {
+
+    if (initialLoad && window.scrollY !== 0) {
+      //   setNavVisibleClass("nav nav-up");
+      setInitialLoad(false);
+    } else if (initialLoad && window.scrollY === 0) {
       navTimeOut = setTimeout(() => {
         setNavVisibleClass("nav nav-initial");
+        setInitialLoad(false);
       }, 1500);
-    } else if (initialLoad) {
-      setInitialLoad(false);
     } else if (scrollDown === true) {
       setNavVisibleClass("nav nav-up");
     } else {
@@ -59,7 +61,7 @@ export default function Navbar2() {
 
   return (
     <nav className={navVisibleClass}>
-      <ul>
+      <motion.ul initial={{ y: -100 }} animate={{ y: 0 }} transition={{ delay: 2.35 }}>
         <li className="nav__fullname">
           <a href="#">
             <SvgFullname />
@@ -70,7 +72,6 @@ export default function Navbar2() {
             ABOUT ME
           </a>
         </li>
-
         <li>
           <a className="nav__link" href="#projects">
             PROJECTS
@@ -86,7 +87,7 @@ export default function Navbar2() {
             CONTACT
           </a>
         </li>
-      </ul>
+      </motion.ul>
       {/* </div> */}
     </nav>
   );

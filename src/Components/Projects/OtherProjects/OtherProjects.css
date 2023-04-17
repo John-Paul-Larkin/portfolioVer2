@@ -46,6 +46,12 @@
   width:97%;
 }
 
+.other-projects-description {
+  padding-bottom:2rem;
+}
+
+
+
 @media (min-width: 425px) {
   .other-projects-wrapper {
     padding: 1rem;
