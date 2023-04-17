@@ -8,6 +8,7 @@ import TextScrollHighlight from "./TextScrollHighlight";
 import YouTube from "./YouTube";
 
 import "./Projects.css";
+import "./ImageOverlay.css"
 
 export default function Projects() {
   //ref for animating hero

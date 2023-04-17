@@ -1,8 +1,8 @@
 .nav {
   position: fixed;
-  height: 100px;
+  height: 80px;
   width: 100vw;
-  z-index: 5;
+  z-index: 7;
   background-color: var(--clr-two);
   overflow: hidden;
   box-shadow: -5px 5px 5px var(--clr-one);

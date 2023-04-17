@@ -14,7 +14,7 @@ export default function KitchenDisplayImage() {
         <div className="overlay">
           <div className="overlay-text">
             <h4>Kitchen display</h4>
-            <p>Note required pos app</p>
+            <p>Note - requires you run the pos app first</p>
           </div>
         </div>
         <form target="_blank">

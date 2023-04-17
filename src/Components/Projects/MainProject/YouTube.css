@@ -1,7 +1,7 @@
 .player-container {
   padding: 1rem 0;
   position: relative;
-  z-index: 7;
+  /* z-index: 5; */
 }
 
 .player-wrapper {
@@ -22,16 +22,6 @@
   box-shadow: 5px 5px 10px var(--clr-one);
 }
 
-.player-modal {
-  position: fixed;
-  top:0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(250, 235, 215, 0.6);
-  z-index: 6;
-  display: none;
-}
-
 @media (min-width: 425px) {
   .player-container {
     padding: 1rem;
@@ -44,6 +34,15 @@
   }
 }
 
+.player-modal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 235, 215, 0.6);
+  z-index: 10;
+  display: none;
+}
 @media (min-width: 700px) {
   .player-container {
     padding: 0;
@@ -67,6 +66,8 @@
     grid-area: 1 / 1 / 4/ 3;
     justify-self: center;
     width: 100%;
+    z-index: 11;
+
   }
 }
 

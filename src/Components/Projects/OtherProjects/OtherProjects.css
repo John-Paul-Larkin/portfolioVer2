@@ -43,14 +43,12 @@
 }
 
 .other-projects-wrapper hr {
-  width:97%;
+  width: 97%;
 }
 
 .other-projects-description {
-  padding-bottom:2rem;
+  padding-bottom: 2rem;
 }
-
-
 
 @media (min-width: 425px) {
   .other-projects-wrapper {
@@ -79,4 +77,3 @@
     display: none;
   }
 }
-

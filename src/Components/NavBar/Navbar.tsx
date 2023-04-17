@@ -2,25 +2,23 @@ import { useEffect, useState } from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
-  const [scrollDown, setScrollDown] = useState(false);
-  const [initialLoad, setInitialLoad] = useState(true);
+  const [scrollDown, setScrollDown] = useState<boolean | null>(null);
+  const [navVisibleClass, setNavVisibleClass] = useState("nav nav-up");
 
   useEffect(() => {
-    // sets whether the scroll direction is up or down
+    // detects whether the scroll direction is up or down
 
     const threshold = 0;
-    let lastScrollY = window.pageYOffset;
+    let lastScrollY = window.scrollY;
     let ticking = false;
 
     const updateScrollDown = () => {
-      const scrollY = window.pageYOffset;
-
-      console.log(scrollY);
-
+      const scrollY = window.scrollY;
       if (Math.abs(scrollY - lastScrollY) < threshold) {
         ticking = false;
         return;
       }
+
       setScrollDown(scrollY > lastScrollY ? true : false);
       lastScrollY = scrollY > 0 ? scrollY : 0;
       ticking = false;
@@ -34,32 +32,30 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", onScroll);
-    // console.log(scrollDown, "sd");
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollDown]);
 
   useEffect(() => {
-    setTimeout(() => {
-      setScrollDown(true);
-    }, 1500);
+    let navTimeOut: number;
 
-    const setLoadedOnFirstScroll = () => {
-      setInitialLoad(false);
-      window.removeEventListener("scroll", setLoadedOnFirstScroll);
+    if (window.scrollY === 0 && scrollDown === null) {
+      // ie on load
+      navTimeOut = setTimeout(() => {
+        setNavVisibleClass("nav nav-initial");
+      }, 1200);
+    } else if (scrollDown === true) {
+      setNavVisibleClass("nav nav-up");
+    } else if (scrollDown === false) {
+      setNavVisibleClass("nav nav-after");
+    }
+    return () => {
+      clearTimeout(navTimeOut);
     };
-
-    window.addEventListener("scroll", setLoadedOnFirstScroll);
-
-    return () => window.removeEventListener("scroll", setLoadedOnFirstScroll);
-  }, []);
-
-  console.log(initialLoad, scrollDown);
+  }, [scrollDown]);
 
   return (
-    // <nav className={scrollDown ? "nav nav-up" : "nav"}>
-    // <nav className={scrollDown ? (initialLoad ? "nav" : "nav nav-up") : initialLoad ? "nav nav-up" : "nav nav-initial"}>
-    <nav className={initialLoad ? (scrollDown ? "nav nav-initial" : "nav nav-up") : scrollDown ? "nav nav-up" : "nav nav-after"}>
+    <nav className={navVisibleClass}>
       <ul>
         <li className="nav__fullname">
           <a href="#">
@@ -71,7 +67,6 @@ export default function Navbar() {
             ABOUT ME
           </a>
         </li>
-
         <li>
           <a className="nav__link" href="#projects">
             PROJECTS
@@ -88,7 +83,6 @@ export default function Navbar() {
           </a>
         </li>
       </ul>
-      {/* </div> */}
     </nav>
   );
 }
