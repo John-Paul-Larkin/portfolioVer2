@@ -43,12 +43,8 @@ export default function ContactForm() {
           </motion.p>
         </div>
 
-
-
-
-
         <form name="contactF" className="form" method="POST">
-        <input type="hidden" name="form-name" value="contactF" />
+          <input type="hidden" name="form-name" value="contactF" />
           <motion.div className="inputs" whileInView={animation.animate} initial={animation.initial}>
             <div className="label-wrapper">
               <label htmlFor="email">Email Address</label>
@@ -99,7 +95,7 @@ export default function ContactForm() {
           </motion.div>
 
           <div className="inputs">
-            <button type="submit" className="btn-send" tabIndex={4}>
+            <button type="submit" className="btn-send" tabIndex={4} onClick={handleSubmit}> 
               Send
             </button>
           </div>
