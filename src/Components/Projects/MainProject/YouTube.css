@@ -1,7 +1,7 @@
 .player-container {
   padding: 1rem 0;
   position: relative;
-  z-index: 4;
+  z-index: 7;
 }
 
 .player-wrapper {
@@ -24,10 +24,11 @@
 
 .player-modal {
   position: fixed;
+  top:0;
   width: 100%;
   height: 100%;
   background-color: rgba(250, 235, 215, 0.6);
-  z-index: 3;
+  z-index: 6;
   display: none;
 }
 
@@ -63,7 +64,7 @@
     z-index: 2;
   }
   .player-container-click {
-    grid-area: 2 / 1 / 4/ 3;
+    grid-area: 1 / 1 / 4/ 3;
     justify-self: center;
     width: 100%;
   }

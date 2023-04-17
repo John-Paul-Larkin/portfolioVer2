@@ -1,6 +1,5 @@
 import { wrapGrid } from "animate-css-grid";
-import { useContext, useEffect, useRef } from "react";
-import { PortfolioContext } from "../../../Context/PortfolioContext";
+import { useEffect, useRef } from "react";
 import OtherProjects from "../OtherProjects/OtherProjects";
 import KitchenDisplayImage from "./KitchenDisplayImage";
 import PosDescription from "./PosDescription";
