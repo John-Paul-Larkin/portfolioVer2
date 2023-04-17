@@ -7,25 +7,27 @@ export default function ContactForm() {
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
-
-  const handleSubmit = (event: React.FormEvent) => {
+  // eslint-disable-next-line
+  const handleSubmit = (event: { preventDefault: () => void; target: any }) => {
     event.preventDefault();
-    const data = {
-      firstName: nameRef.current!.value,
-      email: emailRef.current!.value,
-      message: messageRef.current!.value,
-    };
+    // const data = {
+    //   firstName: nameRef.current!.value,
+    //   email: emailRef.current!.value,
+    //   message: messageRef.current!.value,
+    // };
+
     // alert(JSON.stringify(data) + "Your data");
 
     // event.preventDefault();
 
-    // const myForm = event.target;
-    // const formData = new FormData(myForm);
+    const myForm = event.target;
+    // eslint-disable-next-line
+    const formData: any = new FormData(myForm);
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(data).toString(),
+      body: new URLSearchParams(formData).toString(),
     })
       .then(() => console.log("Form successfully submitted"))
       .catch((error) => alert(error));
@@ -56,7 +58,7 @@ export default function ContactForm() {
           </motion.p>
         </div>
 
-        <form name="contactF" className="form" method="POST" data-netlify="true">
+        <form name="contactF" className="form" data-netlify="true">
           {/* <input type="hidden" name="form-name" value="contactF" /> */}
 
           <motion.div className="inputs" whileInView={animation.animate} initial={animation.initial}>
