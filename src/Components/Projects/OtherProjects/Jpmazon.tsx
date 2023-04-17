@@ -23,12 +23,12 @@ export default function Jpmazon() {
             <p>JPMAZON: Mediocre prices on books, clothes and other crap you dont need.</p>
           </div>
 
-          <form target="_blank">
+          <form name="gitJpM" target="_blank">
             <button className="highlight-btn github-btn" type="submit" formAction="https://github.com/Fishamble/jpmazonV2">
               GitHub
             </button>
           </form>
-          <form target="_blank">
+          <form name="liveJpM" target="_blank">
             <button className="highlight-btn live-btn" type="submit" formAction="https://jpmazon.netlify.app/">
               Live
             </button>

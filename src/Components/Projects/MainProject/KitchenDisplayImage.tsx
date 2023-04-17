@@ -17,12 +17,12 @@ export default function KitchenDisplayImage() {
             <p>Note - requires you run the pos app first</p>
           </div>
         </div>
-        <form target="_blank">
+        <form name="gitKd" target="_blank">
           <button className="highlight-btn github-btn" type="submit" formAction="https://github.com/Fishamble/kitchen_back_end">
             GitHub
           </button>
         </form>
-        <form target="_blank">
+        <form name="liveKd" target="_blank">
           <button className="highlight-btn live-btn" type="submit" formAction="https://kitchendisplay.netlify.app/">
             Live
           </button>

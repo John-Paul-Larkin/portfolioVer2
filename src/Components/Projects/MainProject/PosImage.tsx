@@ -16,12 +16,12 @@ export default function PosImage() {
           <p></p>
         </div>
 
-        <form target="_blank">
+        <form name="gitPos" target="_blank">
           <button className="highlight-btn github-btn" type="submit" formAction="https://github.com/Fishamble/kitchenpos">
             GitHub
           </button>
         </form>
-        <form target="_blank">
+        <form name="livePos" target="_blank">
           <button className="highlight-btn live-btn" type="submit" formAction="https://kitchenpos.netlify.app/">
             Live
           </button>

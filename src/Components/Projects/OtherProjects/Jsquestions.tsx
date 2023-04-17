@@ -22,12 +22,12 @@ export default function Jsquestions() {
             <p>An app for testing javascript and other programming knowlegde</p>
           </div>
 
-          <form target="_blank">
+          <form name="gitJsQ" target="_blank">
             <button className="highlight-btn github-btn" type="submit" formAction="https://github.com/Fishamble/QuestionApp">
               GitHub
             </button>
           </form>
-          <form target="_blank">
+          <form name="liveJsQ" target="_blank">
             <button className="highlight-btn live-btn" type="submit" formAction="https://jsqapp.netlify.app/">
               Live
             </button>
