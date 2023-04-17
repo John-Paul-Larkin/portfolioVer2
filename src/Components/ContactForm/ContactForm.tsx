@@ -15,7 +15,20 @@ export default function ContactForm() {
       email: emailRef.current!.value,
       message: messageRef.current!.value,
     };
-    alert(JSON.stringify(data) + "Your data");
+    // alert(JSON.stringify(data) + "Your data");
+
+    // event.preventDefault();
+
+    // const myForm = event.target;
+    // const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(data).toString(),
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
   };
 
   const animation = {
@@ -43,8 +56,9 @@ export default function ContactForm() {
           </motion.p>
         </div>
 
-        <form name="contactF" className="form" method="POST">
-          <input type="hidden" name="form-name" value="contactF" />
+        <form name="contactF" className="form" method="POST" data-netlify="true">
+          {/* <input type="hidden" name="form-name" value="contactF" /> */}
+
           <motion.div className="inputs" whileInView={animation.animate} initial={animation.initial}>
             <div className="label-wrapper">
               <label htmlFor="email">Email Address</label>
@@ -95,7 +109,7 @@ export default function ContactForm() {
           </motion.div>
 
           <div className="inputs">
-            <button type="submit" className="btn-send" tabIndex={4} onClick={handleSubmit}> 
+            <button type="submit" className="btn-send" tabIndex={4} onClick={handleSubmit}>
               Send
             </button>
           </div>
