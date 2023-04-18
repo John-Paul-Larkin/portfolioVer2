@@ -1,5 +1,5 @@
-import { ReactElement, useContext, useRef } from "react";
-import { PortfolioContext } from "../../../Context/PortfolioContext";
+import { ReactElement } from "react";
+// import { PortfolioContext } from "../../../Context/PortfolioContext";
 import "./TextScrollHightlight.css";
 
 export default function TextScrollHighlight({ children }: { children: ReactElement }) {
@@ -84,5 +84,3 @@ export default function TextScrollHighlight({ children }: { children: ReactEleme
 // const textInView = useInView(hightlightTextRef, { margin: "0px 0px -60% 0px" });
 
 /* Vector 1 */
-
-

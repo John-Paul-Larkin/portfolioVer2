@@ -1,5 +1,5 @@
 import { wrapGrid } from "animate-css-grid";
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import OtherProjects from "../OtherProjects/OtherProjects";
 import KitchenDisplayImage from "./KitchenDisplayImage";
 import PosDescription from "./PosDescription";
@@ -7,22 +7,24 @@ import PosImage from "./PosImage";
 import TextScrollHighlight from "./TextScrollHighlight";
 import YouTube from "./YouTube";
 
+import "./ImageOverlay.css";
 import "./Projects.css";
-import "./ImageOverlay.css"
+import { PortfolioContext } from "../../../Context/PortfolioContext";
 
 export default function Projects() {
   //ref for animating hero
-  // const { containerRef } = useContext(PortfolioContext);
+   const { project1Ref } = useContext(PortfolioContext);
 
-  const project1Ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (project1Ref.current) {
-      console.log("in wrap grid");
-      wrapGrid(project1Ref.current, { duration: 350, onStart: () => console.log("started anim") });
+      // wrap grid is used to animate the youtube react-player component
+      wrapGrid(project1Ref.current, {
+        duration: 350,
+        // onStart: () => console.log("started anim")
+      });
     }
-
-  }, []);
+  }, [project1Ref]);
 
   return (
     <section className="projects" id="projects">

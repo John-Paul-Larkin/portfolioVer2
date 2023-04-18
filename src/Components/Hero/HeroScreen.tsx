@@ -25,7 +25,7 @@ export default function HeroScreen() {
       }
     }
 
-    const resizeText = () => {
+    const resizeNameAnimationOnScreenChange = () => {
       console.log("in resize");
       width = window.innerWidth;
       if (wrapperSmRef.current && wrapperLrgRef.current && fullnameLrgRef.current) {
@@ -40,9 +40,9 @@ export default function HeroScreen() {
       }
     };
 
-    window.addEventListener("resize", resizeText);
+    window.addEventListener("resize", resizeNameAnimationOnScreenChange);
 
-    return () => window.removeEventListener("resize", resizeText);
+    return () => window.removeEventListener("resize", resizeNameAnimationOnScreenChange);
   }, []);
 
   return (
