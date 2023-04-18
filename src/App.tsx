@@ -16,7 +16,7 @@ import Test2 from "./Components/Test/test2";
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <PortfolioStore>
         <HeroScreen />
         <Test2 />

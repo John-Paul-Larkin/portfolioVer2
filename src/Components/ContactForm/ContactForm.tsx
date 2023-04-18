@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { PortfolioContext } from "../../Context/PortfolioContext";
 import TextScrollHighlight from "../Projects/MainProject/TextScrollHighlight";
 import "./ContactForm.css";
 
@@ -7,6 +8,9 @@ export default function ContactForm() {
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  // contactref used for scrollbar
+  const { contactRef } = useContext(PortfolioContext);
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -43,7 +47,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="contact">
+    <section className="contact" ref={contactRef}>
       <div className="container">
         <div className="heading">
           <TextScrollHighlight>

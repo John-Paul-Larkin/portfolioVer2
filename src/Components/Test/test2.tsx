@@ -7,12 +7,15 @@ export default function Test2() {
   const lineRef = useRef<SVGPathElement>(null);
 
   const [viewPortHeight, setViewPortHeight] = useState(window.innerHeight);
-  const { drawLength, setDrawLength, project1Ref, otherProjectsRef } = useContext(PortfolioContext);
+  const { drawLength, setDrawLength, project1Ref, otherProjectsRef, contactRef } = useContext(PortfolioContext);
 
+  //   const porject1Position = useCalcElementPositionOnScrollbar({ ref: project1Ref, viewPortHeight });
+    const porject1Position = useCalcElementPositionOnScrollbar({ ref: project1Ref, viewPortHeight });
 
-  const { top:project1Top, bottom:project1Bottom } = useCalcElementPositionOnScrollbar({ ref: project1Ref, viewPortHeight });
-  const { top:otherProjectsTop, bottom:otherProjectsBottom } = useCalcElementPositionOnScrollbar({ ref: otherProjectsRef, viewPortHeight });
+  //   const contactPosition = useCalcElementPositionOnScrollbar({ ref: contactRef, viewPortHeight });
 
+  //   const { top: otherProjectsTop, bottom: otherProjectsBottom } = useCalcElementPositionOnScrollbar({ ref: otherProjectsRef, viewPortHeight });
+  //   const { top: contactTop, bottom: contactBottom } = useCalcElementPositionOnScrollbar({ ref: contactRef, viewPortHeight });
 
   useEffect(() => {
     setViewPortHeight(window.innerHeight);
@@ -45,6 +48,8 @@ export default function Test2() {
     };
   }, [drawLength, setDrawLength, viewPortHeight]);
 
+  console.log(drawLength, "dl");
+
   return (
     <div className="line-container">
       <svg className="svg-line" viewBox={`0 0 2 ${viewPortHeight}`} fill="none">
@@ -56,55 +61,34 @@ export default function Test2() {
           r="5"
           stroke="pink"
           fill="pink"
-          strokeWidth={5}
+          strokeWidth={2}
           onClick={() => {
             document.getElementById(`projects`)?.scrollIntoView();
           }}
         />
-            <circle
+        <circle
           cx="1"
-          cy={project1Top}
+          cy={porject1Position}
           r="5"
-          stroke="yellow"
-          fill="yellow"
-          strokeWidth={5}
+          stroke="blue"
+          fill="blue"
+          strokeWidth={2}
           onClick={() => {
             document.getElementById(`projects`)?.scrollIntoView();
           }}
-          />
-              <circle
+        />
+
+        {/* <circle
           cx="1"
-          cy={project1Bottom}
-          r="5"
-          stroke="red"
-          fill="red"
-          strokeWidth={5}
-          onClick={() => {
-            document.getElementById(`projects`)?.scrollIntoView();
-          }}
-          />
-          <circle
-          cx="1"
-          cy={otherProjectsTop}
-          r="5"
-          stroke="yellow"
-          fill="yellow"
-          strokeWidth={5}
-          onClick={() => {
-            document.getElementById(`projects`)?.scrollIntoView();
-          }}
-          />
-              <circle
-          cx="1"
-          cy={otherProjectsBottom}
+          cy={contactPosition}
           r="5"
           stroke="red"
           fill="red"
-          strokeWidth={5}
+          strokeWidth={2}
           onClick={() => {
             document.getElementById(`projects`)?.scrollIntoView();
           }}
-          />
+        /> */}
       </svg>
     </div>
   );

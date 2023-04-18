@@ -5,7 +5,7 @@ interface ContextProvider {
   project1Ref: MutableRefObject<HTMLDivElement | null>;
   otherProjectsRef: MutableRefObject<HTMLDivElement | null>;
   heroRef: MutableRefObject<HTMLDivElement | null>;
-
+  contactRef: MutableRefObject<HTMLDivElement | null>;
   drawLength: number;
   setDrawLength: React.Dispatch<React.SetStateAction<number>>;
 }
@@ -15,10 +15,12 @@ export default function PortfolioStore({ children }: { children: ReactNode }) {
   const project1Ref = useRef<HTMLDivElement>(null);
   const otherProjectsRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   const [drawLength, setDrawLength] = useState(0);
 
   const contextValues = {
+    contactRef,
     modalRef,
     heroRef,
     project1Ref,
@@ -31,4 +33,3 @@ export default function PortfolioStore({ children }: { children: ReactNode }) {
 }
 // export const PortfolioContext = createContext<MutableRefObject<HTMLElement | null> | null>(null);
 export const PortfolioContext = createContext({} as ContextProvider);
-

@@ -27,12 +27,12 @@ export default function Projects() {
   }, [project1Ref]);
 
   return (
-    <section className="projects" id="projects">
+    <section className="projects" id="projects" ref={project1Ref}>
       <div className="container">
         <TextScrollHighlight>
           <h2>Projects</h2>
         </TextScrollHighlight>
-        <div className="project1" ref={project1Ref}>
+        <div className="project1" >
           <PosDescription />
           <PosImage />
           <KitchenDisplayImage />
