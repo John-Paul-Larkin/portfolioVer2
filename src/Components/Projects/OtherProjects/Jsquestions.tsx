@@ -8,8 +8,8 @@ export default function Jsquestions() {
       <div className="other-projects-description">
         <h3 className="project-heading">Coding questions</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui aliquam suscipit, pariatur repudiandae accusamus molestias, esse aut est
-          repellat accusantium minus eius tempora quam sit alias perspiciatis eligendi. Minus, velit.
+          An app for testing coding related questions. I used react for the front end and firestore for the back. Aloing the way I implemented the
+          react context API for state management and the intersection observer API for infinite scrolling.
         </p>
       </div>
       <div className="outer">

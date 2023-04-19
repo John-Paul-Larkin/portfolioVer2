@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities; */
 
-
 @font-face {
   src: local("Valencia"), url(./Assets/Fonts/Valencia.ttf) format("truetype");
   font-family: "Valencia";
@@ -25,14 +24,21 @@
   background-color: var(--clr-two);
 }
 
+
 h2 {
   /* margin-top: 3rem; */
   padding-top: 2rem;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   text-align: center;
   font-weight: bold;
   letter-spacing: 1px;
   color: inherit;
+}
+
+@media (min-width: 410px) {
+ h2 {
+    font-size: 3.5rem;
+  }
 }
 
 hr {

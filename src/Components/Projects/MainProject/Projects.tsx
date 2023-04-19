@@ -1,5 +1,5 @@
 import { wrapGrid } from "animate-css-grid";
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect } from "react";
 import OtherProjects from "../OtherProjects/OtherProjects";
 import KitchenDisplayImage from "./KitchenDisplayImage";
 import PosDescription from "./PosDescription";
@@ -7,14 +7,13 @@ import PosImage from "./PosImage";
 import TextScrollHighlight from "./TextScrollHighlight";
 import YouTube from "./YouTube";
 
+import { PortfolioContext } from "../../../Context/PortfolioContext";
 import "./ImageOverlay.css";
 import "./Projects.css";
-import { PortfolioContext } from "../../../Context/PortfolioContext";
 
 export default function Projects() {
   //ref for animating hero
-   const { project1Ref } = useContext(PortfolioContext);
-
+  const { project1Ref } = useContext(PortfolioContext);
 
   useEffect(() => {
     if (project1Ref.current) {
@@ -27,12 +26,12 @@ export default function Projects() {
   }, [project1Ref]);
 
   return (
-    <section className="projects" id="projects" ref={project1Ref}>
+    <section className="projects" id="projects">
       <div className="container">
         <TextScrollHighlight>
           <h2>Projects</h2>
         </TextScrollHighlight>
-        <div className="project1" >
+        <div className="project1" ref={project1Ref}>
           <PosDescription />
           <PosImage />
           <KitchenDisplayImage />

@@ -7,7 +7,7 @@
 .description {
   padding: 1em;
   font-size: 1rem;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   border: 2px solid var(--clr-four);
   background: rgba(27, 42, 65, 0.85); /*--clr-two as rgb */
   box-shadow: 5px 5px 10px var(--clr-one);

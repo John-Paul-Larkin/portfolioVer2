@@ -44,7 +44,12 @@ export default function YouTube() {
   }, []);
 
   return (
-    <motion.div initial={initialLeft} whileInView={animate} className="player-container" ref={playerRef}>
+    <motion.div
+      initial={initialLeft}
+      whileInView={animate}
+      className="player-container"
+      ref={playerRef}
+    >
       <div className="player-wrapper">
         {createPortal(<div className="player-modal" ref={modalBackdropRef}></div>, document.body)}
 
