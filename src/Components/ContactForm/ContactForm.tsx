@@ -1,33 +1,19 @@
 import { motion } from "framer-motion";
 import { FormEvent, useContext, useRef } from "react";
+import Swal from "sweetalert2";
 import { PortfolioContext } from "../../Context/PortfolioContext";
 import TextScrollHighlight from "../Projects/MainProject/TextScrollHighlight";
 import "./ContactForm.css";
 
 export default function ContactForm() {
-  const nameRef = useRef<HTMLInputElement>(null);
-  const emailRef = useRef<HTMLInputElement>(null);
-  const messageRef = useRef<HTMLTextAreaElement>(null);
-
   // contactref used for scrollbar
   const { contactRef } = useContext(PortfolioContext);
-
-  // interface ContactFormDetails {
-  //   name: string;
-  //   email: string;
-  //   message: string;
-  // }
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    // console.log(form);
-    // console.log(formData);
-    // for (const pair of formData.entries()) {
-    //   console.log(pair[0]+ ', ' + pair[1]);
-
     const myForm = event.currentTarget;
-    console.log(myForm);
 
     const formData = new FormData(myForm);
 
@@ -37,8 +23,30 @@ export default function ContactForm() {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       body: new URLSearchParams(formData as any).toString(),
     })
-      .then(() => alert("/thank-you/"))
-      .catch((error) => alert(error));
+      .then(() => {
+        Swal.fire({
+          title: "Awesome",
+          // icon: "success",
+          color: "white",
+          background: "#6874e8",
+          imageUrl: "https://media.giphy.com/media/AgrfqPt5AyiTm/giphy.gif",
+          // imageUrl: "https://media.giphy.com/media/xUA7aVZuDp4anJb3bO/giphy.gif",
+          // imageUrl: "https://media.giphy.com/media/BYoRqTmcgzHcL9TCy1/giphy.gif",
+
+          imageWidth: 400,
+          // imageHeight: 200,
+          showConfirmButton: false,
+          timer: 2500,
+        });
+        formRef.current?.reset();
+      })
+      .catch((error) => {
+        Swal.fire({
+          title: "Error!",
+          text: `Oops something went wrong- ${error}`,
+          icon: "error",
+        });
+      });
   };
 
   const animation = {
@@ -66,7 +74,7 @@ export default function ContactForm() {
           </motion.p>
         </div>
 
-        <form name="contactF" className="form" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+        <form name="contactF" className="form" method="POST" data-netlify="true" onSubmit={handleSubmit} ref={formRef}>
           <input type="hidden" name="form-name" value="contactF" />
 
           <motion.div className="inputs" whileInView={animation.animate} initial={animation.initial}>
@@ -79,7 +87,7 @@ export default function ContactForm() {
               id="email"
               className="email"
               placeholder="youremail@corp.com"
-              ref={emailRef}
+              required
               tabIndex={1}
               whileInView={animationBorder.animate}
               initial={animationBorder.initial}
@@ -96,7 +104,6 @@ export default function ContactForm() {
               id="name"
               className="contact-name"
               placeholder="Optional"
-              ref={nameRef}
               tabIndex={2}
               whileInView={animationBorder.animate}
               initial={animationBorder.initial}
@@ -111,7 +118,6 @@ export default function ContactForm() {
               placeholder="Start typing..."
               className="message"
               name="message"
-              ref={messageRef}
               tabIndex={3}
               initial={animationBorder.initial}
               whileInView={animationBorder.animate}
