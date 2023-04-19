@@ -18,8 +18,8 @@ function App() {
     <>
       {/* <Navbar /> */}
       <PortfolioStore>
+        {/* <Test2 /> */}
         <HeroScreen />
-        <Test2 />
         <Projects />
         <DevIcons />
         <ContactForm />

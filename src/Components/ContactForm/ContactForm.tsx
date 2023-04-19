@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useContext, useRef } from "react";
+import { FormEvent, useContext, useRef } from "react";
 import { PortfolioContext } from "../../Context/PortfolioContext";
 import TextScrollHighlight from "../Projects/MainProject/TextScrollHighlight";
 import "./ContactForm.css";
@@ -12,27 +12,32 @@ export default function ContactForm() {
   // contactref used for scrollbar
   const { contactRef } = useContext(PortfolioContext);
 
-  const handleSubmit = (event: React.FormEvent) => {
+  // interface ContactFormDetails {
+  //   name: string;
+  //   email: string;
+  //   message: string;
+  // }
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const data = {
-      firstName: nameRef.current!.value,
-      email: emailRef.current!.value,
-      message: messageRef.current!.value,
-    };
 
-    // alert(JSON.stringify(data) + "Your data");
+    // console.log(form);
+    // console.log(formData);
+    // for (const pair of formData.entries()) {
+    //   console.log(pair[0]+ ', ' + pair[1]);
 
-    // event.preventDefault();
+    const myForm = event.currentTarget;
+    console.log(myForm);
 
-    // const myForm = event.target;
-    // const formData = new FormData(myForm);
+    const formData = new FormData(myForm);
 
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(data).toString(),
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      body: new URLSearchParams(formData as any).toString(),
     })
-      .then(() => console.log("Form successfully submitted"))
+      .then(() => alert("/thank-you/"))
       .catch((error) => alert(error));
   };
 
@@ -61,14 +66,8 @@ export default function ContactForm() {
           </motion.p>
         </div>
 
-        <form name="contactF" className="form" data-netlify="true">
-          {/* <input type="hidden" name="form-name" value="contactF" /> */}
-          {/* add method = post */}
-          {/* <form name="contactF" netlify netlify-honeypot="bot-field" hidden>
-             <input type="email" name="email" />
-              <input type="text" name="name" />
-              <textarea name="message"></textarea>
-              </form>  */}
+        <form name="contactF" className="form" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+          <input type="hidden" name="form-name" value="contactF" />
 
           <motion.div className="inputs" whileInView={animation.animate} initial={animation.initial}>
             <div className="label-wrapper">
@@ -120,7 +119,7 @@ export default function ContactForm() {
           </motion.div>
 
           <div className="inputs">
-            <button type="submit" className="btn-send" tabIndex={4} onClick={handleSubmit}>
+            <button type="submit" className="btn-send" tabIndex={4}>
               Send
             </button>
           </div>

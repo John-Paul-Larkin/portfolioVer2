@@ -21,39 +21,14 @@ const useCalcElementPositionOnScrollbar = ({ ref, viewPortHeight }: Inputs): num
   };
 
   let position = 0;
+  console.log((viewPortHeight / document.documentElement.scrollHeight) * 100);
 
   if (ref.current !== null) {
-    // element to top / total height of root element --- as a percentage
-    // const scrolltestTopPercentage = (getElementDistanceFromTop({ element: ref.current }) / document.documentElement.scrollHeight) * 100;
+    const scrolltestTopPercentage = (getElementDistanceFromTop({ element: ref.current }) / document.documentElement.scrollHeight) * 100;
 
-    const scrolltestTopPercentage =
-      ((document.documentElement.scrollHeight - (getElementDistanceFromTop({ element: ref.current }) + viewPortHeight)) /
-        document.documentElement.scrollHeight) *
-      100;
-
-    //   (document.documentElement.scrollHeight - getElementDistanceFromTop({ element: ref.current }))  / document.documentElement.scrollHeight * 100;
-    //     getElementDistanceFromTop({ element: ref.current }) / document.documentElement.scrollHeight
-    //   ) *
-    //     100;
-
-    // const scrolltestBottomPercentage =
-    //   ((getElementDistanceFromTop({ element: ref.current }) + ref.current.offsetHeight) / document.documentElement.scrollHeight) * 100;
-
-    // console.log(getElementDistanceFromTop({ element: ref.current }), "distance from top");
-    console.log(scrolltestTopPercentage, "stts");
-
-    // console.log(window.scrollY, "srolly");
-    console.log(document.documentElement.offsetHeight, "sh");
-
-    // const scrolltestTopPercentage = getElementDistanceFromTop({ element: ref.current })
-
-    position = (viewPortHeight / 100) * (100 - scrolltestTopPercentage);
-    console.log(position, "pos");
-    // console.log((viewPortHeight / 100) * scrolltestBottomPercentage);
-
-    // console.log(264 / viewPortHeight *100);
+    position = (viewPortHeight / 100) * scrolltestTopPercentage;
   }
-  //   position = 264;
+
   return position;
 };
 

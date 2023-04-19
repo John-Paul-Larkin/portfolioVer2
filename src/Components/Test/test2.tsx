@@ -12,7 +12,7 @@ export default function Test2() {
   //   const porject1Position = useCalcElementPositionOnScrollbar({ ref: project1Ref, viewPortHeight });
     const porject1Position = useCalcElementPositionOnScrollbar({ ref: project1Ref, viewPortHeight });
 
-  //   const contactPosition = useCalcElementPositionOnScrollbar({ ref: contactRef, viewPortHeight });
+    // const contactPosition = useCalcElementPositionOnScrollbar({ ref: contactRef, viewPortHeight });
 
   //   const { top: otherProjectsTop, bottom: otherProjectsBottom } = useCalcElementPositionOnScrollbar({ ref: otherProjectsRef, viewPortHeight });
   //   const { top: contactTop, bottom: contactBottom } = useCalcElementPositionOnScrollbar({ ref: contactRef, viewPortHeight });
