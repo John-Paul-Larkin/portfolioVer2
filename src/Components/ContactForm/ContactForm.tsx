@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FormEvent, useContext, useRef } from "react";
 import Swal from "sweetalert2";
+import { animationContactFormBorder, contactFormAnimation } from "../../Assets/AnimateValues";
 import { PortfolioContext } from "../../Context/PortfolioContext";
 import TextScrollHighlight from "../Projects/MainProject/TextScrollHighlight";
 import "./ContactForm.css";
@@ -49,16 +50,6 @@ export default function ContactForm() {
       });
   };
 
-  const animation = {
-    initial: { opacity: 0.1, y: 10 },
-    animate: { opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.25, ease: "easeOut" } },
-  };
-
-  const animationBorder = {
-    initial: { opacity: 0.1, width: "80%" },
-    animate: { opacity: 1, width: "90%", transition: { delay: 0.2, duration: 0.25, ease: "easeIn" } },
-  };
-
   return (
     <section className="contact" ref={contactRef}>
       <div className="container">
@@ -66,10 +57,10 @@ export default function ContactForm() {
           <TextScrollHighlight>
             <h2>Get in touch!</h2>
           </TextScrollHighlight>
-          <motion.p whileInView={animation.animate} initial={animation.initial}>
+          <motion.p whileInView={contactFormAnimation.animate} initial={contactFormAnimation.initial}>
             Comments, suggestions, or just want to say hello?
           </motion.p>
-          <motion.p whileInView={animation.animate} initial={animation.initial}>
+          <motion.p whileInView={contactFormAnimation.animate} initial={contactFormAnimation.initial}>
             I'd love to hear from you.
           </motion.p>
         </div>
@@ -77,7 +68,7 @@ export default function ContactForm() {
         <form name="contactF" className="form" method="POST" data-netlify="true" onSubmit={handleSubmit} ref={formRef}>
           <input type="hidden" name="form-name" value="contactF" />
 
-          <motion.div className="inputs" whileInView={animation.animate} initial={animation.initial}>
+          <motion.div className="inputs" whileInView={contactFormAnimation.animate} initial={contactFormAnimation.initial}>
             <div className="label-wrapper">
               <label htmlFor="email">Email Address</label>
             </div>
@@ -89,12 +80,12 @@ export default function ContactForm() {
               placeholder="youremail@corp.com"
               required
               tabIndex={1}
-              whileInView={animationBorder.animate}
-              initial={animationBorder.initial}
+              whileInView={animationContactFormBorder.animate}
+              initial={animationContactFormBorder.initial}
             />
           </motion.div>
 
-          <motion.div className="inputs" whileInView={animation.animate} initial={animation.initial}>
+          <motion.div className="inputs" whileInView={contactFormAnimation.animate} initial={contactFormAnimation.initial}>
             <div className="label-wrapper">
               <label htmlFor="name">Name</label>
             </div>
@@ -105,12 +96,12 @@ export default function ContactForm() {
               className="contact-name"
               placeholder="Optional"
               tabIndex={2}
-              whileInView={animationBorder.animate}
-              initial={animationBorder.initial}
+              whileInView={animationContactFormBorder.animate}
+              initial={animationContactFormBorder.initial}
             />
           </motion.div>
 
-          <motion.div className="inputs" whileInView={animation.animate} initial={animation.initial}>
+          <motion.div className="inputs" whileInView={contactFormAnimation.animate} initial={contactFormAnimation.initial}>
             <div className="label-wrapper">
               <label htmlFor="message">Message</label>
             </div>
@@ -119,8 +110,8 @@ export default function ContactForm() {
               className="message"
               name="message"
               tabIndex={3}
-              initial={animationBorder.initial}
-              whileInView={animationBorder.animate}
+              initial={animationContactFormBorder.initial}
+              whileInView={animationContactFormBorder.animate}
             ></motion.textarea>
           </motion.div>
 

@@ -23,4 +23,14 @@ const initialRight = {
   x: 20,
 };
 
-export { animate, initial, initialLeft, initialRight };
+const contactFormAnimation = {
+  initial: { opacity: 0.1, y: 10 },
+  animate: { opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.25, ease: "easeOut" } },
+};
+
+const animationContactFormBorder = {
+  initial: { opacity: 0.1, width: "80%" },
+  animate: { opacity: 1, width: "90%", transition: { delay: 0.2, duration: 0.25, ease: "easeIn" } },
+};
+
+export { animate, initial, initialLeft, initialRight, contactFormAnimation, animationContactFormBorder };
