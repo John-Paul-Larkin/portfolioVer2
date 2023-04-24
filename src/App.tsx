@@ -1,4 +1,3 @@
-import "./App.css";
 import PortfolioStore from "./Context/PortfolioContext";
 
 import ContactForm from "./Components/ContactForm/ContactForm";
@@ -16,7 +15,7 @@ import Test2 from "./Components/Test/test2";
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <PortfolioStore>
         {/* <Test2 /> */}
         <HeroScreen />

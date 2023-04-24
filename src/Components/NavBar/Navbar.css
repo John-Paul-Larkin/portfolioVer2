@@ -19,12 +19,12 @@
 }
 
 .nav-after {
-  transition: top .2s ease-out;
+  transition: top 0.2s ease-out;
 }
 
 .nav-up {
   top: -110px;
-  transition: top .8s ease;
+  transition: top 0.8s ease;
 }
 
 .nav__fullname {
@@ -46,6 +46,7 @@
   text-decoration: none;
   font-weight: 700;
   color: var(--clr-four);
+  white-space: nowrap;
 }
 
 .nav__contact {
@@ -71,6 +72,10 @@
 }
 
 @media (min-width: 700px) {
+  .nav ul {
+    max-width: 80%;
+  }
+
   .nav li {
     padding-left: 0.5em;
     padding-right: 0.5em;
