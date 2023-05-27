@@ -5,8 +5,10 @@ import Footer from "./Components/Footer/Footer";
 import HeroScreen from "./Components/Hero/HeroScreen";
 import DevIcons from "./Components/Icons/DevIcons";
 import Projects from "./Components/Projects/MainProject/Projects";
-// import Navbar from "./Components/NavBar/Navbar";
 import Navbar from "./Components/NavBar/Navbar";
+import About from "./About";
+
+// import Navbar from "./Components/NavBar/Navbar";
 // import Test from "./Components/Test/Test";
 // import Test2 from "./Components/Test/test2";
 
@@ -21,6 +23,7 @@ function App() {
         <HeroScreen />
         <Projects />
         <DevIcons />
+        <About/>
         <ContactForm />
         <Footer />
       </PortfolioStore>

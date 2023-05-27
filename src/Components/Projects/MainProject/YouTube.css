@@ -55,7 +55,7 @@
   }
 
   .player-container::before {
-    content: "Intro video 30 seconds";
+    content: "Intro video 1:16";
     position: absolute;
     font-size: 0.8rem;
     top: -2em;

@@ -63,7 +63,7 @@ export default function Navbar() {
           </a>
         </li>
         <li>
-          <a className="nav__link" href="#">
+          <a className="nav__link" href="#about">
             ABOUT ME
           </a>
         </li>

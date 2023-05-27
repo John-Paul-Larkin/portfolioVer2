@@ -57,7 +57,7 @@ export default function YouTube() {
           className="react-player"
           width="100%"
           height="100%"
-          url="https://www.youtube.com/watch?v=D0f20o1ADF0"
+          url="https://youtu.be/vgQ1oEJDxEU"
           light={true}
           volume={1}
           controls={true}

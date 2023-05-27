@@ -8,14 +8,14 @@ const animate = {
   },
 };
 
-const initialLeft = {
-  opacity: 0.1,
-  x: -20,
-};
-
 const initial = {
   opacity: 0.1,
   y: 20,
+};
+
+const initialLeft = {
+  opacity: 0.1,
+  x: -20,
 };
 
 const initialRight = {
