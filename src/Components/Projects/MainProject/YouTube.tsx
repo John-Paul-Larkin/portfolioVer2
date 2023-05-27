@@ -61,7 +61,7 @@ export default function YouTube() {
           light={true}
           volume={1}
           controls={true}
-          muted={true}
+          // muted={false}
           playing={true}
         />
       </div>

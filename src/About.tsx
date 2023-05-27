@@ -18,6 +18,7 @@ I’m a software engineer specializing in building (and occasionally designing) 
 I am a Product and UX Designer! I work at the intersection of curiosity, reasoning and imagination, which guide me to uncover insights, (re)frame problems and craft meaningful, future-oriented solutions.
 I am passionate about providing solutions to users by building accessible products. */}
           To be filled.
+          
         </p>
       </div>
     </section>
