@@ -7,6 +7,7 @@ import DevIcons from "./Components/Icons/DevIcons";
 import Projects from "./Components/Projects/MainProject/Projects";
 import Navbar from "./Components/NavBar/Navbar";
 import About from "./Components/AboutMe/About";
+// import Comments from "./Components/CommentSection/Comments";
 
 // import Navbar from "./Components/NavBar/Navbar";
 // import Test from "./Components/Test/Test";
@@ -24,6 +25,7 @@ function App() {
         <Projects />
         <DevIcons />
         <About/>
+        {/* <Comments/> */}
         <ContactForm />
         <Footer />
       </PortfolioStore>
