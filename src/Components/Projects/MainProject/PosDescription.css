@@ -42,6 +42,12 @@
   transition: color 1s;
 }
 
+
+.description-container .links a{
+  color: var(--clr-six);
+
+}
+
 @media (min-width: 425px) {
   .description-container {
     padding: 1rem;
@@ -59,6 +65,9 @@
     grid-area: 1 / 1 / 2/ 3;
     padding: 0;
     align-self: center;
+  }
+  .description-container .links{
+    display: none;
   }
 
   .project1 .description {
