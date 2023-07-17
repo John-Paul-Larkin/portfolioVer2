@@ -1,0 +1,11 @@
+.wim-container {
+    padding: 1rem;
+  font-size: 1rem;
+  /* border-radius: 20px; */
+  border: 2px solid var(--clr-four);
+  background: rgba(27, 42, 65, 0.85);
+  box-shadow: 5px 5px 10px var(--clr-one);
+  z-index: 2;
+  /* width:100%; */
+  
+}
