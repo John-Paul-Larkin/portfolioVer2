@@ -14,7 +14,22 @@
   display: block;
   top:10%;
   font-size: .77rem;
+}
 
+.wim-container .overlay-text {
+  display: block;
+  top:10%;
+  font-size: .77rem;
+}
+
+.wim-container .github-btn,
+.wim-container .live-btn {
+  display: block;
+}
+
+.wim-container .img-btn-container:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 @media (min-width: 450px) {
