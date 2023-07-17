@@ -6,12 +6,12 @@ import './Wim.css'
 
 export default function Wim() {
   return (
-    <motion.aside initial={initialLeft} whileInView={animate} className="other-projects-container jpmazon">
-      <div className="other-projects-description">
+    <motion.aside initial={initialLeft} whileInView={animate} className="wim-container">
+      <div className="wim-description">
         <h3 className="project-heading">WIM</h3>
         <p>
           WIM is an inventory tool, which allows for the tracking of sales, purchases and up to date stock levels for products. The front end is built
-          using react, typescript and react-table and is hosted on netlify. The back end uses Node/Express.js and a mySQL relational database.
+          using react.<span className="extra-description"> typescript and react-table and is hosted on netlify.</span> The back end uses Node/Express.js and a mySQL relational database.
         </p>
       </div>
       <div className="outer">

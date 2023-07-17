@@ -10,11 +10,11 @@ export default function OtherProjects() {
 
   return (
     <div className="other-projects-wrapper" ref={otherProjectsRef}>
+      <Wim/>
+      <hr />
       <Jpmazon />
       <hr />
       <Jsquestions />
-      <hr />
-      <Wim/>
     </div>
   );
 }
