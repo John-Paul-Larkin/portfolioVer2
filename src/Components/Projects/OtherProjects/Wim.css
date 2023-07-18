@@ -29,9 +29,9 @@
     }
   } */
 
-  .extra-description {
+/* .extra-description {
     display: none;
-  }
+  } */
 
 @media (min-width: 600px) {
   .wim-container {
@@ -40,9 +40,11 @@
     background: radial-gradient(circle, rgba(46, 61, 107, 1) 50%, rgba(43, 47, 89, 1) 93%);
     /* margin:0; */
     padding: 0;
-    
   }
 
+  .temp-note {
+    margin-top: 4rem;
+  }
 }
 
 @media (min-width: 650px) {
@@ -65,8 +67,82 @@
     /* width:100%; */
   }
 
-
   .wim-container .outer {
     margin: 2rem;
+  }
+}
+
+.temp-note {
+  margin-top: 1rem;
+  color: red;
+}
+
+@media (min-width: 1220px) {
+  .wim-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    background: radial-gradient(circle, rgba(46, 61, 107, 1) 50%, rgba(43, 47, 89, 1) 93%);
+    /* margin:0; */
+    padding: 0;
+  }
+
+  .temp-note {
+    margin-top: 4rem;
+  }
+}
+
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* ////////////////////////////// */
+/* css for other projects image overlay */
+
+.wim-container .github-btn,
+.wim-container .live-btn {
+  display: block;
+}
+
+.wim-container .img-btn-container:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.wim-container .overlay-text {
+  display: block;
+  top: 10%;
+  font-size: 0.77rem;
+}
+
+@media (min-width: 450px) {
+  .wim-container .overlay-text {
+    display: block;
+    font-size: 0.88rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .wim-container .overlay-text {
+    display: block;
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .wim-container .overlay-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1250px) {
+  .wim-container .overlay-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1450px) {
+  .wim-container .overlay-text {
+    top: 20%;
   }
 }

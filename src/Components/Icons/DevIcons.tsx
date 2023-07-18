@@ -30,13 +30,7 @@ export default function DevIcons() {
         <TextScrollHighlight>
           <h2>Skills</h2>
         </TextScrollHighlight>
-        <motion.ul
-          className="dev-icons-container"
-          initial="hidden"
-          whileInView="visible"
-          variants={list}
-          viewport={{ margin: "0px 0px -100px 0px" }}
-        >
+        <motion.ul className="dev-icons-container" initial="hidden" whileInView="visible" variants={list} viewport={{ margin: "0px 0px -100px 0px" }}>
           <motion.li variants={item}>
             <i className="devicon-html5-plain colored"></i>
             <span>HTML</span>
@@ -76,6 +70,10 @@ export default function DevIcons() {
           <motion.li variants={item}>
             <i className="devicon-typescript-plain colored"></i>
             <span>Typescript</span>
+          </motion.li>
+          <motion.li variants={item}>
+            <i className="devicon-nodejs-plain colored"></i>
+            <span>Node</span>
           </motion.li>
         </motion.ul>
       </div>

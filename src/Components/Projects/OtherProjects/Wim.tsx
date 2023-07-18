@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { animate, initialLeft } from "../../../Assets/AnimateValues";
 
 import wim from "../../../Assets/Images/wim.jpg";
-import './Wim.css'
+import "./Wim.css";
 
 export default function Wim() {
   return (
@@ -11,7 +11,11 @@ export default function Wim() {
         <h3 className="project-heading">WIM</h3>
         <p>
           WIM is an inventory tool, which allows for the tracking of sales, purchases and up to date stock levels for products. The front end is built
-          using react.<span className="extra-description"> typescript and react-table and is hosted on netlify.</span> The back end uses Node/Express.js and a mySQL relational database.
+          using react.<span className="extra-description"> typescript and react-table and is hosted on netlify.</span> The back end uses
+          Node/Express.js and a mySQL relational database.
+        </p>
+        <p className="temp-note">
+          Please note railway have recently removed their free tier, so the back end for this app is currently not hosted. I will have it back up soon
         </p>
       </div>
       <div className="outer">
