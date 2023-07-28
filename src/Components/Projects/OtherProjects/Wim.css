@@ -51,9 +51,9 @@
   .wim-container {
     grid-template-columns: 1fr 1fr;
   }
-  .extra-description {
+  /* .extra-description {
     display: inline;
-  }
+  } */
 }
 
 @media (min-width: 800px) {
@@ -86,9 +86,7 @@
     padding: 0;
   }
 
-  .temp-note {
-    margin-top: 4rem;
-  }
+
 }
 
 /* ////////////////////////////// */

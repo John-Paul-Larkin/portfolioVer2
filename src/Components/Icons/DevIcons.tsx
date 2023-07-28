@@ -75,6 +75,10 @@ export default function DevIcons() {
             <i className="devicon-nodejs-plain colored"></i>
             <span>Node</span>
           </motion.li>
+          <motion.li variants={item}>
+            <i className="devicon-mysql-plain colored"></i>
+            <span>MySQL</span>
+          </motion.li>
         </motion.ul>
       </div>
     </section>
