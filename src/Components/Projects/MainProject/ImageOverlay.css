@@ -1,7 +1,11 @@
 /* css for other projects image overlay */
 
-.other-projects-container .github-btn,
+/* .other-projects-container .github-btn,
 .other-projects-container .live-btn {
+  display: none;
+} */
+
+.highlight-btn {
   display: none;
 }
 
