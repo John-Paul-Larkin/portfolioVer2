@@ -98,7 +98,7 @@
   font-size: 1rem;
   transform: translateX(-50%);
   opacity: 0;
-  /* display: none; */
+  display: none;
   transition: opacity 0.35s ease;
   cursor: pointer;
 
@@ -133,7 +133,6 @@
 
 .img-btn-container:hover .overlay-text {
   opacity: 1;
-  display: block;
 }
 
 @media (min-width: 700px) {
