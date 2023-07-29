@@ -26,15 +26,15 @@ export default function PosDescription() {
           they can be prepared in a sequential manner. The app provides a timeline, which arranges the orders depending on the station(grill, fry), so
           that each chef can, at a glance, determine which item they should be preparing, if there are any modifications to the ingredients and the
           remaining time before the order should be sent.
-          <div className="links">
-            <p>
+          <span className="links">
+            <span>
               Point of sale <a href="https://github.com/Fishamble/kitchenpos">GitHub </a> - <a href="https://kitchenpos.netlify.app/">Live</a>
-            </p>
-            <p>
+            </span>
+            <span>
               Kitchen display system <a href="https://github.com/Fishamble/kitchen_back_end">GitHub </a> -{" "}
               <a href="https://kitchendisplay.netlify.app/">Live</a>
-            </p>
-          </div>
+            </span>
+          </span>
         </p>
         {/* <TextScrollHighlight>
         <FontAwesomeIcon className="description-icons" title="GitHub" icon={faGithub} />

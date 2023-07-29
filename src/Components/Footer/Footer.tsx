@@ -51,18 +51,8 @@ export default function Footer() {
   return (
     <footer className="footer">
       <QuoteDisplay />
-      {/* <p>logo</p> */}
 
       <ul className="icons">
-        {/* <li>
-          <a href="" aria-label=""></a>
-        </li>
-        <li>
-          <a href="" aria-label=""></a>
-        </li>
-        <li>
-          <a href="" aria-label=""></a>
-        </li> */}
         <li>
           <a href="" aria-label="Twitter link">
             <FontAwesomeIcon icon={faTwitter} />
