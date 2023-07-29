@@ -143,6 +143,7 @@
 
 .img-btn-container:hover .overlay-text {
   opacity: 1;
+  display: block;
 }
 
 @media (min-width: 700px) {
