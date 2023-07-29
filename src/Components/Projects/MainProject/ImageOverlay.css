@@ -5,9 +5,10 @@
   display: none;
 } */
 
-.highlight-btn {
+/* .highlight-btn {
   display: none;
-}
+  visibility: hidden;
+} */
 
 .other-projects-container .img-btn-container:hover .overlay {
   display: block;
@@ -101,8 +102,8 @@
   width: 4rem;
   font-size: 1rem;
   transform: translateX(-50%);
-  opacity: 0;
-  display: none;
+  /* opacity: 0; */
+  /* display: none; */
   transition: opacity 0.35s ease;
   cursor: pointer;
 
@@ -114,6 +115,7 @@
   border-radius: 5px;
   font-weight: 700;
   outline: 2px solid var(--clr-seven);
+  visibility: hidden;
 }
 
 .highlight-btn:hover {
@@ -133,6 +135,8 @@
 .img-btn-container:hover .highlight-btn {
   opacity: 1;
   display: block;
+  visibility: visible;
+  transition: visibility 0ms 0.3s;
 }
 
 .img-btn-container:hover .overlay-text {
