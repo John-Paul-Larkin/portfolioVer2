@@ -128,10 +128,10 @@
 }
 
 .github-btn {
-  left: 33%;
+  left: 66%;
 }
 .live-btn {
-  left: 66%;
+  left: 33%;
 }
 
 .img-btn-container:hover .highlight-btn {
