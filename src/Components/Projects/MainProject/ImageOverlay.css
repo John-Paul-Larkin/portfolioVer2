@@ -10,12 +10,14 @@
   visibility: hidden;
 } */
 
-.other-projects-container .img-btn-container:hover .overlay {
+/* .other-projects-container */
+.img-btn-container:hover .overlay {
   display: block;
   background: rgba(0, 0, 0, 0.7);
 }
 
-.other-projects-container .overlay-text {
+/* .other-projects-container  */
+.overlay-text {
   display: block;
   top: 10%;
   font-size: 0.77rem;
@@ -54,8 +56,8 @@
 }
 /* css for other projects image overlay */
 
-.github-btn,
-.live-btn,
+/* .github-btn, */
+/* .live-btn, */
 .overlay-text {
   display: none;
 }
@@ -136,7 +138,7 @@
   opacity: 1;
   display: block;
   visibility: visible;
-  transition: visibility 0ms 0.3s;
+  transition: visibility 0ms 0.1s;
 }
 
 .img-btn-container:hover .overlay-text {

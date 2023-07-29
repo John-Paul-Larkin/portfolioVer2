@@ -9,9 +9,9 @@ export default function Wim() {
     <motion.aside initial={initialLeft} whileInView={animate} className="wim-container">
       <div className="wim-description">
         <h3 className="project-heading">WIM</h3>
-        <p>WIM is an inventory tool, which allows for the tracking of sales, purchases and up to date stock levels for products.</p>
+        <p>WIM is an inventory tool, which allows for the tracking of sales, purchases and realtime stock levels for products.</p>
         <p>The front end is built using react, typescript and react-table and is hosted on netlify.</p>
-        <p>The back end uses Node/Express.js and a mySQL relational database and is hosted on an Ubuntu virtual private server </p>
+        <p>The back end utilises Node/Express.js and a mySQL relational database and is hosted on a digital ocean VPS. </p>
       </div>
       <div className="outer">
         <div className="project-img-wrapper img-btn-container">
