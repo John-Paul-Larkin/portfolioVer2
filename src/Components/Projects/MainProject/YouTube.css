@@ -60,7 +60,7 @@
     font-size: 0.8rem;
     top: -2em;
     left: 2em;
-    background-color: var(--clr-two);
+    background-color: white;
     padding: 0.5em;
     font-weight: 700;
     border: 2px solid var(--clr-four);
@@ -69,7 +69,6 @@
   }
 
   .player-container-click {
-    grid-area: 1 / 1 / 4/ 3;
     justify-self: center;
     width: 100%;
     z-index: 11;
@@ -78,7 +77,6 @@
 
 @media (min-width: 1200px) {
   .player-container-click {
-    grid-area: 1 / 1 / 3/ 4;
     width: 80%;
   }
 }

@@ -1,93 +1,81 @@
 .description-container {
   position: relative;
   z-index: 2;
-  padding: 1rem 0;
+  /* so pos image sits behind */
+  /* padding: 1rem 0; */
 }
 
 .description {
-  padding: 1em;
-  font-size: 1rem;
-  /* border-radius: 20px; */
-  border: 2px solid var(--clr-four);
-  background: rgba(27, 42, 65, 0.85); /*--clr-two as rgb */
+  background-color: orangered;
+
+  display: flex;
+
+  /* box-shadow: -5px 5px 5px var(--clr-one); */
   box-shadow: 5px 5px 10px var(--clr-one);
+
 }
 
-.project-heading {
-  font-size: 1.5rem;
-  text-align: center;
-  font-weight: bold;
-  letter-spacing: 1px;
+.waiter-img {
+  width: 100%;
 }
 
-.project-heading::first-letter {
+.waiter-img-wrapper {
+  width: 70%;
+}
+
+.img-text-container {
   position: relative;
-  font-size: 1.6em;
-  color: var(--clr-six);
+  background-color: rgb(27, 42, 65);
+  /* background: var(--clr-two); */
+
+  /* color:white; */
+
+  /* display: inline-block; */
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
 }
 
-.description-icons {
-  font-size: 1.5em;
+.img-text-container > p {
+  position: absolute;
+  top: 2rem;
+  left: -269px;
+  font-size: 2.2rem;
+  font-weight: 900;
+  /* background-color: white; */
+  padding: 0.1rem;
 }
 
-.description-icons:hover {
-  cursor: pointer;
+.img-text-container p span {
+  /* color: white; */
+  display: inline-block;
+  background-color: hsl(22, 15%, 90%);
+  padding-right: 1rem;
 }
 
-.pos-heading {
-  color: var(--clr-seven);
-  color: inherit;
-  font-size: 1.1em;
-  font-weight: bold;
-  transition: color 1s;
-}
-
-
-.description-container .links a{
-  color: var(--clr-six);
+.inner-text {
+  /* position: relative; */
+  color: white;
+  width: calc(100% + 102.56px);
+  transform: translate(-102.56px);
+  background-color: rgb(27, 42, 65);
+  /* background-color: red; */
+  margin-top: 2rem;
 
 }
-
-@media (min-width: 425px) {
-  .description-container {
-    padding: 1rem;
-  }
+.inner-text > p {
+  padding: 1rem;
 }
 
-@media (min-width: 500px) {
-  .description-container {
-    padding: 2rem;
-  }
+.inner-text p:nth-child(3){
+  text-align: end;
+  padding-right: 2rem;
 }
 
 @media (min-width: 700px) {
-  .description-container {
-    grid-area: 1 / 1 / 2/ 3;
-    padding: 0;
-    align-self: center;
-  }
-  .description-container .links{
-    display: none;
-  }
-
   .project1 .description {
-    background: radial-gradient(circle, rgba(46, 61, 107, 1) 50%, rgba(43, 47, 89, 1) 93%);
-    padding: 2rem;
     opacity: 1;
-  }
-
-  .description p {
-    max-width: 70ch;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  .description-container {
-    grid-area: 1 / 1 / 1 / 3;
-  }
-
-  .description p {
-    line-height: 1.7;
   }
 }

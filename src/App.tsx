@@ -18,7 +18,7 @@ import About from "./Components/AboutMe/About";
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <PortfolioStore>
         {/* <Test2 /> */}
         <HeroScreen />

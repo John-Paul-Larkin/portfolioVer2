@@ -14,8 +14,6 @@
     box-shadow: 5px 5px 10px var(--clr-one);
     align-self: center;
 
-    grid-area: 3 / 1 / 4/ 2;
-    /* padding: 0; */
     align-self: center;
     /* slight difference between this image and the youtube player */
     aspect-ratio: 1280 / 732;
@@ -29,7 +27,7 @@
     font-size: 0.8rem;
     top: -2em;
     left: 2em;
-    background-color: var(--clr-two);
+    background-color: white;
     padding: 0.5em;
     font-weight: 700;
     border: 2px solid var(--clr-four);
@@ -39,7 +37,6 @@
 
 @media (min-width: 1200px) {
   .kitchen-display-container {
-    grid-area: 2 / 1 / 3 / 2;
     /* height: 105%; */
   }
 }

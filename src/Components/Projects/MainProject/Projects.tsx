@@ -6,6 +6,7 @@ import PosDescription from "./PosDescription";
 import PosImage from "./PosImage";
 import TextScrollHighlight from "./TextScrollHighlight";
 import YouTube from "./YouTube";
+import './km-grid.css'
 
 import { PortfolioContext } from "../../../Context/PortfolioContext";
 import "./ImageOverlay.css";
@@ -27,10 +28,8 @@ export default function Projects() {
 
   return (
     <section className="projects" id="projects">
+          {/* <h2>Projects</h2> */}
       <div className="container">
-        <TextScrollHighlight>
-          <h2>Projects</h2>
-        </TextScrollHighlight>
         <div className="project1" ref={project1Ref}>
           <PosDescription />
           <PosImage />

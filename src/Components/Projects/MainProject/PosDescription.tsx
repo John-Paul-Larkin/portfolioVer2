@@ -3,44 +3,84 @@
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { motion } from "framer-motion";
-import "./PosDescription.css";
-
 import { animate, initial, initialLeft } from "../../../Assets/AnimateValues";
+import annoyedCustomer from "./../../../Assets/Images/waiter.jpg";
+import "./PosDescription.css";
 // import TextScrollHighlight from "./TextScrollHighlight";
 
 export default function PosDescription() {
   return (
     <motion.div initial={initialLeft} whileInView={animate} className="description-container">
       <motion.div initial={initialLeft} whileInView={animate} className="description">
-        <motion.h3 className="project-heading" initial={initial} whileInView={animate}>
-          <>Kitchen management</>
-        </motion.h3>
-        <p>
-          <span className="pos-heading">"Restaurant POS" </span>
-          is a point of sale application for restaurants, designed to simplify the process of order taking, while streamlining communication between
-          the server in the front of house, and the chefs in the kitchen.
-        </p>
-        <p>
-          I built this app to work in conjunction with a<span className="pos-heading"> "kitchen display" </span>
-          application, which is an app for orchestrating the various sections of a commercial kitchen, such that orders are displayed and timed, so
-          they can be prepared in a sequential manner. The app provides a timeline, which arranges the orders depending on the station(grill, fry), so
-          that each chef can, at a glance, determine which item they should be preparing, if there are any modifications to the ingredients and the
-          remaining time before the order should be sent.
-          <span className="links">
-            <span>
-              Point of sale <a href="https://github.com/Fishamble/kitchenpos">GitHub </a> - <a href="https://kitchenpos.netlify.app/">Live</a>
-            </span>
-            <span>
-              Kitchen display system <a href="https://github.com/Fishamble/kitchen_back_end">GitHub </a> -{" "}
-              <a href="https://kitchendisplay.netlify.app/">Live</a>
-            </span>
-          </span>
-        </p>
-        {/* <TextScrollHighlight>
-        <FontAwesomeIcon className="description-icons" title="GitHub" icon={faGithub} />
-        </TextScrollHighlight>
-        <FontAwesomeIcon className="description-icons" icon={faPlayCircle} /> */}
+        <div className="waiter-img-wrapper">
+          <img
+            width="640"
+            height="427"
+            src={annoyedCustomer}
+            className="waiter-img"
+            alt="waiter standing over annoyed customer, both gesturing towards food"
+          />
+        </div>
+
+        <div className="img-text-container">
+          <p>
+            What's taking so <span>long?</span>
+          </p>
+          <div className="inner-text">
+            {/* <p> Have you ever endured a half-hour wait, only to be served a lukewarm, unappetizing meal?</p> */}
+            <p>In a busy restaurant kitchen, efficiency and swift communication are paramount.</p>
+            <p>I built these apps as a solution t. </p>
+
+            <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: 1, duration: 1.5 } }}>
+              LEARN MORE
+            </motion.p>
+          </div>
+        </div>
       </motion.div>
     </motion.div>
   );
+}
+
+{
+  /* <p>
+  I built these apps as solutions to the issues I observed in my previous career. A web based Point of sale app, allowing for tailoring and
+  instant transmismiting of orders to the kitchen. and a kitchen display app, so that each chef can, at a glance, determine which item they
+  should be preparing,
+</p> */
+}
+
+// Have you ever endured a half-hour wait, only to be served a lukewarm, unappetizing meal?
+// In a busy restaurant kitchen, efficiency and communication is paramount.
+
+// With that in mind I built these apps, the first is a Point of sale, so a server can communicate an order to the kitchen. The second is a kitchen display app, so the chef can instantly see the order and they have an overview of every item and how it should be prepared.
+
+// While working in the hospitality sector I often imagined the
+
+{
+  /* <p className="cta">
+Long
+<span>wait?</span>
+</p> */
+}
+
+{
+  /* <p className="c
+ta-question">Have you ever endured a half-hour wait, only to be served a lukewarm, unappetizing meal?</p> */
+}
+{
+  /* <p>We all have</p> */
+}
+
+{
+  /* <p className="eff">
+In a busy restaurant kitchen,
+<span> efficiency </span>
+and
+<span> communication </span>
+are paramount.
+</p>
+
+<p className='i-built'>These two apps are my attempt to fix that!
+<a href="" className="link">Learn more</a>
+</p> */
 }

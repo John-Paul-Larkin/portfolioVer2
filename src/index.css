@@ -5,6 +5,8 @@
   --clr-two: #1b2a41;
   --clr-three: #324a5f;
   --clr-four: #6874e8;
+  --clr-four: hsl(210, 100%, 50%);
+
   --clr-five: #ee589e;
   --clr-six: #ffff00;
   --clr-seven: #e8f0ff;
@@ -13,10 +15,16 @@
 
   font-family: "Roboto", sans-serif;
 
-  background-color: var(--clr-two);
+
+  --clr-seaBlue:hsl(210, 100%, 50%);
+
+
+  /* background-color: var(--clr-seaBlue); */
+  background-color: lightblue;
+
 }
 
-h1,
+
 h2,
 h3 {
   font-family: "Roboto", sans-serif;
