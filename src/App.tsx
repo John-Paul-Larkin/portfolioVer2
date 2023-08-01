@@ -1,12 +1,12 @@
 import PortfolioStore from "./Context/PortfolioContext";
 
+import About from "./Components/AboutMe/About";
 import ContactForm from "./Components/ContactForm/ContactForm";
 import Footer from "./Components/Footer/Footer";
+import DevIcons from "./Components/Hero/DevIcons";
 import HeroScreen from "./Components/Hero/HeroScreen";
-import DevIcons from "./Components/Icons/DevIcons";
-import Projects from "./Components/Projects/MainProject/Projects";
 import Navbar from "./Components/NavBar/Navbar";
-import About from "./Components/AboutMe/About";
+import Projects from "./Components/Projects/MainProject/Projects";
 // import Comments from "./Components/CommentSection/Comments";
 
 // import Navbar from "./Components/NavBar/Navbar";
@@ -23,8 +23,8 @@ function App() {
         {/* <Test2 /> */}
         <HeroScreen />
         <Projects />
-        <DevIcons />
-        <About/>
+        {/* <DevIcons /> */}
+        <About />
         {/* <Comments/> */}
         <ContactForm />
         <Footer />

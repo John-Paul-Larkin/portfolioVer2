@@ -29,7 +29,7 @@
   /* background: var(--clr-two); */
 
   /* color:white; */
-
+  color:var(--clr-text);
   /* display: inline-block; */
   width: 30%;
   display: flex;
@@ -62,7 +62,7 @@
   transform: translate(-102.56px);
   background-color: rgb(27, 42, 65);
   /* background-color: red; */
-  margin-top: 2rem;
+  margin-top: 4rem;
 
 }
 .inner-text > p {
