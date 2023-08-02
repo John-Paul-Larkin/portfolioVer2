@@ -11,6 +11,7 @@ import "./PosDescription.css";
 export default function PosDescription() {
   return (
     <motion.div initial={initialLeft} whileInView={animate} className="description-container">
+      
       <motion.div initial={initialLeft} whileInView={animate} className="description">
         <div className="waiter-img-wrapper">
           <img
@@ -28,8 +29,8 @@ export default function PosDescription() {
           </p>
           <div className="inner-text">
             {/* <p> Have you ever endured a half-hour wait, only to be served a lukewarm, unappetizing meal?</p> */}
-            <p>In a busy restaurant kitchen, efficiency reigns supreme.</p>
-            <p>I built these apps as to facilitate efficiency and communication.</p>
+            <p>In a busy restaurant kitchen, speed is crucial for success.</p>
+            <p>These apps facilitate efficiency and communication. Happy customers, happy staff.</p>
 
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: 1, duration: 1.5 } }}>
               LEARN MORE

@@ -5,6 +5,9 @@
   /* padding: 1rem 0; */
 }
 
+
+
+
 .description {
   background-color: orangered;
 
@@ -41,32 +44,40 @@
 .img-text-container > p {
   position: absolute;
   top: 2rem;
-  left: -269px;
+  left: -285px;
   font-size: 2.2rem;
   font-weight: 900;
   /* background-color: white; */
-  padding: 0.1rem;
+  padding: calc(0.1rem - 2px);
+  border: 1px solid rgb(27, 42, 65);
+  padding-left: 1rem;
+  border-radius: 10px 0 0 10px;
+
 }
 
 .img-text-container p span {
   /* color: white; */
   display: inline-block;
   background-color: hsl(22, 15%, 90%);
+  border-radius: 0  10px 10px 0;
+
   padding-right: 1rem;
 }
 
 .inner-text {
   /* position: relative; */
   color: white;
-  width: calc(100% + 102.56px);
+  width: calc(80% + 102.56px);
   transform: translate(-102.56px);
   background-color: rgb(27, 42, 65);
   /* background-color: red; */
+  border-radius: 10px;
   margin-top: 4rem;
+  border: 1px solid hsl(22, 15%, 90%);
 
 }
 .inner-text > p {
-  padding: 1rem;
+  padding: .5rem;
 }
 
 .inner-text p:nth-child(3){
@@ -77,5 +88,11 @@
 @media (min-width: 700px) {
   .project1 .description {
     opacity: 1;
+  }
+}
+
+@media (min-width: 1250px) {
+  .inner-text > p {
+    padding: 1rem;
   }
 }

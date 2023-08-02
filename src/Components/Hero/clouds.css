@@ -1,0 +1,61 @@
+.cloud-wrapper {
+  position: absolute;
+  height: 70vh;
+  width: 100vw;
+  max-width:100%;
+  /* background-color: blue; */
+  overflow:hidden;
+  z-index: -1;
+}
+
+.cloud1 {
+  position: absolute;
+  z-index: 4;
+  top: 5vh;
+  /* left:10vw; */
+}
+
+.cloud2 {
+  position: absolute;
+  z-index: 3;
+  top: 25vh;
+}
+
+.cloud3 {
+  position: absolute;
+  z-index: 2;
+  top: 43vh;
+}
+
+.cloud4 {
+  position: absolute;
+  z-index: 1;
+  top: 33vh;
+}
+
+.cloud5 {
+  position: absolute;
+  z-index: 1;
+
+  top: 12vh;
+}
+
+.cloud6 {
+  position: absolute;
+  z-index: 1;
+
+  top: 15vh;
+}
+
+.cloud7 {
+  position: absolute;
+  z-index: 1;
+
+  top: 20vh;
+}
+
+.cloud8 {
+  position: absolute;
+  z-index: 1;
+  top: 55vh;
+}

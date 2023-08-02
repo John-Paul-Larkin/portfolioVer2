@@ -1,15 +1,19 @@
-
 .dev-icons {
   background-color: var(--clr-seaBlue);
   color: var(--clr-seven);
   font-size: 2rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   /* padding: 0; */
   /* padding-bottom: 2rem; */
   /* width:360px; */
-  padding-top: 5rem;
+  height: 100%;
+  /* padding-bottom: 2rem; */
+
+  z-index: 2;
+  position: relative;
 }
 
 .dev-icons li {
@@ -23,7 +27,7 @@
 }
 
 .dev-icons span {
-  font-size: .4em;
+  font-size: 0.4em;
 }
 
 @media (min-width: 790px) {
@@ -31,10 +35,6 @@
     /* font-size: 1rem; */
   }
 }
-
-
-
-
 
 @media (min-width: 880px) {
   .dev-icons {
