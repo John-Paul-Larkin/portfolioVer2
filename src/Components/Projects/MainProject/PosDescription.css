@@ -1,3 +1,28 @@
+.lrg-question {
+  display: none;
+}
+
+  .waiter-img {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .waiter-img-wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  .sml-question {
+    /* position: absolute; */
+    /* right: 10%; */
+    /* top:10%; */
+    background-color: rgb(27, 42, 65);
+    border-radius: 10px;
+    color: white;
+    padding: .5rem;
+    margin:1rem;
+
+  }
 
 
 @media (min-width: 700px) {
@@ -6,10 +31,25 @@
   }
 
 
-  
+  .description {
+    box-shadow: 5px 5px 10px var(--clr-one);
+  }
 }
 
 @media (min-width: 1000px) {
+
+
+  .waiter-img {
+    width: 100%;
+  }
+  .lrg-question {
+    display: block;
+  }
+
+  .sml-question {
+    display: none;
+  }
+
   .inner-text > p {
     padding: 1rem;
   }
@@ -19,11 +59,11 @@
     color: white;
     width: calc(80% + 102.56px);
     transform: translate(-102.56px);
-    background-color: rgb(27, 42, 65);
     /* background-color: red; */
+    background-color: rgb(27, 42, 65);
     border-radius: 10px;
-    margin-top: 4rem;
     border: 1px solid hsl(22, 15%, 90%);
+    margin-top: 4rem;
   }
 
   .inner-text p:nth-child(3) {
@@ -36,29 +76,25 @@
     /* so pos image sits behind */
     /* padding: 1rem 0; */
   }
-  
+
   .description {
     background-color: orangered;
-  
+
     display: flex;
-  
+
     /* box-shadow: -5px 5px 5px var(--clr-one); */
     box-shadow: 5px 5px 10px var(--clr-one);
   }
-  
-  .waiter-img {
-    width: 100%;
-  }
-  
+
   .waiter-img-wrapper {
     width: 70%;
   }
-  
+
   .img-text-container {
     position: relative;
     background-color: rgb(27, 42, 65);
     /* background: var(--clr-two); */
-  
+
     /* color:white; */
     color: var(--clr-text);
     /* display: inline-block; */
@@ -68,8 +104,8 @@
     /* align-items: center; */
     justify-content: center;
   }
-  
-  .img-text-container > p {
+
+  .lrg-question {
     position: absolute;
     top: 2rem;
     left: -285px;
@@ -81,13 +117,13 @@
     padding-left: 1rem;
     border-radius: 10px 0 0 10px;
   }
-  
+
   .img-text-container p span {
     /* color: white; */
     display: inline-block;
     background-color: hsl(22, 15%, 90%);
     border-radius: 0 10px 10px 0;
-  
+
     padding-right: 1rem;
   }
 }

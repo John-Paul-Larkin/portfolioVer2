@@ -28,9 +28,7 @@ export default function Projects() {
 
   return (
     <section className="projects" id="projects">
-        <div className="projects-heading">
-          <h2 >Projects</h2>
-        </div>
+
       <div className="container">
         <div className="project1" ref={project1Ref}>
           <PosDescription />

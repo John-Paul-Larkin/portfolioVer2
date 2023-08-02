@@ -26,7 +26,7 @@ function App() {
         {/* <DevIcons /> */}
         <About />
         {/* <Comments/> */}
-        <ContactForm />
+        {/* <ContactForm /> */}
         <Footer />
       </PortfolioStore>
     </>

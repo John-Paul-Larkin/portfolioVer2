@@ -11,9 +11,11 @@ import "./PosDescription.css";
 export default function PosDescription() {
   return (
     <motion.div initial={initialLeft} whileInView={animate} className="description-container">
-      
       <motion.div initial={initialLeft} whileInView={animate} className="description">
         <div className="waiter-img-wrapper">
+          <p className='sml-question'>
+            What's taking so long?
+          </p>
           <img
             width="640"
             height="427"
@@ -24,13 +26,16 @@ export default function PosDescription() {
         </div>
 
         <div className="img-text-container">
-          <p>
+          <p className="lrg-question">
             What's taking so <span>long?</span>
           </p>
           <div className="inner-text">
             {/* <p> Have you ever endured a half-hour wait, only to be served a lukewarm, unappetizing meal?</p> */}
             <p>In a busy restaurant kitchen, speed and efficiency are the key to success.</p>
-            <p>These apps facilitate communication.<br/> Happy customers, happy staff.</p>
+            <p>
+              These apps facilitate communication.
+              <br /> Happy customers, happy staff.
+            </p>
 
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: 1, duration: 1.5 } }}>
               LEARN MORE
@@ -41,5 +46,3 @@ export default function PosDescription() {
     </motion.div>
   );
 }
-
-

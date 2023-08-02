@@ -7,7 +7,6 @@ const animate = {
     duration: 0.3,
   },
 };
-
 const initial = {
   opacity: 0.1,
   y: 20,
