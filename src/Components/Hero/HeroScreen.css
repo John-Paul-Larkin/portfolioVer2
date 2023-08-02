@@ -46,10 +46,10 @@
 }
 
 .blurb-wrapper {
-  grid-area:12/12/17/28;
+  grid-area:11/12/17/18;
 
-background-color: aqua;
-  /* overflow: hidden; */
+/* background-color: aqua; */
+  overflow: hidden;
   font-size: 0.25em;
   position: relative;
 }
@@ -68,8 +68,23 @@ background-color: aqua;
   height: 30vh;
 }
 
+@media (min-width:500px) {
+  .hero-wrapper {
+    font-size:5rem;
+  }
+}
 
+@media (min-width:1000px) {
+  .hero-wrapper {
+    font-size:7rem;
+  }
+}
 
+@media (min-width:1300px) {
+  .hero-wrapper {
+    font-size:9rem;
+  }
+}
 
 
 

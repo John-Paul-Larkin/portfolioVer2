@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { RiSailboatFill } from "react-icons/ri";
 import Clouds from "./Clouds";
 import DevIcons from "./DevIcons";
@@ -16,9 +17,9 @@ export default function HeroScreen() {
           <p>Sailing the full stack.</p>
         </div>
         <div className="blurb-wrapper">
-          <div>
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.7, duration: 1, ease: "easeOut" } }}>
             Transforming business processes into working software solutions.
-          </div>
+          </motion.div>
         </div>
       </div>
 

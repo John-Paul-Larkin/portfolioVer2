@@ -37,14 +37,7 @@ export default function DevIcons() {
           <i className="devicon-vscode-plain "></i>
           <span>VSCode</span>
         </motion.li>
-        <motion.li variants={item}>
-          <i className="devicon-github-original "></i>
-          <span>Github</span>
-        </motion.li>
-        <motion.li variants={item}>
-          <i className="devicon-git-plain "></i>
-          <span>Git</span>
-        </motion.li>
+        
         <motion.li variants={item}>
           <i className="devicon-javascript-plain"></i>
           <span>Javascript</span>
@@ -56,6 +49,10 @@ export default function DevIcons() {
         <motion.li variants={item}>
           <i className="devicon-firebase-plain "></i>
           <span>Firebase</span>
+        </motion.li>
+        <motion.li variants={item}>
+          <i className="devicon-mysql-plain "></i>
+          <span>MySQL</span>
         </motion.li>
         <motion.li variants={item}>
           <i className="devicon-react-original "></i>
@@ -70,9 +67,15 @@ export default function DevIcons() {
           <span>Node</span>
         </motion.li>
         <motion.li variants={item}>
-          <i className="devicon-mysql-plain "></i>
-          <span>MySQL</span>
+          <i className="devicon-github-original "></i>
+          <span>Github</span>
         </motion.li>
+        <motion.li variants={item}>
+          <i className="devicon-git-plain "></i>
+          <span>Git</span>
+        </motion.li>
+
+
       </motion.ul>
   );
 }

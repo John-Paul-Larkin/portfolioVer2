@@ -29,8 +29,8 @@ export default function PosDescription() {
           </p>
           <div className="inner-text">
             {/* <p> Have you ever endured a half-hour wait, only to be served a lukewarm, unappetizing meal?</p> */}
-            <p>In a busy restaurant kitchen, speed is crucial for success.</p>
-            <p>These apps facilitate efficiency and communication. Happy customers, happy staff.</p>
+            <p>In a busy restaurant kitchen, speed and efficiency are the key to success.</p>
+            <p>These apps facilitate communication.<br/> Happy customers, happy staff.</p>
 
             <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: 1, duration: 1.5 } }}>
               LEARN MORE
@@ -42,46 +42,4 @@ export default function PosDescription() {
   );
 }
 
-{
-  /* <p>
-  I built these apps as solutions to the issues I observed in my previous career. A web based Point of sale app, allowing for tailoring and
-  instant transmismiting of orders to the kitchen. and a kitchen display app, so that each chef can, at a glance, determine which item they
-  should be preparing,
-</p> */
-}
 
-// Have you ever endured a half-hour wait, only to be served a lukewarm, unappetizing meal?
-// In a busy restaurant kitchen, efficiency and communication is paramount.
-
-// With that in mind I built these apps, the first is a Point of sale, so a server can communicate an order to the kitchen. The second is a kitchen display app, so the chef can instantly see the order and they have an overview of every item and how it should be prepared.
-
-// While working in the hospitality sector I often imagined the
-
-{
-  /* <p className="cta">
-Long
-<span>wait?</span>
-</p> */
-}
-
-{
-  /* <p className="c
-ta-question">Have you ever endured a half-hour wait, only to be served a lukewarm, unappetizing meal?</p> */
-}
-{
-  /* <p>We all have</p> */
-}
-
-{
-  /* <p className="eff">
-In a busy restaurant kitchen,
-<span> efficiency </span>
-and
-<span> communication </span>
-are paramount.
-</p>
-
-<p className='i-built'>These two apps are my attempt to fix that!
-<a href="" className="link">Learn more</a>
-</p> */
-}
