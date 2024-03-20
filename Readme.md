@@ -1,1 +1,1 @@
-This is an old version of my portfolio. Find the latest version [here](https://github.com/Fishamble/portfolioVer3)
+This is an old version of my portfolio. Find the latest version [www.jplarkin.ie](https://www.jplarkin.ie)
